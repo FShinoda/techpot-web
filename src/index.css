@@ -1,13 +1,99 @@
-body {
+/* Scalable and Modular Architecture for CSS */
+/* Base CSS */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+/* Layout CSS */
+html, body {
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+/* Fluid Typography CSS: Mobile-First */
+html {
+  font-size: calc(1em + 1vw);
+}
+
+body {
+  background-color: var(--color-primary);
+  font-family: var(--font-body);
+  color: #eee;
+}
+
+h1 {
+  font-size: 1.828em;
+}
+
+h2 {
+  font-size: 1.471em;
+}
+
+h3 {
+  font-size: 1.406em;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+h5 {
+  font-size: 1.132em;
+}
+
+h6 {
+  font-size: 1.081em;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: var(--font-code);
+}
+
+:root {
+  /* Fontes */
+  --font-body: 'PT Sans', sans-serif;
+  --font-code: 'Fira Code', monospace;
+
+  /* Cores */
+  --color-primary: #1e2e3e;
+  --color-secundary: #d0094d;
+  --color-terciary: #04d361;
+    
+  --color-primary-hover: #253a4f;
+  --color-secundary-hover: #a0063c;
+  --color-terciary-hover: #00af4f;
+}
+
+/* Estilos personalizados */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+/*
+  RESPONSIVENESS
+
+  Breakpoint Width:
+  - xxs: '320px';
+  - xs: '480px';
+  - sm: '576px';
+  - md: '768px';
+  - lg: '992px';
+  - xl: '1200px';
+  - xxl: '1600px';
+*/
+/* Fluid Typography: Tablets CSS*/
+@media (min-width: 576px) {
+  html {
+    font-size: calc(.5em + .35vw);
+  }
 }
