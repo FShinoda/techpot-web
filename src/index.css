@@ -7,7 +7,6 @@
   box-sizing: border-box;
 }
 
-
 /* Layout CSS */
 html, body {
   height: 100%;
@@ -54,7 +53,6 @@ h6 {
 code {
   font-family: var(--font-code);
 }
-
 
 :root {
   /* Fontes */
