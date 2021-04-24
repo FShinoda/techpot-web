@@ -1,7 +1,7 @@
 /* Scalable and Modular Architecture for CSS */
 /* Base CSS */
 * {
-  /* margin: 0; */
+  margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
@@ -15,18 +15,13 @@ html, body {
 }
 
 /* Fluid Typography CSS */
-html {
-  /* font-size: calc(16px + 1vw); */
-  font-size: 100%;
-}
-
 body {
   background-color: var(--color-primary);
   font-family: var(--font-body);
   color: #eee;
 }
 
-/* h1 {
+h1 {
   font-size: 1.772em;
 }
 
@@ -48,31 +43,7 @@ h5 {
 
 h6 {
   font-size: 1.1em;
-} */
-
-/* h1 {
-  font-size: 1.828em;
 }
-
-h2 {
-  font-size: 1.471em;
-}
-
-h3 {
-  font-size: 1.406em;
-}
-
-h4 {
-  font-size: 1.3em;
-}
-
-h5 {
-  font-size: 1.132em;
-}
-
-h6 {
-  font-size: 1.081em;
-} */
 
 code {
   font-family: var(--font-code);
@@ -83,6 +54,13 @@ code {
   --font-body: 'PT Sans', sans-serif;
   --font-code: 'Fira Code', monospace;
 
+  /* Tamanho da Fonte */
+  --min-width: 320px;
+  --max-width: 800px;
+  --min-fontSize: 16px;
+  --max-fontSize: 20px;
+  font-size: var(--min-fontSize);
+
   /* Cores */
   --color-primary: #1e2e3e;
   --color-secundary: #d0094d;
@@ -91,25 +69,11 @@ code {
   --color-primary-hover: #253a4f;
   --color-secundary-hover: #a0063c;
   --color-terciary-hover: #00af4f;
-
-  --min-width: 320px;
-  --max-width: 800px;
-  --min-fontSize: 16px;
-  --max-fontSize: 32px;
-  /* font-size: var(--min-fontSize); */
 }
-
-/* @media only screen and (min-width: 320px) and (max-width: 800px) {
-  :root {
-    font-size: calc(
-      var(--min-fontSize) + ( var(--max-fontSize) - var(--min-fontSize) ) * ( ( 100vw - var(--min-width) ) / ( var(--max-width) - var(--min-width) ) )
-    );
-  }
-} */
 
 @media only screen and (min-width: 320px) and (max-width: 800px) {
   :root {
-    --calc-a: calc(32 - 16);
+    --calc-a: calc(20 - 16);
     --calc-b: calc(var(--calc-b1) / var(--calc-b2));
     --calc-b1: calc(100vw - var(--min-width));
     --calc-b2: calc(800 - 320);
