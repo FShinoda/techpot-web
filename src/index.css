@@ -1,7 +1,7 @@
 /* Scalable and Modular Architecture for CSS */
 /* Base CSS */
 * {
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
   outline: 0;
   box-sizing: border-box;
@@ -74,6 +74,37 @@ code {
   --color-primary-hover: #253a4f;
   --color-secundary-hover: #a0063c;
   --color-terciary-hover: #00af4f;
+
+  --min-width: 320px;
+  --max-width: 800px;
+  --min-fontSize: 16px;
+  --max-fontSize: 32px;
+  /* font-size: var(--min-fontSize); */
+}
+
+/* @media only screen and (min-width: 320px) and (max-width: 800px) {
+  :root {
+    font-size: calc(
+      var(--min-fontSize) + ( var(--max-fontSize) - var(--min-fontSize) ) * ( ( 100vw - var(--min-width) ) / ( var(--max-width) - var(--min-width) ) )
+    );
+  }
+} */
+
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+  :root {
+    --calc-a: calc(32 - 16);
+    --calc-b: calc(var(--calc-b1) / var(--calc-b2));
+    --calc-b1: calc(100vw - var(--min-width));
+    --calc-b2: calc(800 - 320);
+    --calc-c: calc(var(--calc-a) * var(--calc-b));
+    font-size: calc(var(--min-fontSize) + var(--calc-c));
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  :root {
+    font-size: var(--max-fontSize);
+  }
 }
 
 
@@ -134,4 +165,3 @@ code {
   - xl/gg: '1200px';
   - xxl/ggg: '1600px';
 */
-

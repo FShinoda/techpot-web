@@ -27,6 +27,10 @@ import GroupSearch from './pages/groupSearchMob/groupSearch';
 
 import Navbar from "./components/navbar/navbar.jsx";
 
+/* PÁGINAS */
+// Perfil de Usuário
+import UserProfile from "./pages/userProfile/style.jsx";
+
 const Router = () =>{
     return(
         <Switch>
