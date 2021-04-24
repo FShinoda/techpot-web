@@ -1,7 +1,7 @@
 /* Scalable and Modular Architecture for CSS */
 /* Base CSS */
 * {
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
   outline: 0;
   box-sizing: border-box;
@@ -14,9 +14,10 @@ html, body {
   max-height: 100%;
 }
 
-/* Fluid Typography CSS: Mobile-First */
+/* Fluid Typography CSS */
 html {
-  font-size: calc(1em + 1vw);
+  /* font-size: calc(16px + 1vw); */
+  font-size: 100%;
 }
 
 body {
@@ -25,7 +26,31 @@ body {
   color: #eee;
 }
 
-h1 {
+/* h1 {
+  font-size: 1.772em;
+}
+
+h2 {
+  font-size: 1.611em;
+}
+
+h3 {
+  font-size: 1.464em;
+}
+
+h4 {
+  font-size: 1.331em; 
+}
+
+h5 {
+  font-size: 1.21em;
+}
+
+h6 {
+  font-size: 1.1em;
+} */
+
+/* h1 {
   font-size: 1.828em;
 }
 
@@ -47,7 +72,7 @@ h5 {
 
 h6 {
   font-size: 1.081em;
-}
+} */
 
 code {
   font-family: var(--font-code);
@@ -66,6 +91,37 @@ code {
   --color-primary-hover: #253a4f;
   --color-secundary-hover: #a0063c;
   --color-terciary-hover: #00af4f;
+
+  --min-width: 320px;
+  --max-width: 800px;
+  --min-fontSize: 16px;
+  --max-fontSize: 32px;
+  /* font-size: var(--min-fontSize); */
+}
+
+/* @media only screen and (min-width: 320px) and (max-width: 800px) {
+  :root {
+    font-size: calc(
+      var(--min-fontSize) + ( var(--max-fontSize) - var(--min-fontSize) ) * ( ( 100vw - var(--min-width) ) / ( var(--max-width) - var(--min-width) ) )
+    );
+  }
+} */
+
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+  :root {
+    --calc-a: calc(32 - 16);
+    --calc-b: calc(var(--calc-b1) / var(--calc-b2));
+    --calc-b1: calc(100vw - var(--min-width));
+    --calc-b2: calc(800 - 320);
+    --calc-c: calc(var(--calc-a) * var(--calc-b));
+    font-size: calc(var(--min-fontSize) + var(--calc-c));
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  :root {
+    font-size: var(--max-fontSize);
+  }
 }
 
 /* Estilos personalizados */
@@ -80,20 +136,14 @@ code {
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 
 /*
-  RESPONSIVENESS
+  RESPONSIVIDADE
 
-  Breakpoint Width:
-  - xxs: '320px';
-  - xs: '480px';
-  - sm: '576px';
-  - md: '768px';
-  - lg: '992px';
-  - xl: '1200px';
-  - xxl: '1600px';
+  Pontos de Quebra na Largura:
+  - xxs/ppp: '320px';
+  - xs/pp: '480px';
+  - sm/p: '576px';
+  - md/m: '768px';
+  - lg/g: '992px';
+  - xl/gg: '1200px';
+  - xxl/ggg: '1600px';
 */
-/* Fluid Typography: Tablets CSS*/
-@media (min-width: 576px) {
-  html {
-    font-size: calc(.5em + .35vw);
-  }
-}
