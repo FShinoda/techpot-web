@@ -1,3 +1,4 @@
+/* REACT */
 import React from "react";
 import { Switch, Route } from 'react-router-dom';
 
@@ -7,13 +8,18 @@ import App from './pages/exemplo/App.jsx';
 
 // Paginas Funcionais
 
+/* PÁGINAS */
+// Perfil de Usuário
+import UserProfile from "./pages/userProfile/style.jsx";
+
 const Router = () =>{
     return(
         <Switch>
-            {/* Paginas-exemplo a serem deletadas futuramente */}
+            {/* Páginas-exemplo a serem deletadas futuramente */}
             <Route exact path="/exemplo" component={App}/>=
-
-            {/* Paginas que usaremos de fato */}
+            
+            {/* Páginas que usaremos de fato */}
+            <Route exact path="/perfil" component={UserProfile} />
         </Switch>
     );
 };
