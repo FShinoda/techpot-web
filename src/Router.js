@@ -2,15 +2,17 @@
 import React from "react";
 import { Switch, Route } from 'react-router-dom';
 
-/// Pages
-// Pagina-Exemplo:
+//// Pages
+/// Pagina-Exemplo:
 import App from './pages/exemplo/App.jsx';
 
-// Paginas Funcionais
+/// Paginas Funcionais
 
-/* PÁGINAS */
+// Feed
+import MainFeed from './pages/feed/mainFeed.jsx';
+
 // Perfil de Usuário
-import UserProfile from "./pages/userProfile/style.jsx";
+import UserProfile from './pages/userProfile/style.jsx';
 
 const Router = () =>{
     return(
@@ -19,7 +21,11 @@ const Router = () =>{
             <Route exact path="/exemplo" component={App}/>=
             
             {/* Páginas que usaremos de fato */}
+            <Route exact path="/feed" component={MainFeed} />
             <Route exact path="/perfil" component={UserProfile} />
+
+            {/* 404  */}
+            {/* <Route path="*" component={} /> */}
         </Switch>
     );
 };

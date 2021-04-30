@@ -1,0 +1,57 @@
+/* div mãe */
+.MainFeed{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* div mãe da etc da esquerda */
+.container-left{
+    background-color: green;
+    width: 25vw;
+    height: 100vh; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/* div mãe do FEED (centro) - posts && create-post*/
+.container-center{
+    background-color:lightgrey;
+    width: 50vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+
+}
+
+/* div mãe da etc da direita */
+.container-right{
+    background-color: crimson;
+    width: 25vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/* deixei 1024px por causa do ipad pro*/
+@media screen and (max-width: 1024px){
+    .container-left,
+    .container-right{
+        display: none;
+    }
+
+    .container-center{
+        width: 100vw;
+    }
+}
