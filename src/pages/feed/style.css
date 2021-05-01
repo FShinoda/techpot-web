@@ -1,5 +1,7 @@
 /* div mãe */
 .MainFeed{
+    width: 100vw;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -9,12 +11,13 @@
 .container-left{
     background-color: green;
     width: 25vw;
-    height: 100vh; 
+    height: auto;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    justify-content: flex-start;
+    
 
 }
 
@@ -22,7 +25,7 @@
 .container-center{
     background-color:lightgrey;
     width: 50vw;
-    height: 100vh;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -35,14 +38,24 @@
 .container-right{
     background-color: crimson;
     width: 25vw;
-    height: 100vh;
+    height: auto;
     
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 
 }
+
+
+/* placeholders */
+.componente-a{
+    background-color:rgb(220, 233, 233); 
+    width: 70%;
+    height: 500px;
+    margin: 15px;
+}
+
+
 
 /* deixei 1024px por causa do ipad pro*/
 @media screen and (max-width: 1024px){
@@ -53,5 +66,7 @@
 
     .container-center{
         width: 100vw;
+        height: auto;
+    
     }
 }
