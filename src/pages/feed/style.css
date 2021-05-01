@@ -9,7 +9,7 @@
 
 /* div mãe da etc da esquerda */
 .container-left{
-    background-color: green;
+    background-color: #aaa;
     width: 25vw;
     height: auto;
 
@@ -36,7 +36,7 @@
 
 /* div mãe da etc da direita */
 .container-right{
-    background-color: crimson;
+    background-color: #aaa;
     width: 25vw;
     height: auto;
     
@@ -53,6 +53,45 @@
     width: 70%;
     height: 500px;
     margin: 15px;
+}
+
+
+/* react Calendar */
+
+.react-calendar {
+    max-width: 90%;
+}
+.react-calendar__navigation{
+    background-color: crimson;
+    
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: rgb(223, 66, 97);
+}
+
+.react-calendar__navigation__arrow,
+.react-calendar__navigation__label
+{
+    color: #eee;
+    font-weight: bold;
+}
+
+.react-calendar__tile--now {
+    background: rgb(255, 155, 173);
+    
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+    background: rgb(255, 182, 195);
+}
+.react-calendar__tile--active {
+    background: crimson;
+    color: white;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+    background: rgb(248, 30, 73);
 }
 
 
