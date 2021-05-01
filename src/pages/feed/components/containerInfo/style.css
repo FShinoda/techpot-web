@@ -1,0 +1,31 @@
+.ContainerInfo{
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin: 15px 0;
+    
+    color: #444;
+}
+
+.container-header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    
+}
+
+.container-body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+
+}
