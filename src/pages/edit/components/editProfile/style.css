@@ -9,6 +9,7 @@
 
 .editProfile-show{
     width: 70%;
+    margin-top: 15px;
     padding: 20px;
     border-radius: 15px;
     display: flex;
@@ -42,7 +43,7 @@
     flex-direction: column;
     color: #222;
     font-weight: 600;
-    padding: 45px 60px;
+    padding: 20px 60px;
 }
 
 .editUser-form label{
@@ -53,6 +54,16 @@
     border: none;
     border-bottom: 2px solid #444;
     font-size: 18px;
+    transition: .2s;
+    padding: 5px 0 ;
+}
+
+.editUser-form input:focus{
+    border: none;
+    border-bottom: 3px solid #D0094C;
+    font-size: 18px;
+    padding: 10px;
+    transition: .2s;
 }
 
 .editUser-form textarea{
