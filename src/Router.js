@@ -14,6 +14,9 @@ import MainFeed from './pages/feed/mainFeed.jsx';
 // Perfil de Usuário
 import UserProfile from './pages/userProfile/style.jsx';
 
+// Edit (pagina de configurações)
+import Edit from './pages/edit/edit.jsx';
+
 const Router = () =>{
     return(
         <Switch>
@@ -23,6 +26,7 @@ const Router = () =>{
             {/* Páginas que usaremos de fato */}
             <Route exact path="/feed" component={MainFeed} />
             <Route exact path="/perfil" component={UserProfile} />
+            <Route exact path="/edit" component={Edit} />
 
             {/* 404  */}
             {/* <Route path="*" component={} /> */}

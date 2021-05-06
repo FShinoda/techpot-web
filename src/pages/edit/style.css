@@ -1,0 +1,28 @@
+.Edit{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 70px 0 ;
+    background-color:#ddd;
+    min-height: 100vh;
+    
+
+}
+
+.edit-sidebar{
+    background-color: #fff;
+    width: 200px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #ddd;
+}
+
+.edit-content{
+    padding: 30px 15px;
+    background-color: #fff;
+    width: 800px;
+    min-height: 80vh;
+    border: solid 1px #ddd;
+}
+
+
