@@ -1,0 +1,70 @@
+.EditProfile{
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editProfile-show{
+    width: 70%;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    background-color: #D0094C;
+}
+.editProfile-show img {
+    width: 50px;
+    border-radius: 100%;
+}
+
+.editUser-names{
+    padding-left: 15px;
+}
+
+.fullname{
+    color: #fff;
+    font-weight: 700;
+}
+
+.username{
+    font-size: 16px;
+    color: #ddd;
+}
+
+
+
+/* forms */
+.editUser-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #222;
+    font-weight: 600;
+    padding: 45px 60px;
+}
+
+.editUser-form label{
+    margin: 20px 0 6px 0 ;
+}
+
+.editUser-form input{
+    border: none;
+    border-bottom: 2px solid #444;
+    font-size: 18px;
+}
+
+.editUser-form textarea{
+    max-width: 100%;
+    min-height: 70px;
+    resize: vertical;
+    padding: 10px
+}
+
+.editUser-edit{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+}
+
