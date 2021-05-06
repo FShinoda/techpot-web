@@ -30,6 +30,9 @@ import Navbar from "./components/navbar/navbar.jsx";
 // Perfil de Usuário
 import UserProfile from './pages/userProfile/style.jsx';
 
+// Edit (pagina de configurações)
+import Edit from './pages/edit/edit.jsx';
+
 const Router = () =>{
     return(
         <Switch>
