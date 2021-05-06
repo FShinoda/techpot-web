@@ -22,7 +22,9 @@ const Edit = () => {
             case "1":
                 return <EditPerfil fullname={"João da Silva Peixe"} username={"jopeix33"}/>;
             case "2":
-                return "Bom dia";
+                return "Bom dia 2";
+            case "3":
+                return "Boa Noite 3"
             default: 
                 return "A configurar";
         }
@@ -33,9 +35,9 @@ const Edit = () => {
             <div className="edit-sidebar">
                 <MenuItem>
                     {/* Estou pesquisando como pegar a propriedade key para usar apenas o handle click*/}
-                    <EditItem key="1" titulo="Editar Perfil" clickEvent={() => setCurrentNav("1")}/> 
-                    <EditItem key="2" titulo="Portifolio" clickEvent={() => setCurrentNav("2")}/>
-                    <EditItem key="3" titulo="Privacidade" clickEvent={() => setCurrentNav("3")}/>
+                    <EditItem key="1" titulo="Editar Perfil" clickEvent={() => setCurrentNav("1")} isSelected={currentNav == "1" ? true : false}/> 
+                    <EditItem key="2" titulo="Portifolio" clickEvent={() => setCurrentNav("2")} isSelected={currentNav == "2" ? true : false}/>
+                    <EditItem key="3" titulo="Privacidade" clickEvent={() => setCurrentNav("3")} isSelected={currentNav == "3" ? true : false}/>
                 </MenuItem>
                 
             </div>
