@@ -4,6 +4,7 @@ import './style.css';
 // Components
 import CardGroup from './components/cardGroup/cardGroup';
 
+
 const GroupSearch = () =>{
     return(
         <div className="GroupSearch">
