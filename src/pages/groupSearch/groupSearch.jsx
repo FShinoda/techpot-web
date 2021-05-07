@@ -24,7 +24,7 @@ const GroupSearch = () =>{
                 <CardGroup title={"Barzão Virtual"} career={"Marketing"}/>
                 <CardGroup title={"Barzão Virtual"} career={"Ciencias sociais"}/>
                 <CardGroup title={"Barzão Virtual"} career={"Publicidade e Propaganda"}/>
-                <CardGroup title={"Barzão Virtual"} career={"Easter Egg"}/>
+                <CardGroup title={"Barzão Virtual"} career={"Easter Egg"}/> 
             </div>
 
         </div>
