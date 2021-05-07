@@ -17,6 +17,9 @@ import UserProfile from './pages/userProfile/style.jsx';
 // Edit (pagina de configurações)
 import Edit from './pages/edit/edit.jsx';
 
+// Group Search 
+import GroupSearch from './pages/groupSearch/groupSearch';
+
 const Router = () =>{
     return(
         <Switch>
@@ -27,6 +30,7 @@ const Router = () =>{
             <Route exact path="/feed" component={MainFeed} />
             <Route exact path="/perfil" component={UserProfile} />
             <Route exact path="/edit" component={Edit} />
+            <Route exact path="/grupos" component={GroupSearch} />
 
             {/* 404  */}
             {/* <Route path="*" component={} /> */}
