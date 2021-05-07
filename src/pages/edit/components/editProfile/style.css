@@ -5,33 +5,66 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #1e2e3e;
 }
 
 .editProfile-show{
-    width: 70%;
-    margin-top: 15px;
-    padding: 20px;
-    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-radius: 20px;
     display: flex;
     background-color: #D0094C;
+    margin-bottom: 30px;
 }
 .editProfile-show img {
-    width: 50px;
+    width: 150px;
     border-radius: 100%;
 }
 
-.editUser-names{
-    padding-left: 15px;
+.editUser-cardNames{
+    text-align: center;
+    padding: 15px 0 20px 0;   
+     
 }
 
 .fullname{
     color: #fff;
     font-weight: 700;
+    word-wrap: break-word;
+    margin: 0 15px;
 }
 
 .username{
-    font-size: 16px;
+    font-size: 14px;
     color: #ddd;
+}
+
+.editUser-card-info{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+    padding: 10px 15px 15px 15px ;
+}
+
+.user-type{
+    text-align: center;
+    color:#444;
+}
+
+.bio{
+    text-align:justify;
+    padding: 20px 15px 30px 15px;
+    word-wrap: break-word;
+    color: #000;
+}
+
+.local{
+    color: #888;
+    padding: 0 15px;
 }
 
 
@@ -41,6 +74,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
     color: #222;
     font-weight: 600;
     padding: 20px 60px;
