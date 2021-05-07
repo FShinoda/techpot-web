@@ -20,7 +20,7 @@ const Edit = () => {
     const getNavContent = (current) => {
         switch (current) {
             case "1":
-                return <EditPerfil fullname={"João da Silva Peixe"} username={"jopeix33"}/>;
+                return <EditPerfil fullname={"João da Silva Peixe"} username={"jopeix33"} bio={"Gosto de programar e de pescar"} city={"Poá"} state={"São Paulo"}/>;
             case "2":
                 return "Bom dia 2";
             case "3":
