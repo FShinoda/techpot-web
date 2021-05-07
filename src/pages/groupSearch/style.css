@@ -1,0 +1,47 @@
+.GroupSearch{
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.groupSearch-header{
+    min-width: 1350px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.groupSearch-header button{
+    background-color: #D0094C;
+    color: #ddd;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    width: 120px;
+    height: 50px;
+    transition: .3s;
+
+}
+
+.groupSearch-header button:hover{
+    background-color: #A0063C;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.groupSearch-colection{
+    max-width: 1325px;
+    height: auto;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
