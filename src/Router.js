@@ -33,6 +33,9 @@ import UserProfile from './pages/userProfile/style.jsx';
 // Edit (pagina de configurações)
 import Edit from './pages/edit/edit.jsx';
 
+// Group Search 
+import GroupSearch from './pages/groupSearch/groupSearch';
+
 const Router = () =>{
     return(
         <Switch>
