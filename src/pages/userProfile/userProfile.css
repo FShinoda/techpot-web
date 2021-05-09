@@ -1,0 +1,362 @@
+/* USER PROFILE */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+body {
+    background-color: var(--color-primary);
+    font-family: var(--font-body);
+    color: #eee;
+}
+
+
+/* Ant Design */
+.ant-btn:hover,
+.ant-btn:focus {
+  color: var(--color-primary-hover);
+  background: transparent;
+  border-color: transparent;
+}
+
+.ant-modal-header {
+    background-color: var(--color-primary);
+    border-bottom: 1px solid var(--color-primary-hover);
+}
+
+.ant-modal-title {
+    color: #eee;
+    font-size: 1.25em;
+}
+
+.ant-modal-close {
+    color: #eee;
+}
+
+.ant-modal-close:hover,
+.ant-modal-close:focus {
+    color: #eee;
+    opacity: .5;
+}
+
+.ant-modal-content {
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary-hover);
+    color: #eee;
+}
+
+.ant-modal-footer {
+    border-top: 1px solid var(--color-primary-hover);
+}
+
+
+/* [DIV] graphical */
+.graphical {
+    max-width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Background Image */
+.background {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.backgroundImg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid var(--color-secundary);
+}
+
+/* Camera Icon */
+.backgroundImgCameraIcon {
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.imgBtn {
+    border: hidden;
+    background-color: transparent;
+    font-size: 1.15rem;
+    color: #eee;
+}
+
+.imgBtn:hover {
+    cursor: pointer;
+    opacity: .5;
+    color: #eee;
+}
+
+.imgBtn:focus,
+.imgBtn:active {
+    color: #eee;
+}
+
+.profilePhoto {
+    position: absolute;
+    margin-top: 3.75em;
+    margin-left: -1.5rem;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: var(--color-secundary);
+}
+
+.profilePhoto:hover {
+    cursor: pointer;
+}
+
+/* Modal Customization */
+.backModalBtn {
+    color: var(--color-primary);
+}
+
+.submitModalBtn:hover {
+    color: #eee !important;
+}
+
+.iconInbox {
+    font-size: 5rem;
+    color: var(--color-primary);
+}
+
+.draggerText {
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+/* Profile Photo */
+.profileImg {
+    display: flex;
+    justify-content: center;
+    margin-top: -18.25%;
+}
+
+.userImg {
+    max-width: 35%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.iconAdd {
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 25%;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: var(--color-secundary);
+}
+
+.iconAdd:hover {
+    cursor: pointer;
+}
+
+.iconAdd svg {
+    color: #eee;
+}
+
+
+/* [DIV] profileId */
+.profileId {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileId h2 {
+    color: #eee;
+    font-size: 1.25rem;
+}
+
+.profileId span {
+    margin-top: -1.25em;
+}
+
+
+/* RESPONSIVENESS */
+@media only screen and (min-width: 480px) {
+    .iconAdd {
+        margin-top: 22.5%;
+        margin-left: 25%;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .imgBtn {
+        font-size: 1.65em;
+    }
+    
+    .iconAdd {
+        margin-top: 21.75%;
+        height: 44px;
+        width: 44px;
+    }
+
+    .iconAddSymbol {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .graphical {
+        max-width: 75%;
+        margin-top: 2.5%;
+        margin-left: 12.5%;
+        margin-right: 12.5%;
+    }
+
+    .userImg {
+        max-width: 32.5%;
+    }
+    
+    .iconAdd {
+        margin-left: 20%;
+        margin-top: 16%;
+        width: 48px;
+        height: 48px;
+    }
+
+    .iconAddSymbol {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .graphical {
+        max-width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    
+    .imgBtn {
+        font-size: 2.05em;
+    }
+    
+    .iconAdd {
+        width: 52px;
+        height: 52px;
+        margin-left: 15.75%;
+        margin-top: 13.25%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .graphical {
+        max-width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: .75%;
+    }
+
+    .imgBtn {
+        font-size: 1.25em;
+    }
+
+    .profileImg {
+        margin-top: -15%;
+    }
+
+    .userImg {
+        max-width: 25%;
+    }
+
+    .iconAdd {
+        width: 40px;
+        height: 40px;
+        margin-top: 8.5%;
+        margin-left: 10.5%;
+    }
+
+    .iconAddSymbol {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .graphical {
+        max-width: 45%;
+        margin-left: 27.5%;
+        margin-right: 27.5%;
+    }
+
+    .userImg {
+        max-width: 22.5%;
+    }
+
+    .iconAdd {
+        width: 38px;
+        height: 38px;
+        margin-left: 8%;
+        margin-top: 7.5%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {}
+
+@media only screen and (min-width: 1920px) {
+    .graphical {
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+
+    .imgBtn {
+        font-size: 1.5em;
+    }
+
+    .iconAdd {
+        margin-left: 7%;
+        margin-top: 6.75%;
+    }
+}
+
+@media only screen and (min-width: 2304px) {
+    .imgBtn {
+        font-size: 1.75em;
+    }
+
+    .iconAdd {
+        width: 50px;
+        height: 50px;
+        margin-left: 6.75%;
+    }
+
+    .iconAddSymbol {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    .imgBtn {
+        font-size: 2em;
+    }
+
+    .iconAdd {
+        width: 56px;
+        height: 56px;
+    }
+
+    .iconAddSymbol {
+        width: 32px;
+        height: 32px;
+    }
+}

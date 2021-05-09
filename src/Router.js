@@ -10,13 +10,13 @@ import App from './pages/exemplo/App.jsx';
 
 /* PÁGINAS */
 // Perfil de Usuário
-import UserProfile from "./pages/userProfile/style.jsx";
+import UserProfile from "./pages/userProfile/userProfile.jsx";
 
 const Router = () =>{
     return(
         <Switch>
             {/* Páginas-exemplo a serem deletadas futuramente */}
-            <Route exact path="/exemplo" component={App}/>=
+            <Route exact path="/exemplo" component={App} />
             
             {/* Páginas que usaremos de fato */}
             <Route exact path="/perfil" component={UserProfile} />
