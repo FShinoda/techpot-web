@@ -12,7 +12,7 @@ import App from './pages/exemplo/App.jsx';
 import MainFeed from './pages/feed/mainFeed.jsx';
 
 // Perfil de Usuário
-import UserProfile from './pages/userProfile/style.jsx';
+import UserProfile from './pages/userProfile/userProfile.jsx';
 
 // Edit (pagina de configurações)
 import Edit from './pages/edit/edit.jsx';
@@ -24,7 +24,7 @@ const Router = () =>{
     return(
         <Switch>
             {/* Páginas-exemplo a serem deletadas futuramente */}
-            <Route exact path="/exemplo" component={App}/>=
+            <Route exact path="/exemplo" component={App}/>
             
             {/* Páginas que usaremos de fato */}
             <Route exact path="/feed" component={MainFeed} />
