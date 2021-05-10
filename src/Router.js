@@ -3,22 +3,14 @@ import React from "react";
 import { Switch, Route } from 'react-router-dom';
 
 /// Pages
-// Pagina-Exemplo:
-import App from './pages/exemplo/App.jsx';
-
-// Paginas Funcionais
-
-/* PÁGINAS */
-// Perfil de Usuário
-import UserProfile from "./pages/userProfile/userProfile.jsx";
+// Pagina App - exemplo
+import App from './pages/exemplo/App';
+import UserProfile from "./pages/userProfile/index.jsx";
 
 const Router = () =>{
     return(
         <Switch>
-            {/* Páginas-exemplo a serem deletadas futuramente */}
-            <Route exact path="/exemplo" component={App} />
-            
-            {/* Páginas que usaremos de fato */}
+            <Route exact path="/exemplo" component={App}/>
             <Route exact path="/perfil" component={UserProfile} />
         </Switch>
     );
