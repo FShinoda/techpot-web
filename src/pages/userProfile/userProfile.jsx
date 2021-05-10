@@ -1,10 +1,5 @@
 import React from "react";
-import "antd/dist/antd.css";
 import "./userProfile.css";
-
-
-/* COMPONENTS */
-import UpdateImageModal from "./components/updateImageModal/updateImageModal.jsx";
 
 
 /* IMAGES */
@@ -19,11 +14,11 @@ import userProfilePlaceholder from "../../assets/userProfilePlaceholder.jpg";
 /* USER PROFILE PAGE */
 const UserProfile = () => {
     // Owner or Guest Verification
-    let isOwner = true;
+    let isOwner = false;
 
 
     // Friend Verification
-    let isFriend = true;
+    let isFriend = false;
 
 
     return(
@@ -38,7 +33,7 @@ const UserProfile = () => {
                         isOwner
                         ?
                             <div className="backgroundImgCameraIcon">
-                                <UpdateImageModal />
+                                {/* <UpdateImageModal /> */}
                             </div> 
                         :
                             null
@@ -51,7 +46,7 @@ const UserProfile = () => {
                         isOwner
                         ?
                             <div className="profilePhoto flex-center">
-                                <UpdateImageModal />
+                                {/* <UpdateImageModal /> */}
                             </div>
                         :
                             null
