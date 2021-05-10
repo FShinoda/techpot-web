@@ -15,6 +15,7 @@ import {
 } from "antd";
 
 
+/* UPDATE IMAGE MODAL */
 const UpdateImageModal = () => {
     // Show Modal
     const [ showModal, setShowModal ] = useState(false);
