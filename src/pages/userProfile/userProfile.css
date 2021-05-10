@@ -219,6 +219,12 @@ body {
         max-width: 25%;
     }
 
+    .profilePhoto {
+        padding-top: .5%;
+        margin-top: 7.5em;
+        margin-left: 6.5rem;
+    }
+
     .iconAdd {
         width: 40px;
         height: 40px;
@@ -251,7 +257,12 @@ body {
     }
 }
 
-@media only screen and (min-width: 1600px) {}
+@media only screen and (min-width: 1600px) {
+    .profilePhoto {
+        margin-top: 8.5em;
+        margin-left: 6.5rem;
+    }
+}
 
 @media only screen and (min-width: 1920px) {
     .graphical {
@@ -264,6 +275,12 @@ body {
         font-size: 1.5em;
     }
 
+    .profilePhoto {
+        margin-top: 9.25em;
+        margin-left: 6.5rem;
+        padding-bottom: .1%;
+    }
+
     .iconAdd {
         margin-left: 7%;
         margin-top: 6.75%;
@@ -273,6 +290,12 @@ body {
 @media only screen and (min-width: 2304px) {
     .imgBtn {
         font-size: 1.75em;
+    }
+
+    .profilePhoto {
+        margin-top: 11em;
+        margin-left: 7.75rem;
+        padding-bottom: .25%;
     }
 
     .iconAdd {
@@ -290,6 +313,10 @@ body {
 @media only screen and (min-width: 2560px) {
     .imgBtn {
         font-size: 2em;
+    }
+
+    .profilePhoto {
+        margin-top: 12.5em;
     }
 
     .iconAdd {
