@@ -17,8 +17,7 @@ import { InboxOutlined } from "@ant-design/icons";
 import {
     Modal,
     Button,
-    Upload,
-    message
+    Upload
 } from "antd";
 
 
