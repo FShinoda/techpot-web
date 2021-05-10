@@ -27,36 +27,6 @@ body {
   border-color: transparent;
 }
 
-.ant-modal-header {
-    background-color: var(--color-primary);
-    border-bottom: 1px solid var(--color-primary-hover);
-}
-
-.ant-modal-title {
-    color: #eee;
-    font-size: 1.25em;
-}
-
-.ant-modal-close {
-    color: #eee;
-}
-
-.ant-modal-close:hover,
-.ant-modal-close:focus {
-    color: #eee;
-    opacity: .5;
-}
-
-.ant-modal-content {
-    background-color: var(--color-primary);
-    border: 1px solid var(--color-primary-hover);
-    color: #eee;
-}
-
-.ant-modal-footer {
-    border-top: 1px solid var(--color-primary-hover);
-}
-
 
 /* [DIV] graphical */
 .graphical {
@@ -86,56 +56,17 @@ body {
     margin-left: 1%;
 }
 
-.imgBtn {
-    border: hidden;
-    background-color: transparent;
-    font-size: 1.15rem;
-    color: #eee;
-}
-
-.imgBtn:hover {
-    cursor: pointer;
-    opacity: .5;
-    color: #eee;
-}
-
-.imgBtn:focus,
-.imgBtn:active {
-    color: #eee;
-}
-
 .profilePhoto {
     position: absolute;
-    margin-top: 3.75em;
-    margin-left: -1.5rem;
+    margin-top: 4.75em;
+    margin-left: 5rem;
     height: 32px;
     width: 32px;
     border-radius: 50%;
     background-color: var(--color-secundary);
+    padding-top: 1%;
 }
 
-.profilePhoto:hover {
-    cursor: pointer;
-}
-
-/* Modal Customization */
-.backModalBtn {
-    color: var(--color-primary);
-}
-
-.submitModalBtn:hover {
-    color: #eee !important;
-}
-
-.iconInbox {
-    font-size: 5rem;
-    color: var(--color-primary);
-}
-
-.draggerText {
-    font-size: 1rem;
-    color: var(--color-primary);
-}
 
 /* Profile Photo */
 .profileImg {
@@ -188,6 +119,11 @@ body {
 
 /* RESPONSIVENESS */
 @media only screen and (min-width: 480px) {
+    .profilePhoto {
+        margin-top: 7.5em;
+        margin-left: 7.5rem;
+    }
+
     .iconAdd {
         margin-top: 22.5%;
         margin-left: 25%;
@@ -197,8 +133,9 @@ body {
 }
 
 @media only screen and (min-width: 576px) {
-    .imgBtn {
-        font-size: 1.65em;
+    .profilePhoto {
+        margin-top: 8.75em;
+        margin-left: 8.25rem;
     }
     
     .iconAdd {
@@ -223,6 +160,11 @@ body {
 
     .userImg {
         max-width: 32.5%;
+    }
+
+    .profilePhoto {
+        height: 36px;
+        width: 36px;
     }
     
     .iconAdd {

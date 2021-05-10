@@ -3,6 +3,7 @@ import "./updateImageModal.css";
 
 
 /* ICONS */
+import { FaCamera } from "react-icons/fa";
 import { InboxOutlined } from "@ant-design/icons";
 
 
@@ -27,6 +28,10 @@ const UpdateImageModal = () => {
 
     return(
         <div className="UpdateImageModal">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a className="imgBtn" onClick={() => setShowModal(!showModal)}>
+                <FaCamera />
+            </a>
             <Modal
                 title="Atualizar imagem"
                 visible={showModal}
