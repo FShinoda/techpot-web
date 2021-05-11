@@ -1,7 +1,7 @@
 .CardGroup{
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
+    border-radius: 30px;
     width: 300px;
     min-height: 300px;
     margin-bottom: 50px;
