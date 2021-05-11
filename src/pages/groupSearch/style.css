@@ -1,10 +1,11 @@
 .GroupSearch{
     
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 100px;
 
 }
 
@@ -18,7 +19,7 @@
 }
 
 .groupSearch-header button{
-    background-color: #D0094C;
+    background-color: var(--color-secundary);
     color: #ddd;
     font-size: 16px;
     font-weight: 600;
@@ -30,7 +31,7 @@
 }
 
 .groupSearch-header button:hover{
-    background-color: #A0063C;
+    background-color: var(--color-secundary-hover);
     transition: .3s;
     cursor: pointer;
 }
@@ -44,4 +45,23 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+}
+
+.btn-loadMore{
+    background-color: var(--color-primary);
+    opacity: .7;
+    border: var(--color-secundary-hover) 2px solid;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    width: 150px;
+    height: 60px;
+    transition: .3s;
+}
+
+.btn-loadMore:hover{
+    opacity: 1;
+    background-color: var(--color-secundary-hover);
+    transition: .3s;
+    cursor: pointer;
 }
