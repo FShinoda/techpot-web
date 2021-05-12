@@ -27,6 +27,10 @@ const UserProfile = () => {
     // Owner and Guest Verification
     const [ friendStatus, setFriendStatus ] = useState("notFriend");
 
+    const handleClick = (event) => {
+        console.log(event.target.key);
+        setCurrentNav(event.target.key);
+    };
 
     const getNavContent = (current) => {
         switch(current) {
@@ -95,6 +99,19 @@ const UserProfile = () => {
                     <UserInfoNavItemList icon={icon} title={"Grupos"} alt={"Ícone X."} clickEvent={() => setCurrentNav("2")} isSelected={currentNav == "2" ? true : false} />
                     <UserInfoNavItemList icon={icon} title={"Amigos"} alt={"Ícone X."} clickEvent={() => setCurrentNav("3")} isSelected={currentNav == "3" ? true : false} />
                     <UserInfoNavItemList icon={icon} title={"Portfolio"} alt={"Ícone X."} clickEvent={() => setCurrentNav("4")} isSelected={currentNav == "4" ? true : false} />
+                </div>
+
+                <div className="content">
+                    {getNavContent(currentNav)}
+                </div>
+            </div>
+            
+
+            {/* USER INFO NAVIGATION */}
+            <div className="userInfoNav">
+                <div className="listNav">
+                    <UserInfoNavItemList key="1" title={"Visão Geral"} clickEvent={() => setCurrentNav("1")} isSelected={currentNav == "1" ? true : false} />
+                    <UserInfoNavItemList key="2" title={"Sobre"} clickEvent={() => setCurrentNav("2")} isSelected={currentNav == "2" ? true : false} />
                 </div>
 
                 <div className="content">
