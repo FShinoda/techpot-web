@@ -12,6 +12,7 @@ import {LeftOutlined} from '@ant-design/icons';
 
 
 const GroupSearch = () =>{
+
     return(
         <div className="GroupSearch">
             <div className="GroupSearch-header">
@@ -21,15 +22,22 @@ const GroupSearch = () =>{
             <div className="GroupSearch-container">
                 <div className="GroupSearch-banner">
                     <h2 className="GroupSearch-title">Grupos</h2>
-                </div>
+                    <button className="GroupSearch-btn-newGroup">Novo Grupo</button> 
+                </div> 
                 <div className="GroupSearch-groups">
-                    <GroupItem title={"Barzão Virtual do segundo semestre 2020"} carreer={"TECH"} img={groupPlaceholder} />
                     <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
-                    <GroupItem title={"Barzão Virtual"} carreer={"PP"} img={groupPlaceholder} />
-                    <GroupItem title={"Barzão Virtual"} carreer={"Marketing"} img={groupPlaceholder} />
-                    <GroupItem title={"Barzão Virtual"} carreer={"Administração"} img={groupPlaceholder} />
-                    <GroupItem title={"Barzão Virtual"} carreer={"Ciências Sociais"} img={groupPlaceholder} />
-                    <GroupItem title={"Barzão Virtual"} carreer={"Jornalismo"} img={groupPlaceholder} />
+                    <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
+                    <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
+                    <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
+                    <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
+                    <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
+                    <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
+                    <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
+                    <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
+                    <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
+                    <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
+                    <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
+                    
                 </div>
             </div>
             <div className="GroupSearch-load-more">
