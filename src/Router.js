@@ -34,7 +34,7 @@ import UserProfile from './pages/userProfile/style.jsx';
 import Edit from './pages/edit/edit.jsx';
 
 // Group Search 
-import GroupSearch from './pages/groupSearch/groupSearch';
+import GroupSearch from './pages/groupSearchMob/groupSearch';
 
 const Router = () =>{
     return(

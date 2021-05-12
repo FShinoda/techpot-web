@@ -12,7 +12,6 @@ import {LeftOutlined} from '@ant-design/icons';
 
 
 const GroupSearch = () =>{
-
     return(
         <div className="GroupSearch">
             <div className="GroupSearch-header">
