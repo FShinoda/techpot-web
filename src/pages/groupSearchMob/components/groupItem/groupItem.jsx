@@ -11,7 +11,7 @@ const GroupItem = ({title, img, carreer}) =>{
             </div>
             <div className="GroupItem-info">
                 <div className="info-title">
-                    <h6>{title}</h6>
+                    <span>{title}</span>
                 </div>
                 <p>{carreer}</p>
             </div>
