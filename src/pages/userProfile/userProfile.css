@@ -1,36 +1,9 @@
 /* USER PROFILE */
-* {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    min-height: 100%;
-    max-height: 100%;
-}
-
-body {
-    background-color: var(--color-primary);
-    font-family: var(--font-body);
-    color: #eee;
-}
-
-
-/* Ant Design */
-.ant-btn:hover,
-.ant-btn:focus {
-  color: var(--color-primary-hover);
-  background: transparent;
-  border-color: transparent;
-}
 
 
 /* [DIV] graphical */
 .graphical {
-    max-width: 90%;
+    width: 90%;
     margin-top: 5%;
     margin-left: 5%;
     margin-right: 5%;
@@ -38,294 +11,223 @@ body {
 
 /* Background Image */
 .background {
-    display: flex;
-    justify-content: flex-start;
+    height: 150px;
 }
 
 .backgroundImg {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
     border: 1px solid var(--color-secundary);
 }
-
-/* Camera Icon */
-.backgroundImgCameraIcon {
-    position: absolute;
-    margin-top: 1%;
-    margin-left: 1%;
-}
-
-.profilePhoto {
-    position: absolute;
-    margin-top: 4.75em;
-    margin-left: 5rem;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    background-color: var(--color-secundary);
-    padding-top: 1%;
-}
-
 
 /* Profile Photo */
 .profileImg {
     display: flex;
     justify-content: center;
-    margin-top: -18.25%;
+    height: 86.75px;
+    margin-top: -17.5%;
 }
 
 .userImg {
-    max-width: 35%;
+    border: 8.75px solid var(--color-primary);
+    max-width: 30%;
     height: auto;
-    border-radius: 50%;
-}
-
-.iconAdd {
-    position: absolute;
-    margin-top: 20%;
-    margin-left: 25%;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    background-color: var(--color-secundary);
-}
-
-.iconAdd:hover {
-    cursor: pointer;
-}
-
-.iconAdd svg {
-    color: #eee;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
 }
 
 
 /* [DIV] profileId */
 .profileId {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 90%;
+    max-width: 90%;
+    overflow-wrap: break-word;
+    margin-top: -2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
 }
 
 .profileId h2 {
-    color: #eee;
-    font-size: 1.25rem;
+    font-size: 1.331rem;
+    line-height: 1.15rem;
+}
+
+.profileId h3 {
+    font-size: 1.1rem;
+    line-height: 1.15rem;
+    opacity: .85;
 }
 
 .profileId span {
-    margin-top: -1.25em;
+    font-size: 1.1rem;
+    line-height: 1.15rem;
+    opacity: .75;
+}
+
+
+/* [DIV] userInfoNav */
+.userInfoNav {
+    width: 50%;
+    margin-top: 1.5em;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.listNav {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
 }
 
 
 /* RESPONSIVENESS */
 @media only screen and (min-width: 480px) {
-    .profilePhoto {
-        margin-top: 7.5em;
-        margin-left: 7.5rem;
+    .background {
+        height: 200px;
     }
 
-    .iconAdd {
-        margin-top: 22.5%;
-        margin-left: 25%;
-        width: 40px;
-        height: 40px;
+    .profileImg {
+        height: 108.4375px;
+        margin-top: -12.5%;
+    }
+
+    .profileId {
+        margin-top: -1%;
     }
 }
 
 @media only screen and (min-width: 576px) {
-    .profilePhoto {
-        margin-top: 8.75em;
-        margin-left: 8.25rem;
-    }
-    
-    .iconAdd {
-        margin-top: 21.75%;
-        height: 44px;
-        width: 44px;
+    .background {
+        height: 240px;
     }
 
-    .iconAddSymbol {
-        width: 24px;
-        height: 24px;
+    .profileImg {
+        height: 122.75px;
+        margin-top: -12.5%;
     }
 }
 
 @media only screen and (min-width: 768px) {
     .graphical {
-        max-width: 75%;
-        margin-top: 2.5%;
-        margin-left: 12.5%;
-        margin-right: 12.5%;
+        max-width: 70%;
+        margin-top: 3.5%;
+        margin-left: 15%;
+        margin-right: 15%;
     }
 
-    .userImg {
-        max-width: 32.5%;
-    }
-
-    .profilePhoto {
-        height: 36px;
-        width: 36px;
-    }
-    
-    .iconAdd {
-        margin-left: 20%;
-        margin-top: 16%;
-        width: 48px;
-        height: 48px;
-    }
-
-    .iconAddSymbol {
-        width: 28px;
-        height: 28px;
+    .profileId {
+        width: 70%;
+        max-width: 70%;
+        margin-top: -.5%;
+        margin-left: 15%;
+        margin-right: 15%;
     }
 }
 
 @media only screen and (min-width: 992px) {
-    .graphical {
-        max-width: 60%;
-        margin-left: 20%;
-        margin-right: 20%;
+    .background {
+        height: 315px;
     }
-    
-    .imgBtn {
-        font-size: 2.05em;
-    }
-    
-    .iconAdd {
-        width: 52px;
-        height: 52px;
-        margin-left: 15.75%;
-        margin-top: 13.25%;
+
+    .profileImg {
+        height: 148.75px;
+        margin-top: -12.5%;
     }
 }
 
 @media only screen and (min-width: 1200px) {
     .graphical {
         max-width: 50%;
+        margin-top: 1%;
         margin-left: 25%;
         margin-right: 25%;
-        margin-top: .75%;
     }
-
-    .imgBtn {
-        font-size: 1.25em;
+    
+    .background {
+        height: 240px;
     }
 
     .profileImg {
-        margin-top: -15%;
+        height: 122.75px;
+        margin-top: -11.75%;
     }
 
-    .userImg {
-        max-width: 25%;
-    }
-
-    .profilePhoto {
-        padding-top: .5%;
-        margin-top: 7.5em;
-        margin-left: 6.5rem;
-    }
-
-    .iconAdd {
-        width: 40px;
-        height: 40px;
-        margin-top: 8.5%;
-        margin-left: 10.5%;
-    }
-
-    .iconAddSymbol {
-        height: 24px;
-        width: 24px;
+    .profileId {
+        width: 50%;
+        max-width: 50%;
+        margin-top: 0;
+        margin-left: 25%;
+        margin-right: 25%;
     }
 }
 
 @media only screen and (min-width: 1440px) {
-    .graphical {
-        max-width: 45%;
-        margin-left: 27.5%;
-        margin-right: 27.5%;
+    .background {
+        height: 265px;
     }
 
-    .userImg {
-        max-width: 22.5%;
-    }
-
-    .iconAdd {
-        width: 38px;
-        height: 38px;
-        margin-left: 8%;
-        margin-top: 7.5%;
+    .profileImg {
+        height: 136.75px;
+        margin-top: -10%;
     }
 }
 
 @media only screen and (min-width: 1600px) {
-    .profilePhoto {
-        margin-top: 8.5em;
-        margin-left: 6.5rem;
+    .background {
+        height: 315px;
+    }
+
+    .profileImg {
+        height: 148.75px;
+        margin-top: -10%;
     }
 }
 
 @media only screen and (min-width: 1920px) {
+    .background {
+        height: 345px;
+    }
+
+    .profileImg {
+        margin-top: -8.75%;
+    }
+}
+
+@media only screen and (min-width: 2304px) {
     .graphical {
         width: 40%;
         margin-left: 30%;
         margin-right: 30%;
     }
-
-    .imgBtn {
-        font-size: 1.5em;
+    
+    .profileImg {
+        margin-top: -9%;
     }
 
-    .profilePhoto {
-        margin-top: 9.25em;
-        margin-left: 6.5rem;
-        padding-bottom: .1%;
-    }
-
-    .iconAdd {
-        margin-left: 7%;
-        margin-top: 6.75%;
-    }
-}
-
-@media only screen and (min-width: 2304px) {
-    .imgBtn {
-        font-size: 1.75em;
-    }
-
-    .profilePhoto {
-        margin-top: 11em;
-        margin-left: 7.75rem;
-        padding-bottom: .25%;
-    }
-
-    .iconAdd {
-        width: 50px;
-        height: 50px;
-        margin-left: 6.75%;
-    }
-
-    .iconAddSymbol {
-        width: 28px;
-        height: 28px;
+    .profileId {
+        width: 40%;
+        max-width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
     }
 }
 
 @media only screen and (min-width: 2560px) {
-    .imgBtn {
-        font-size: 2em;
+    .graphical {
+        width: 35%;
+        margin-left: 32.5%;
+        margin-right: 32.5%;
     }
 
-    .profilePhoto {
-        margin-top: 12.5em;
-    }
-
-    .iconAdd {
-        width: 56px;
-        height: 56px;
-    }
-
-    .iconAddSymbol {
-        width: 32px;
-        height: 32px;
+    .profileId {
+        width: 35%;
+        max-width: 35%;
+        margin-left: 32.5%;
+        margin-right: 32.5%;
     }
 }
