@@ -71,14 +71,7 @@
 
 .profileId h3 {
     font-size: 1.1rem;
-    line-height: 1.15rem;
     opacity: .85;
-}
-
-.profileId span {
-    font-size: 1.1rem;
-    line-height: 1.15rem;
-    opacity: .75;
 }
 
 
@@ -208,12 +201,13 @@
     .listNav {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: 25%;
+        justify-content: flex-start;
+        width: 30%;
     }
 
     .content {
         margin-top: 0;
+        width: 70%;
     }
 }
 
