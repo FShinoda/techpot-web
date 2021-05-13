@@ -3,10 +3,13 @@ import "./userInfoNavItemList.css";
 
 
 /* USER INFO NAV ITEM LIST */
-const UserInfoNavItemList = ({title, clickEvent, isSelected}) => {
+const UserInfoNavItemList = ({icon, title, alt, clickEvent, isSelected}) => {
     return(
-        <div className="UserInfoNavItemList">
-            <button onClick={clickEvent}>{title}</button>
+        <div className={isSelected ? "UserInfoNavItemList isSelected" : "UserInfoNavItemList" }>
+            <button onClick={clickEvent}>
+                <img src={icon}  alt={alt} />
+                <span>{title}</span>
+            </button>
         </div>
     );
 };
