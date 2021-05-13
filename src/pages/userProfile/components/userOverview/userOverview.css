@@ -1,0 +1,53 @@
+/* USER OVERVIEW */
+.UserOverview {
+    margin-bottom: 1rem;
+}
+
+
+/* [DIV] userBio */
+.userBio {
+    background-color: var(--color-primary-hover);
+    border-radius: 12px;
+    padding: 36px;
+    margin-top: 2em;
+}
+
+.userBio h3 {
+    margin-bottom: 1rem;
+}
+
+.userBio p {
+    opacity: .8;
+}
+
+
+/* RESPONSIVENESS */
+@media only screen and (min-width: 1200px) {
+    .UserOverview {
+        display: flex;
+    }
+
+    .overallInfo {
+        width: 40%;
+    }
+
+    .userBio {
+        width: 55%;
+        margin-left: 5%;
+        margin-top: 0;
+        font-size: .75rem;
+        padding: 16px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .userBio {
+        font-size: .85rem;
+    }
+}
+
+@media only screen and (min-width: 2304px) {
+    .userBio {
+        font-size: .9rem;
+    }
+}
