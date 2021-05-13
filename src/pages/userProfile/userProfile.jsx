@@ -5,11 +5,16 @@ import "./userProfile.css";
 
 /* COMPONENTS */
 import UserInfoNavItemList from "./components/userInfoNavItemList/userInfoNavItemList.jsx";
+import UserOverview from "./components/userOverview/userOverview.jsx";
 
 
 /* IMAGES */
 import profileBackgroundImage from "../../assets/profileBackgroundImage.jpg";
 import userProfilePlaceholder from "../../assets/userProfilePlaceholder.jpg";
+
+
+/* ICONS */
+import icon from "../../assets/icone_lupa.png";
 
 
 /* USER PROFILE PAGE */
@@ -25,13 +30,15 @@ const UserProfile = () => {
     const getNavContent = (current) => {
         switch(current) {
             case "1":
-                return <div style={{
-                    height: "25px", width: "50px", backgroundColor: "#d0094d"
-                }}></div>;
+                return <UserOverview/>;
             case "2":
                 return <div style={{
                     height: "25px", width: "50px", backgroundColor: "#361d04"
                 }}></div>;
+            case "3":
+                return null;
+            case "4":
+                return null;
             default:
                 break;
         }
@@ -63,8 +70,10 @@ const UserProfile = () => {
             {/* USER INFO NAVIGATION */}
             <div className="userInfoNav">
                 <div className="listNav">
-                    <UserInfoNavItemList key="1" title={"Visão Geral"} clickEvent={() => setCurrentNav("1")} isSelected={currentNav == "1" ? true : false} />
-                    <UserInfoNavItemList key="2" title={"Sobre"} clickEvent={() => setCurrentNav("2")} isSelected={currentNav == "2" ? true : false} />
+                    <UserInfoNavItemList key="1" icon={icon} title={"Visão Geral"} alt={"Ícone X."} clickEvent={() => setCurrentNav("1")} isSelected={currentNav == "1" ? true : false} />
+                    <UserInfoNavItemList key="2" icon={icon} title={"Grupos"} alt={"Ícone X."} clickEvent={() => setCurrentNav("2")} isSelected={currentNav == "2" ? true : false} />
+                    <UserInfoNavItemList key="3" icon={icon} title={"Amigos"} alt={"Ícone X."} clickEvent={() => setCurrentNav("3")} isSelected={currentNav == "3" ? true : false} />
+                    <UserInfoNavItemList key="4" icon={icon} title={"Portfolio"} alt={"Ícone X."} clickEvent={() => setCurrentNav("4")} isSelected={currentNav == "4" ? true : false} />
                 </div>
 
                 <div className="content">
