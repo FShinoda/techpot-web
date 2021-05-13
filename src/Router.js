@@ -15,7 +15,7 @@ import MainFeed from './pages/feed/mainFeed.jsx';
 import UserProfile from './pages/userProfile/userProfile.jsx';
 
 // Edit (pagina de configurações)
-import Edit from './pages/edit/edit.jsx';
+import GeneralEdit from './pages/generalEdit/generalEdit.jsx';
 
 // Group Search 
 import GroupSearch from './pages/groupSearchMob/groupSearch';
@@ -32,7 +32,7 @@ const Router = () =>{
             {/* Páginas que usaremos de fato */}
             <Route exact path="/feed" component={MainFeed} />
             <Route exact path="/perfil" component={UserProfile} />
-            <Route exact path="/edit" component={Edit} />
+            <Route exact path="/edit" component={GeneralEdit} />
             <Route exact path="/grupos" component={GroupSearch} />
 
             {/* 404  */}

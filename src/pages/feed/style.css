@@ -9,7 +9,7 @@
 
 /* div mãe da etc da esquerda */
 .container-left{
-    background-color: #aaa;
+    background-color: var(--color-primary);
     width: 25vw;
     height: auto;
 
@@ -23,7 +23,7 @@
 
 /* div mãe do FEED (centro) - posts && create-post*/
 .container-center{
-    background-color:lightgrey;
+    background-color: var(--color-primary);
     width: 50vw;
     height: auto;
 
@@ -36,7 +36,7 @@
 
 /* div mãe da etc da direita */
 .container-right{
-    background-color: #aaa;
+    background-color: var(--color-primary);
     width: 25vw;
     height: auto;
     

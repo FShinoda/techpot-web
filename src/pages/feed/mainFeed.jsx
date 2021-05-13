@@ -35,6 +35,7 @@ const MainFeed = () =>{
             </div>
 
             <div className="container-center">
+                {/* Para testar o component post e createPost coloque aqui */}
                 <div className="componente-a"></div>
                 <div className="componente-a"></div>
                 <div className="componente-a"></div>
