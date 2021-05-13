@@ -17,7 +17,7 @@ const Navbar = () => {
                     <ul className="header-nav">
                         <li><img src="media/wetransfer0505/icone_sino.png" alt="Icon-Notification" width="30px" /></li>
                         <li><img src="" alt="Icon-Message" /></li>
-                        <li>Olá, Sérgio</li>
+                        <li>Olá, Surubatur</li>
                         <li className="nav__item"><img src="" alt="Icon-ProfilePic" /></li>
                     </ul>
                 </nav>
