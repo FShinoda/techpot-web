@@ -36,9 +36,13 @@ import Edit from './pages/edit/edit.jsx';
 // Group Search 
 import GroupSearch from './pages/groupSearchMob/groupSearch';
 
+import Navbar from "./components/navbar/navbar.jsx";
+
 const Router = () =>{
     return(
         <Switch>
+
+            <Route exact path="/testnav" component={Navbar} />
             {/* Páginas-exemplo a serem deletadas futuramente */}
             <Route exact path="/testnav" component={Navbar} />
             <Route exact path="/exemplo" component={App}/>
