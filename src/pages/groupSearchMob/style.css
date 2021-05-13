@@ -267,3 +267,29 @@
         transition: .3s;
     }
 }
+
+@media only screen and (min-width: 1440px) {
+    .GroupSearch{
+        width: 1300px;
+
+        padding-bottom: 120px;
+    } 
+
+    
+}
+
+@media only screen and (min-width: 1600px) {
+    .GroupSearch{
+        width: 1500px;
+    } 
+
+    .GroupSearch-btn-newGroup{
+        height: 50px;
+        font-size: 16px;
+        color: #ddd;
+
+        padding: 10px 15px;
+
+        transition: .3s;
+    }
+}

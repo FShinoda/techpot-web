@@ -25,7 +25,7 @@ const GroupSearch = () =>{
                     <button className="GroupSearch-btn-newGroup">Novo Grupo</button> 
                 </div> 
                 <div className="GroupSearch-groups">
-                    <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
+                    <GroupItem title={"Barzão Virtual do segundo semstedfsfsdf"} carreer={"TECH"} img={groupPlaceholder} />
                     <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
                     <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
                     <GroupItem title={"Barzão Virtual"} carreer={"TECH"} img={groupPlaceholder} />
