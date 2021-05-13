@@ -7,13 +7,12 @@ import { RightOutlined } from '@ant-design/icons';
 const EditItem = ({icon, title}) =>{
     return(
         <div className="EditItem">
-            <div className="EditItem-icon">
-                {icon}
-            </div>
+                
             <div className="EditItem-title">
-                <span>{title}</span>
+                <span>{icon}</span>
+                <span className="EditItem-title-padding">{title}</span>
             </div>
-            <div className="EditItem-enter">
+            <div className="EditItem-drop">
                 <RightOutlined />
             </div>
         </div>
