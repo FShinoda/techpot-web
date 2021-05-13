@@ -27,7 +27,10 @@
 
 .EditItem-drop{
     width: 10%;
+}
 
+.EditItem-active{
+    transform: rotate(90deg);
 }
 
 @media only screen and (min-width: 414px){
