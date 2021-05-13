@@ -22,6 +22,18 @@
     border: 1px solid var(--color-secundary);
 }
 
+/* Friend Counter */
+.friendCount {
+    display: none;
+    font-size: 1.25rem;
+}
+
+.friendCount::after {
+    content: "amigos";
+    text-transform: lowercase;
+    font-size: .75rem;
+}
+
 /* Profile Photo */
 .profileImg {
     display: flex;
@@ -169,6 +181,10 @@
         height: 240px;
     }
 
+    .friendCount {
+        display: inline-block;
+    }
+
     .profileImg {
         height: 122.75px;
         margin-top: -11.75%;
@@ -204,6 +220,10 @@
 @media only screen and (min-width: 1440px) {
     .background {
         height: 265px;
+    }
+
+    .friendCount {
+        font-size: 1.5rem;
     }
 
     .profileImg {

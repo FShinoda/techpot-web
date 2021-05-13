@@ -51,6 +51,7 @@ const UserProfile = () => {
             <div className="graphical">
                 <div className="background">
                     <img className="backgroundImg" src={profileBackgroundImage} alt="Imagem de fundo do perfil do usuário." />
+                    <code className="friendCount">0</code>
                 </div>
 
                 <div className="profileImg">
@@ -61,8 +62,8 @@ const UserProfile = () => {
 
             {/* NAME AND IDENDITY */}
             <div className="profileId">
-                <h2>Nome Sobrenome</h2>
-                <h3>@username</h3>
+                <h2>João Kitajima</h2>
+                <h3>@kitajima</h3>
                 <span>Sistemas de Informação</span>
             </div>
             
