@@ -33,7 +33,7 @@ const UserProfile = () => {
                 return <UserOverview/>;
             case "2":
                 return <div style={{
-                    height: "25px", width: "50px", backgroundColor: "#361d04"
+                    height: "25px", width: "50px", backgroundColor: "#cccccc"
                 }}></div>;
             case "3":
                 return null;
