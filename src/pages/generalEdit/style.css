@@ -49,6 +49,11 @@
 
 @media only screen and (min-width: 768px){
 
+    .GeneralEdit-header{
+        font-size: 22px;
+        height: 80px;
+    }
+
     .GeneralEdit-btn-logout{
         margin-top: 70px; /* break */
         font-size: 18px;
