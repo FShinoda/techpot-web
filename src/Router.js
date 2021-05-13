@@ -31,7 +31,7 @@ import Navbar from "./components/navbar/navbar.jsx";
 import UserProfile from './pages/userProfile/style.jsx';
 
 // Edit (pagina de configurações)
-import Edit from './pages/edit/edit.jsx';
+import GeneralEdit from './pages/generalEdit/generalEdit.jsx';
 
 // Group Search 
 import GroupSearch from './pages/groupSearchMob/groupSearch';
