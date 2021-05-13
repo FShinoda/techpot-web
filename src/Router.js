@@ -41,8 +41,6 @@ import Navbar from "./components/navbar/navbar.jsx";
 const Router = () =>{
     return(
         <Switch>
-
-            <Route exact path="/testnav" component={Navbar} />
             {/* Páginas-exemplo a serem deletadas futuramente */}
             <Route exact path="/testnav" component={Navbar} />
             <Route exact path="/exemplo" component={App}/>
