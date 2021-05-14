@@ -24,7 +24,10 @@ const ProfileEdit = () =>{
                         <div className="ProfileEdit-background">
                             {/* Background img */}
                             <img className="ProfileEdit-backgroundImg" src={profileBackgroundImage} alt="Imagem de fundo do perfil do usuário." />
-                            <UpdateImageModal className="ProfileEdit-bg-update"/>
+                            <div className="ProfileEdit-bg-update">
+                                <UpdateImageModal />
+                            </div>
+                            
                         </div>
                         <div className="ProfileEdit-profileImg">
                             {/* Profile img */}
@@ -35,15 +38,25 @@ const ProfileEdit = () =>{
                         {/* Fullname */}
                         <h2>João Kitajima</h2>
                         {/* Username */}
-                        <h3>@kitajima</h3>
+                        <h3>@Jotajima</h3>
                     </div>
                 </div>
 
                 {/* Formulário de edição do perfil */}
                 <div className="ProfileEdit-edit">
+                    {/* Forms */}
                     <form className="ProfileEdit-form">
-                        <label for="">Nome</label>
-                        <input type="text" className="ProfileEdit-input"/>
+                        {/* Fullname */}
+                        <label for="ProfileEdit-input-fullname">Nome:</label>
+                        <input id="ProfileEdit-input-fullname" /* maxLength={} */ type="text" className="ProfileEdit-input" value="[fullname]"/>
+                        {/* Username */}
+                        <label for="ProfileEdit-input-username">Nome de usuário:</label>
+                        <input id="ProfileEdit-input-username" /* maxLength={} */ type="text" className="ProfileEdit-input" value="[username]"/>
+                        {/* Bio */}
+                        <label for="ProfileEdit-input-bio">Bio:</label>
+                        <textarea id="ProfileEdit-input-username" /* maxLength={} */ type="text" className="ProfileEdit-input ProfileEdit-bio">[bio]</textarea>
+
+                        <button type="submit" className="ProfileEdit-submit">Salvar</button>
                     </form>
                 </div>
 

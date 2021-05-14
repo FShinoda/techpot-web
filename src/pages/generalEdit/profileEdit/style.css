@@ -24,6 +24,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     color: #eee;
     font-weight: 400;
+    margin-bottom: 0;
 }
 
 a {
@@ -48,6 +49,13 @@ a:active {
 
 
 
+.ProfileEdit{
+    width: auto;
+    height: auto;
+    margin-top: 65px; /* break */
+}
+
+
 /* [DIV] graphical */
 .ProfileEdit-graphical {
     width: 90%;
@@ -62,6 +70,7 @@ a:active {
 }
 
 .ProfileEdit-backgroundImg {
+    position: relative;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -118,18 +127,53 @@ a:active {
 
 .ProfileEdit-edit{
     width: 100%;
+    padding-top: 4%;
+    padding-bottom: 10%;
+}
+
+.ProfileEdit-form{
+    padding: 0 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ProfileEdit-form label{
+    padding-left: 2px;
+    font-size: 16px;
 }
 
 .ProfileEdit-input{
     border: none;
-    border-bottom: solid 2px var(--color-secundary);
+    border-radius: 5px;
+    padding: 5px 10px;
     background-color: var(--color-primary-hover);
+    margin-bottom: 5%;
 
 }
 
 
+.ProfileEdit-bio{
+    resize: none;
+    height: 100px;
+}
+
+.ProfileEdit-submit{
+    margin-top: 4%;
+}
+
+
 /* RESPONSIVENESS */
+@media only screen and (min-width: 414px) {
+    .ProfileEdit{
+        margin-top: 80px;
+    }
+}
 @media only screen and (min-width: 480px) {
+    .ProfileEdit{
+        margin-top: 95px;
+    }
+
     .ProfileEdit-background {
         height: 200px;
     }
