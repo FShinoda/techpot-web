@@ -23,6 +23,14 @@ body {
   color: #eee;
 }
 
+/* Btn config padrão*/
+button{
+  background-color: var(--color-secundary);
+  padding: 5px 0;
+  border: none;
+  border-radius: 30px;
+}
+
 button, input {
   font-family: var(--font-body);
 }
