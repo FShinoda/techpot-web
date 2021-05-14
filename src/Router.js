@@ -4,7 +4,6 @@ import { Switch, Route } from 'react-router-dom';
 
 //// Pages
 /// Pagina-Exemplo:
-import App from './pages/exemplo/App.jsx';
 
 /// Paginas Funcionais
 
@@ -32,7 +31,6 @@ const Router = () =>{
         <Switch>
             {/* Páginas-exemplo a serem deletadas futuramente */}
             <Route exact path="/testnav" component={Navbar} />
-            <Route exact path="/exemplo" component={App}/>
             
             {/* Páginas que usaremos de fato */}
             <Route exact path="/feed" component={MainFeed} />

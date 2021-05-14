@@ -12,7 +12,7 @@ import EditHeader from '../components/editHeader/editHeader.jsx';
 import UpdateImageModal from "../components/updateImgModal/updateImgModal.jsx";
 
 
-const ProfileEdit = ({}) =>{
+const ProfileEdit = () =>{
     return(
         <div className="ProfileEdit">
             <EditHeader title="Meu perfil"/>
