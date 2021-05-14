@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 /// Pages
 // Pagina App - exemplo
 import App from './pages/exemplo/App';
-import UserProfile from "./pages/userProfile/index.jsx";
+import UserProfile from "./pages/userProfile/userProfile"; 
 
 const Router = () =>{
     return(
