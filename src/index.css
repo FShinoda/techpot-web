@@ -156,3 +156,6 @@ code {
   - xxl/ggg: '1600px';
 */
 
+li{
+  list-style: none;
+}

@@ -1,35 +1,42 @@
 .Navbar {
-    position: relative;
+    position: fixed;
     background-color: #d0094d;
     color: white;
     border-radius: 0px 0px 0px 25px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header-caixa {
+    padding: 0 20px;
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
-    align-items: center;
+    width: 100%;
 }
+
 
 .header-logo{
-    padding: 0.5rem 0rem 0rem 5rem;
+    position: absolute;
+    left: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
-.header-nav{
+.header-righticons{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0;
-    padding-bottom: 0;
 }
 
-.header-search{
-    padding-left: 15vw;
+.Navbar img{
+    width: 24px;
+}
+
+#logo{
+    width: 80px;
 }
 
 .Navbar input{
@@ -38,7 +45,8 @@
     width: 25vw;
     padding-left: 20px;
 
-    /* background-image:url("../../assets/icone_lupa.png");
+    
+    /* background-image:url({search});
     background-size: 25px;
     background-color: white;
     background-position: 97%;
