@@ -6,6 +6,7 @@ import "./userProfile.css";
 /* COMPONENTS */
 import UserInfoNavItemList from "./components/userInfoNavItemList/userInfoNavItemList.jsx";
 import UserOverview from "./components/userOverview/userOverview.jsx";
+import UserGroupTab from "./components/userGroupTab/userGroupTab.jsx";
 
 
 /* IMAGES */
@@ -24,7 +25,7 @@ const UserProfile = () => {
     
 
     // Owner and Guest Verification
-    let isOwner = true;
+    const [ friendStatus, setFriendStatus ] = useState("notFriend");
 
 
     const getNavContent = (current) => {
@@ -32,9 +33,7 @@ const UserProfile = () => {
             case "1":
                 return <UserOverview />;
             case "2":
-                return <div style={{
-                    height: "25px", width: "50px", backgroundColor: "#cccccc"
-                }}></div>;
+                return <UserGroupTab />;
             case "3":
                 return null;
             case "4":
@@ -51,7 +50,29 @@ const UserProfile = () => {
             <div className="graphical">
                 <div className="background">
                     <img className="backgroundImg" src={profileBackgroundImage} alt="Imagem de fundo do perfil do usuário." />
-                    <code className="friendCount">0</code>
+                    <div className="middleSection">
+                        <code className="friendCount">0</code>
+                        {
+                            friendStatus == "notFriend"
+                            ?
+                                <button className="defaultFriend" onClick={() => setFriendStatus("sendingFriend")}>
+                                    <img src={icon} alt="Adicionar nova amizade." />
+                                    <span>Adicionar</span>
+                                </button>
+                            :
+                                friendStatus == "sendingFriend"
+                                ?
+                                    <button className="defaultFriend sendingFriend" onClick={() => setFriendStatus("isFriend")}>
+                                        <img src={icon} alt="Cancelar solicitação." />
+                                        <span>Cancelar solicitação</span>
+                                    </button>
+                                :
+                                    <button className="defaultFriend isFriend" onClick={() => setFriendStatus("notFriend")}>
+                                        <img src={icon} alt="Desfazer amizade." />
+                                        <span>Desfazer amizade</span>
+                                    </button>
+                        }
+                    </div>
                 </div>
 
                 <div className="profileImg">
