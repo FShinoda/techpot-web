@@ -1,8 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "antd/dist/antd.css";
 =======
 >>>>>>> 25a674d... edit mobile pages init
+=======
+import "antd/dist/antd.css";
+>>>>>>> 67ea4ce... Profile edit init
 import './style.css';
 
 // Assets
@@ -12,6 +16,7 @@ import profileBackgroundImage from '../../../assets/profileBackgroundImage.jpg';
 
 // Components
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EditHeader from '../components/editHeader/editHeader.jsx';
 import UpdateImageModal from "../components/updateImgModal/updateImgModal.jsx";
 
@@ -20,6 +25,10 @@ const ProfileEdit = ({}) =>{
 =======
 import EditHeader from '../components/editHeader/editHeader';
 
+=======
+import EditHeader from '../components/editHeader/editHeader.jsx';
+import UpdateImageModal from "../components/updateImgModal/updateImgModal.jsx";
+>>>>>>> 67ea4ce... Profile edit init
 
 
 const ProfileEdit = () =>{
@@ -64,14 +73,14 @@ const ProfileEdit = () =>{
 
 =======
                 <div className="ProfileEdit-preview">
-                    <div className="graphical">
-                        <div className="background">
-                            <img className="backgroundImg" src={profileBackgroundImage} alt="Imagem de fundo do perfil do usuário." />
-                            <code className="friendCount">0</code>
+                    <div className="ProfileEdit-graphical">
+                        <div className="ProfileEdit-background">
+                            <img className="ProfileEdit-backgroundImg" src={profileBackgroundImage} alt="Imagem de fundo do perfil do usuário." />
+                            <UpdateImageModal className="ProfileEdit-bg-update"/>
                         </div>
 
-                        <div className="profileImg">
-                            <img className="userImg" src={userPlaceholder} alt="Imagem de perfil do usuário." />
+                        <div className="ProfileEdit-profileImg">
+                            <img className="ProfileEdit-userImg" src={userPlaceholder} alt="Imagem de perfil do usuário." />
                         </div>
                     </div>
                 </div>
