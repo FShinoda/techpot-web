@@ -1,0 +1,40 @@
+.EditHeader{
+    background-color: var(--color-secundary);
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    
+}
+.EditHeader-header-icon{
+    margin: 0 15px;
+}
+
+@media only screen and (min-width: 414px){
+    .EditHeader{
+        font-size: 18px;
+        height: 60px;
+        
+    }
+}
+
+@media only screen and (min-width: 480px){
+    .EditHeader{
+        font-size: 20px;
+        height: 70px;
+        
+    }
+    
+    .EditHeader-header-icon{
+        margin: 0 30px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+
+    .EditHeader{
+        font-size: 22px;
+        height: 80px;
+    }
+}
