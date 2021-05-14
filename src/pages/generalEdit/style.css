@@ -1,6 +1,7 @@
 .GeneralEdit{
     width: 100vw;
     height: auto;
+    margin-top: 50px;
 }
 
 .GeneralEdit-container{
@@ -24,6 +25,10 @@
 }
 
 @media only screen and (min-width: 414px){
+    .GeneralEdit{
+        margin-top: 60px;
+    }
+    
     .GeneralEdit-btn-logout{
         margin-top: 40px; /* break */
         padding: 10px 20px; /* break */
@@ -33,13 +38,18 @@
 
 @media only screen and (min-width: 480px){
 
+    .GeneralEdit{
+        margin-top: 70px;
+    }
+    
+
     .GeneralEdit-btn-logout{
         margin-top: 50px; /* break */
         font-size: 14px;
     }
 }
 
-@media only screen and (min-width: 480px){
+@media only screen and (min-width: 576px){
 
     .GeneralEdit-btn-logout{
         margin-top: 60px; /* break */
@@ -48,6 +58,9 @@
 }
 
 @media only screen and (min-width: 768px){
+    .GeneralEdit{
+        margin-top: 80px;
+    }
 
     .GeneralEdit-btn-logout{
         margin-top: 70px; /* break */
