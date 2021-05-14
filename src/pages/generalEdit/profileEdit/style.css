@@ -67,6 +67,20 @@
 
 
 
+/* Formulario */
+
+.ProfileEdit-edit{
+    width: 100%;
+}
+
+.ProfileEdit-input{
+    border: none;
+    border-bottom: solid 2px var(--color-secundary);
+    background-color: var(--color-primary-hover);
+
+}
+
+
 /* RESPONSIVENESS */
 @media only screen and (min-width: 480px) {
     .ProfileEdit-background {
