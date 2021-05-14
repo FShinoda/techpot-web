@@ -1,0 +1,82 @@
+.EditItem{
+    background-color: var(--color-primary-hover);
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+
+}
+
+
+.EditItem-title{
+    padding-left: 20px; /* break */
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 30px; /* break */
+
+}
+
+.EditItem-title-padding{
+    margin-left: 15px; /* break */
+}
+
+.EditItem-drop{
+    width: 10%;
+}
+
+.EditItem-active{
+    transform: rotate(90deg);
+}
+
+@media only screen and (min-width: 414px){
+    .EditItem{
+        height: 60px;
+        font-size: 18px;
+        
+    
+    }
+    .EditItem-title{
+        padding-left: 25px; /* break */
+    }
+
+    .EditItem-title-padding{
+        margin-left: 20px; /* break */
+    }
+}
+
+@media only screen and (min-width: 480px){
+    .EditItem{
+        height: 70px;
+        font-size: 20px;
+        
+    
+    }
+    .EditItem-title{
+        padding-left: 30px; /* break */
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .EditItem{
+        height: 90px;
+        font-size: 24px;
+        
+    
+    }
+
+    .EditItem-title{
+        padding-left: 40px; /* break */
+    }
+}
+
+@media only screen and (min-width: 992px){
+
+    .EditItem-title{
+        padding-left: 60px; /* break */
+    }
+}

@@ -1,0 +1,265 @@
+/* USER PROFILE */
+
+
+/* antd counter */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+body {
+    background-color: var(--color-primary);
+    font-family: var(--font-body);
+    color: #eee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #eee;
+    font-weight: 400;
+}
+
+a {
+    color: var(--color-secundary-hover);
+}
+
+a:hover {
+    color: var(--color-secundary-hover);
+}
+
+a:active {
+    color: var(--color-secundary-hover);
+}
+
+/* Ant Design */
+.ant-btn:hover,
+.ant-btn:focus {
+  color: var(--color-primary-hover);
+  background: transparent;
+  border-color: transparent;
+}
+
+
+
+/* [DIV] graphical */
+.ProfileEdit-graphical {
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Background Image */
+.ProfileEdit-background {
+    height: 150px;
+}
+
+.ProfileEdit-backgroundImg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--color-secundary);
+}
+
+.ProfileEdit-bg-update{
+    position: absolute;
+}
+
+/* Profile Photo */
+.ProfileEdit-profileImg {
+    display: flex;
+    justify-content: center;
+    height: 86.75px;
+    margin-top: -17.5%;
+}
+
+.ProfileEdit-userImg {
+    border: 8.75px solid var(--color-primary);
+    max-width: 30%;
+    height: auto;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+
+/* Username && name */
+.ProfileEdit-profileId {
+    width: 90%;
+    max-width: 90%;
+    overflow-wrap: break-word;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.ProfileEdit-profileId h2 {
+    font-size: 1.3rem;
+    line-height: 1.15rem;
+    margin-bottom: 0;
+}
+
+.ProfileEdit-profileId h3 {
+    font-size: 1.1rem;
+    opacity: .85;
+}
+
+
+
+/* Formulario */
+
+.ProfileEdit-edit{
+    width: 100%;
+}
+
+.ProfileEdit-input{
+    border: none;
+    border-bottom: solid 2px var(--color-secundary);
+    background-color: var(--color-primary-hover);
+
+}
+
+
+/* RESPONSIVENESS */
+@media only screen and (min-width: 480px) {
+    .ProfileEdit-background {
+        height: 200px;
+    }
+
+    .ProfileEdit-profileImg {
+        height: 108.4375px;
+        margin-top: -12.5%;
+    }
+
+    .ProfileEdit-profileId {
+        margin-top: -1%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .ProfileEdit-background {
+        height: 240px;
+    }
+
+    .ProfileEdit-profileImg {
+        height: 122.75px;
+        margin-top: -12.5%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ProfileEdit-graphical {
+        max-width: 70%;
+        margin-top: 3.5%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .ProfileEdit-profileId {
+        width: 70%;
+        max-width: 70%;
+        margin-top: -.5%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .ProfileEdit-background {
+        height: 315px;
+    }
+
+    .ProfileEdit-profileImg {
+        height: 148.75px;
+        margin-top: -12.5%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .ProfileEdit-graphical {
+        max-width: 50%;
+        margin-top: 1%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    
+    .ProfileEdit-background {
+        height: 240px;
+    }
+
+    .ProfileEdit-profileImg {
+        height: 122.75px;
+        margin-top: -11.75%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .ProfileEdit-background {
+        height: 265px;
+    }
+
+    .ProfileEdit-profileImg {
+        height: 136.75px;
+        margin-top: -10%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .ProfileEdit-background {
+        height: 315px;
+    }
+
+    .ProfileEdit-profileImg {
+        height: 148.75px;
+        margin-top: -10%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .ProfileEdit-background {
+        height: 345px;
+    }
+
+    .ProfileEdit-profileImg {
+        margin-top: -8.75%;
+    }
+}
+
+@media only screen and (min-width: 2304px) {
+    .ProfileEdit-graphical {
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+    
+    .ProfileEdit-profileImg {
+        margin-top: -9%;
+    }
+
+}
+
+@media only screen and (min-width: 2560px) {
+    .ProfileEdit-graphical {
+        width: 35%;
+        margin-left: 32.5%;
+        margin-right: 32.5%;
+    }
+}
+
+
+
+
+
+
+
+
+
+

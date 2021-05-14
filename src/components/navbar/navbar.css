@@ -1,0 +1,46 @@
+.Navbar {
+    position: relative;
+    background-color: #d0094d;
+    color: white;
+    border-radius: 0px 0px 0px 25px;
+}
+
+.header-caixa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+}
+
+.header-logo{
+    padding: 0.5rem 0rem 0rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.header-search{
+    padding-left: 15vw;
+}
+
+.Navbar input{
+    border: 5px solid #fff;
+    border-radius: 20px;
+    width: 25vw;
+    padding-left: 20px;
+
+    /* background-image:url("../src/assets/icone_lupa.png");
+    background-size: 25px;
+    background-color: white;
+    background-position: 97%;
+    background-repeat: no-repeat; */
+}

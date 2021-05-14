@@ -1,0 +1,65 @@
+.GeneralEdit{
+    width: 100vw;
+    height: auto;
+}
+
+.GeneralEdit-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.GeneralEdit-link{
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+}
+.GeneralEdit-btn-logout{
+    margin-top: 30px; /* break */
+    border: none;
+    background-color: var(--color-secundary);
+    color: #eee;
+    padding: 6px 11px; /* break */
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 414px){
+    .GeneralEdit-btn-logout{
+        margin-top: 40px; /* break */
+        padding: 10px 20px; /* break */
+        
+    }
+}
+
+@media only screen and (min-width: 480px){
+
+    .GeneralEdit-btn-logout{
+        margin-top: 50px; /* break */
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 480px){
+
+    .GeneralEdit-btn-logout{
+        margin-top: 60px; /* break */
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+
+    .GeneralEdit-btn-logout{
+        margin-top: 70px; /* break */
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 992px){
+
+    .GeneralEdit-btn-logout{
+        margin-top: 80px; /* break */
+    }
+}
+
+
