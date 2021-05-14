@@ -22,6 +22,12 @@
     border: 1px solid var(--color-secundary);
 }
 
+/* Middle Section */
+.middleSection {
+    display: flex;
+    justify-content: flex-end;
+}
+
 /* Friend Counter */
 .friendCount {
     display: none;
@@ -32,6 +38,39 @@
     content: "amigos";
     text-transform: lowercase;
     font-size: .75rem;
+}
+
+/* Friend Buttons */
+.defaultFriend {
+    cursor: pointer;
+    max-width: 60px;
+    padding-top: .75em;
+    padding-bottom: .5em;
+
+
+    /* background-color: var(--color-secundary); */
+    background-color: green;
+
+
+    border: 0 transparent;
+    color: #eee;
+    border-radius: 1000vh;
+}
+
+.defaultFriend img {
+    max-width: 30%;
+}
+
+.defaultFriend span {
+    display: none;
+}
+
+.sendingFriend {
+    background-color: grey;
+}
+
+.isFriend {
+    background-color: blue;
 }
 
 /* Profile Photo */
@@ -174,7 +213,19 @@
         height: 240px;
     }
 
+    .middleSection {
+        justify-content: space-between;
+    }
+
     .friendCount {
+        display: inline-block;
+    }
+
+    .defaultFriend {
+        max-width: 160px;
+    }
+
+    .defaultFriend span {
         display: inline-block;
     }
 
