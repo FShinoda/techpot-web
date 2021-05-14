@@ -23,6 +23,10 @@ body {
   color: #eee;
 }
 
+button, input {
+  font-family: var(--font-body);
+}
+
 h1 {
   font-size: 1.772em;
 }
