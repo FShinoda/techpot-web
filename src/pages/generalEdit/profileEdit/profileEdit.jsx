@@ -41,9 +41,9 @@ const ProfileEdit = ({}) =>{
 
                 {/* Formulário de edição do perfil */}
                 <div className="ProfileEdit-edit">
-                    <form>
+                    <form className="ProfileEdit-form">
                         <label for="">Nome</label>
-                        <input type="text"/>
+                        <input type="text" className="ProfileEdit-input"/>
                     </form>
                 </div>
 
