@@ -80,9 +80,10 @@ a:active {
 }
 
 .ProfileEdit-bg-update{
-    margin-bottom: -10%;
-    margin-left: 1.5%;
-    /* opacity: .7; */
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    opacity: .5;
 }
 
 /* Profile Photo */
@@ -91,6 +92,13 @@ a:active {
     justify-content: center;
     height: 86.75px;
     margin-top: -17.5%;
+}
+
+/* Camera foto de perfil */
+.ProfileEdit-profile-update{
+    position: absolute;
+    margin-top: 30px;
+    opacity: .4;
 }
 
 .ProfileEdit-userImg {
@@ -127,11 +135,10 @@ a:active {
 
 
 /* Formulario */
-
 .ProfileEdit-edit{
     width: 100%;
     padding-top: 4%;
-    padding-bottom: 10%;
+    padding-bottom: 30px;
 }
 
 .ProfileEdit-form{
@@ -143,13 +150,14 @@ a:active {
 
 .ProfileEdit-form label{
     padding-left: 2px;
-    font-size: 16px;
+    font-size: 16px; /* break */
 }
 
+/* forms input */
 .ProfileEdit-input{
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px 10px; /* break */
     background-color: var(--color-primary-hover);
     margin-bottom: 5%;
 
@@ -158,7 +166,7 @@ a:active {
 
 .ProfileEdit-bio{
     resize: none;
-    height: 100px;
+    height: 100px; /* break */
 }
 
 .ProfileEdit-submit{
@@ -171,8 +179,28 @@ a:active {
     .ProfileEdit{
         margin-top: 80px;
     }
+
+    .ProfileEdit-form label{
+        font-size: 18px; /* break */
+    }
+
+    .ProfileEdit-input{
+        padding: 10px 10px;
+        font-size: 16px;
+    }
+
+    .ProfileEdit-bio{
+        height: 120px; /* break */
+    }
+
+    /* submit btn */
+    .ProfileEdit-submit{
+        font-size: 16px;
+        padding: 8px 0;
+    }
 }
 @media only screen and (min-width: 480px) {
+
     .ProfileEdit{
         margin-top: 95px;
     }
@@ -186,8 +214,36 @@ a:active {
         margin-top: -12.5%;
     }
 
+    .ProfileEdit-profile-update{
+        margin-top: 40px;
+    }
+
     .ProfileEdit-profileId {
         margin-top: -1%;
+    }
+
+    /* forms */
+    .ProfileEdit-form{
+        padding: 0 50px;
+    }
+
+    .ProfileEdit-form label{
+        font-size: 20px; 
+    }
+
+    /* input */
+    .ProfileEdit-input{
+        padding: 10px 10px;
+        font-size: 18px;
+    }
+
+    .ProfileEdit-bio{
+        height: 140px; /* break */
+    }
+
+    /* submit btn */
+    .ProfileEdit-submit{
+        font-size: 18px;
     }
 }
 
@@ -200,9 +256,38 @@ a:active {
         height: 122.75px;
         margin-top: -12.5%;
     }
+
+    .ProfileEdit-profile-update{
+        margin-top: 50px;
+    }
+
+    /* forms */
+    .ProfileEdit-form{
+        padding: 0 60px;
+    }
+
+    /* forms label */
+    .ProfileEdit-form label{
+        margin-bottom: 5px;
+        font-size: 20px; 
+    }
+
+    /* input */
+    .ProfileEdit-input{
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+
+    /* submit btn */
+    .ProfileEdit-submit{
+        margin-top: 3%;
+    }
 }
 
 @media only screen and (min-width: 768px) {
+    .ProfileEdit{
+        margin-top: 105px;
+    }
     .ProfileEdit-graphical {
         max-width: 70%;
         margin-top: 3.5%;
@@ -217,9 +302,35 @@ a:active {
         margin-left: 15%;
         margin-right: 15%;
     }
+
+    /* forms */
+    .ProfileEdit-form{
+        padding: 0 140px;
+    }
+
+    /* forms label */
+    .ProfileEdit-form label{
+        margin-bottom: 5px;
+        font-size: 22px; 
+    }
+
+    /* forms input */
+    .ProfileEdit-input{
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+
+    /* submit btn */
+    .ProfileEdit-submit{
+        padding: 10px 0px;
+        margin-top: 3%;
+    }
 }
 
 @media only screen and (min-width: 992px) {
+    .ProfileEdit{
+        margin-top: 115px;
+    }
     .ProfileEdit-background {
         height: 315px;
     }
@@ -227,6 +338,15 @@ a:active {
     .ProfileEdit-profileImg {
         height: 148.75px;
         margin-top: -12.5%;
+    }
+
+    .ProfileEdit-profile-update{
+        margin-top: 60px;
+    }
+
+    /* forms */
+    .ProfileEdit-form{
+        padding: 0 190px;
     }
 }
 

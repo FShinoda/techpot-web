@@ -15,7 +15,7 @@ import {
 } from "antd";
 
 
-const UpdateImageModal = () => {
+const UpdateImageModal = ({title, onUpdate}) => {
     // Show Modal
     const [ showModal, setShowModal ] = useState(false);
 
@@ -33,7 +33,7 @@ const UpdateImageModal = () => {
                 <FaCamera />
             </a>
             <Modal
-                title="Atualizar imagem"
+                title={"Atualizar foto do " + title}
                 visible={showModal}
                 onCancel={() => setShowModal(!showModal)}
                 centered

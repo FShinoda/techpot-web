@@ -24,12 +24,17 @@ const ProfileEdit = () =>{
                         <div className="ProfileEdit-background">
                             {/* Background img */}
                             <div className="ProfileEdit-bg-update">
-                                <UpdateImageModal />
+                                {/* Aqui no componente provavelmente vai uma função para mudar o plano de fundo */}
+                                <UpdateImageModal title="background" />
                             </div>
                             <img className="ProfileEdit-backgroundImg" src={profileBackgroundImage} alt="Imagem de fundo do perfil do usuário." />
                             
                         </div>
                         <div className="ProfileEdit-profileImg">
+                            <div className="ProfileEdit-profile-update">
+                                {/* Aqui no componente provavelmente vai uma função para mudar a foto de perfil */}
+                                <UpdateImageModal title="perfil"/>
+                            </div>
                             {/* Profile img */}
                             <img className="ProfileEdit-userImg" src={userPlaceholder} alt="Imagem de perfil do usuário." />
                         </div>
