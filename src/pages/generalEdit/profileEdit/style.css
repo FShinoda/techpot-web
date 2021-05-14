@@ -44,6 +44,26 @@
     border-bottom-right-radius: 25%;
 }
 
+/* Username && name */
+.ProfileEdit-profileId {
+    width: 90%;
+    max-width: 90%;
+    overflow-wrap: break-word;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+.ProfileEdit-profileId h2 {
+    font-size: 1.3rem;
+    line-height: 1.15rem;
+    margin-bottom: 0;
+}
+
+.ProfileEdit-profileId h3 {
+    font-size: 1.1rem;
+    opacity: .85;
+}
 
 
 
@@ -56,6 +76,10 @@
     .ProfileEdit-profileImg {
         height: 108.4375px;
         margin-top: -12.5%;
+    }
+
+    .ProfileEdit-profileId {
+        margin-top: -1%;
     }
 }
 
@@ -74,6 +98,14 @@
     .ProfileEdit-graphical {
         max-width: 70%;
         margin-top: 3.5%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .ProfileEdit-profileId {
+        width: 70%;
+        max-width: 70%;
+        margin-top: -.5%;
         margin-left: 15%;
         margin-right: 15%;
     }
