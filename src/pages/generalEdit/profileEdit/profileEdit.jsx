@@ -23,10 +23,10 @@ const ProfileEdit = () =>{
                     <div className="ProfileEdit-graphical">
                         <div className="ProfileEdit-background">
                             {/* Background img */}
-                            <img className="ProfileEdit-backgroundImg" src={profileBackgroundImage} alt="Imagem de fundo do perfil do usuário." />
                             <div className="ProfileEdit-bg-update">
                                 <UpdateImageModal />
                             </div>
+                            <img className="ProfileEdit-backgroundImg" src={profileBackgroundImage} alt="Imagem de fundo do perfil do usuário." />
                             
                         </div>
                         <div className="ProfileEdit-profileImg">
