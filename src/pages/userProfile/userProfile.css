@@ -113,6 +113,11 @@
     opacity: .85;
 }
 
+.profileId h3 {
+    font-size: 1.1rem;
+    line-height: 1.15rem;
+    opacity: .85;
+}
 
 /* [DIV] userInfoNav */
 .userInfoNav {
@@ -254,6 +259,11 @@
         flex-direction: column;
         justify-content: flex-start;
         width: 30%;
+    }
+
+    .content {
+        margin-top: 0;
+        width: 70%;
     }
 
     .content {

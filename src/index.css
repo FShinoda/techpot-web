@@ -98,6 +98,25 @@ code {
 }
 
 
+/* Cálculo do tamanho da fonte */
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+  :root {
+    --calc-a: calc(20 - 16);
+    --calc-b: calc(var(--calc-b1) / var(--calc-b2));
+    --calc-b1: calc(100vw - var(--min-width));
+    --calc-b2: calc(800 - 320);
+    --calc-c: calc(var(--calc-a) * var(--calc-b));
+    font-size: calc(var(--min-fontSize) + var(--calc-c));
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  :root {
+    font-size: var(--max-fontSize);
+  }
+}
+
+
 /* Scrollbar */
 ::-webkit-scrollbar{
   display: none;

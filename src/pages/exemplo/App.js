@@ -1,7 +1,5 @@
-import React from 'react';
 
-import './style.css';
-import Container from './components/container1/container';
+import './App.css';
 
 const App = () =>{
   return (
