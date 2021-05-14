@@ -1,6 +1,53 @@
 /* USER PROFILE */
 
 
+/* antd counter */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+body {
+    background-color: var(--color-primary);
+    font-family: var(--font-body);
+    color: #eee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #eee;
+    font-weight: 400;
+}
+
+a {
+    color: var(--color-secundary-hover);
+}
+
+a:hover {
+    color: var(--color-secundary-hover);
+}
+
+a:active {
+    color: var(--color-secundary-hover);
+}
+
+/* Ant Design */
+.ant-btn:hover,
+.ant-btn:focus {
+  color: var(--color-primary-hover);
+  background: transparent;
+  border-color: transparent;
+}
+
+
+
 /* [DIV] graphical */
 .ProfileEdit-graphical {
     width: 90%;
@@ -200,37 +247,5 @@
 
 
 
-/* antd counter */
-* {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-}
 
-html, body {
-    height: 100%;
-    min-height: 100%;
-    max-height: 100%;
-}
-
-body {
-    background-color: var(--color-primary);
-    font-family: var(--font-body);
-    color: #eee;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #eee;
-    font-weight: 400;
-}
-
-
-/* Ant Design */
-.ant-btn:hover,
-.ant-btn:focus {
-  color: var(--color-primary-hover);
-  background: transparent;
-  border-color: transparent;
-}
 
