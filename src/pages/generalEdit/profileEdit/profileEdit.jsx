@@ -1,12 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import "antd/dist/antd.css";
-=======
->>>>>>> 25a674d... edit mobile pages init
-=======
-import "antd/dist/antd.css";
->>>>>>> 67ea4ce... Profile edit init
 import './style.css';
 
 // Assets
@@ -15,35 +8,18 @@ import profileBackgroundImage from '../../../assets/profileBackgroundImage.jpg';
 
 
 // Components
-<<<<<<< HEAD
-<<<<<<< HEAD
 import EditHeader from '../components/editHeader/editHeader.jsx';
 import UpdateImageModal from "../components/updateImgModal/updateImgModal.jsx";
 
 
 const ProfileEdit = ({}) =>{
-=======
-import EditHeader from '../components/editHeader/editHeader';
-
-=======
-import EditHeader from '../components/editHeader/editHeader.jsx';
-import UpdateImageModal from "../components/updateImgModal/updateImgModal.jsx";
->>>>>>> 67ea4ce... Profile edit init
 
 
-<<<<<<< HEAD
-const ProfileEdit = () =>{
->>>>>>> 25a674d... edit mobile pages init
-=======
-const ProfileEdit = ({}) =>{
->>>>>>> d722d6f... profile edit form added
     return(
         <div className="ProfileEdit">
             <EditHeader title="Meu perfil"/>
 
             <div className="ProfileEdit-container">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 {/* Preview - banner + foto do usuario + name + username*/}
                 <div className="ProfileEdit-preview">
                     <div className="ProfileEdit-graphical">
@@ -76,10 +52,6 @@ const ProfileEdit = ({}) =>{
 
                 
 
-=======
-=======
-                {/* Preview - banner + foto do usuario + name + username*/}
->>>>>>> d722d6f... profile edit form added
                 <div className="ProfileEdit-preview">
                     <div className="ProfileEdit-graphical">
                         <div className="ProfileEdit-background">
@@ -108,13 +80,6 @@ const ProfileEdit = ({}) =>{
                     </form>
                 </div>
 
-
-                
-<<<<<<< HEAD
->>>>>>> 25a674d... edit mobile pages init
-=======
-
->>>>>>> d722d6f... profile edit form added
             </div>
         </div>
     )

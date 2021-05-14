@@ -27,21 +27,7 @@ import GroupSearch from './pages/groupSearchMob/groupSearch';
 
 import Navbar from "./components/navbar/navbar.jsx";
 
-// Perfil de Usuário
-import UserProfile from './pages/userProfile/style.jsx';
 
-// Edit (pagina de configurações)
-import GeneralEdit from './pages/generalEdit/generalEdit.jsx';
-// Edit Acc
-import AccountEdit from './pages/generalEdit/accountEdit/accountEdit.jsx';
-// Edit Profile
-import ProfileEdit from './pages/generalEdit/profileEdit/profileEdit.jsx';
-
-
-// Group Search 
-import GroupSearch from './pages/groupSearchMob/groupSearch';
-
-import Navbar from "./components/navbar/navbar.jsx";
 
 const Router = () =>{
     return(
