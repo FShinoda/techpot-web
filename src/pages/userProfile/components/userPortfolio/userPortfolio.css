@@ -1,0 +1,115 @@
+/* USER PORTFOLIO */
+.UserPortfolio {
+    background-color: #eee;
+    min-height: 100%;
+    min-width: 100%;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+
+/* [DIV] UserPortfolio_heading */
+.UserPortfolio_heading {
+    font-size: .85rem;
+    text-align: center;
+}
+
+.UserPortfolio_heading h2 {
+    color: var(--color-primary-hover);
+}
+
+.UserPortfolio_heading h2 span {
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.UserPortfolio_heading h2 span span {
+    font-size: .75em;
+}
+
+.UserPortfolio_heading h2 span span::before {
+    content: "[ ";
+}
+
+.UserPortfolio_heading h2 span span::after {
+    content: " ]";
+}
+
+
+/* [DIV] UserPortfolio_btn */
+.UserPortfolio_btn {
+    margin-top: 4.25em;
+    width: 85%;
+    height: 85%;
+    margin-bottom: 1em;
+}
+
+.UserPortfolio_btn button {
+    width: 100%;
+    height: 100%;
+    padding-top: .75em;
+    padding-bottom: .75em;
+    border: none;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.UserPortfolio_btn button span {
+    font-size: .75rem;
+    font-weight: bold;
+    letter-spacing: .5rem;
+    display: inline-block;
+    position: relative;
+    transition: .5s;
+}
+
+
+/* RESPONSIVENESS */
+@media only screen and (min-width: 1200px) {
+    .UserPortfolio {
+        flex-direction: row;
+    }
+
+    .UserPortfolio_heading {
+        min-width: 65%;
+        text-align: left;
+    }
+
+    .UserPortfolio_btn {
+        min-width: 35%;
+        min-height: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .UserPortfolio_btn button {
+        height: 280px;
+        border-radius: 12px;
+    }
+
+    .UserPortfolio_btn button:hover {
+        background-color: var(--color-primary-hover);
+    }
+
+    .UserPortfolio_btn button span {
+        letter-spacing: .25rem;
+        font-size: 1.75em;
+    }
+
+    .UserPortfolio_btn button span::after {
+        content: "\21ac";
+        position: absolute;
+        font-size: 3.5em;
+        opacity: 0;
+        top: 25%;
+        right: -25px;
+        left: 0;
+        transition: .75s;
+    }
+    
+    .UserPortfolio_btn button:hover span::after {
+        opacity: 1;
+        right: 0;
+    }
+}
