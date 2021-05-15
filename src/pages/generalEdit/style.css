@@ -91,11 +91,18 @@
     text-align: center;
 }
 
-/* fullname */
+/* sidebar fullname */
 .GeneralEdit-sidebar-header span{
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 16px;
 }
+
+.GeneralEdit-sidebar-header p{
+    font-weight: bolder;
+    color: #ccc;
+    font-size: 14px;
+}
+
 
 /* sidebar profile pic */
 .GeneralEdit-sidebar-header img{
