@@ -6,11 +6,9 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
-
 }
 
-
+/* div icon + title */
 .EditItem-title{
     padding-left: 20px; /* break */
     width: 90%;
@@ -22,16 +20,13 @@
 }
 
 .EditItem-title-padding{
-    margin-left: 15px; /* break */
+    padding-left: 15px; /* break */
 }
 
 .EditItem-drop{
     width: 10%;
 }
 
-.EditItem-active{
-    transform: rotate(90deg);
-}
 
 @media only screen and (min-width: 414px){
     .EditItem{
@@ -78,5 +73,35 @@
 
     .EditItem-title{
         padding-left: 60px; /* break */
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    /* div mae */
+    .EditItem{
+        width: 100%;
+        height: 50px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* div icon + title */
+    .EditItem-title{
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-right: 15px; /* break */
+    }
+    
+
+    .EditItem-title-padding{
+        margin: 0;
+    }
+
+    .EditItem-drop{
+        display: none;
     }
 }

@@ -40,10 +40,10 @@ const Router = () =>{
             <Route exact path="/feed" component={MainFeed} />
             <Route exact path="/perfil" component={UserProfile} />
             <Route exact path="/editar" component={GeneralEdit} />
-            <Route exact path="/editar/conta" component={AccountEdit} />
-            <Route exact path="/editar/perfil" component={ProfileEdit} />
-            <Route exact path="/editar/portifolio" component={PortfolioEdit} />
-            <Route exact path="/editar/notificacao" component={NotifEdit} />
+            <Route exact path="/editar/conta" component={AccountEdit} /> {/* Mobile only */}
+            <Route exact path="/editar/perfil" component={ProfileEdit} /> {/* Mobile only */}
+            <Route exact path="/editar/portifolio" component={PortfolioEdit} /> {/* Mobile only */}
+            <Route exact path="/editar/notificacao" component={NotifEdit} /> {/* Mobile only */}
             <Route exact path="/grupos" component={GroupSearch} />
 
             {/* 404  */}

@@ -66,3 +66,40 @@
 }
 
 
+/* desk */
+.GeneralEdit-desktop{
+    display: flex;
+}
+
+.GeneralEdit-sidebar{
+    min-height: 100vh;
+    height: auto;
+    width: 250px;
+    background-color: var(--color-primary-hover);
+
+}
+
+.GeneralEdit-sidebar-header{
+    width: 100%;
+    background-color: var(--color-secundary);
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.GeneralEdit-sidebar-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* card de edição */
+.GeneralEdit-card-edit{
+    border-radius: 15px;
+    width: calc( 90vw - 250px);
+    height: 70vh;
+    max-height: auto;
+    margin: 0 auto;
+    margin-top:  40px;
+    background-color: var(--color-primary-hover);
+}
