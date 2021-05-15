@@ -4,20 +4,23 @@
 }
 
 
-/* [DIV] userBio */
-.userBio {
-    background-color: var(--color-primary-hover);
+/* [DIV] UserOverview_userBio */
+.UserOverview_userBio {
+    background-color: #eee;
+    color: var(--color-primary-hover);
     border-radius: 12px;
     padding: 36px;
     margin-top: 2em;
 }
 
-.userBio h3 {
+.UserOverview_userBio h3 {
     margin-bottom: 1rem;
+    color: var(--color-primary);
 }
 
-.userBio p {
+.UserOverview_userBio p {
     opacity: .8;
+    font-weight: bold;
 }
 
 
@@ -27,13 +30,13 @@
         display: flex;
     }
 
-    .overallInfo {
-        width: 40%;
+    .UserOverview_overallInfo {
+        width: 42.5%;
     }
 
-    .userBio {
+    .UserOverview_userBio {
         width: 55%;
-        margin-left: 5%;
+        margin-left: 2.5%;
         margin-top: 0;
         font-size: .75rem;
         padding: 16px;
@@ -41,13 +44,13 @@
 }
 
 @media only screen and (min-width: 1440px) {
-    .userBio {
+    .UserOverview_userBio {
         font-size: .85rem;
     }
 }
 
 @media only screen and (min-width: 2304px) {
-    .userBio {
+    .UserOverview_userBio {
         font-size: .9rem;
     }
 }

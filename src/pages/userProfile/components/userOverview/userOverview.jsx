@@ -17,14 +17,17 @@ import rockLee from "../../../../assets/rock-lee.jpg";
 const UserOverview = () => {
     return(
         <div className="UserOverview">
-            <div className="overallInfo">
+            {/* OVERALL INFO */}
+            <div className="UserOverview_overallInfo">
                 <UserOverallInfo img={tech} alt={"Imagem do curso de Sistemas de Informação."} desc={"Área: "} info={"Sistemas de Informação"} />
                 <UserOverallInfo img={enterprise} alt={"Foto da Empresa."} desc={"Trabalho: "} info={"Consultoria de Consultores S/A"} />
                 <UserOverallInfo img={SP} alt={"Bandeira do Estado de São Paulo."} desc={"Residência: "} info={"São Caetano do Sul, SP"} />
                 <UserOverallInfo img={rockLee} alt={"Imagem do grupo."} desc={"Grupo em destaque: "} info={"Rock Lee do Pagode Namora D+"} />
             </div>
 
-            <div className="userBio">
+
+            {/* BIO */}
+            <div className="UserOverview_userBio">
                 <h3>Sobre</h3>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id tincidunt massa. Quisque vitae enim id tortor dignissim gravida. In vitae nisl ac neque tempus blandit sed in eros. Etiam aliquam tristique ullamcorper. Nulla non luctus ipsum, in porttitor massa. Quisque ornare arcu sit amet libero congue, in gravida risus mattis. Fusce sit amet tortor vel turpis ullamcorper vestibulum sed sed nisl. Fusce orci dolor, aliquet vel sodales vel, tempus nec lacus.</p>
