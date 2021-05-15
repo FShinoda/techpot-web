@@ -4,6 +4,7 @@
     margin-right: .5rem;
 }
 
+/* UserInfoNavItemList button */
 .UserInfoNavItemList button {
     cursor: pointer;
     padding-top: .75em;
@@ -23,9 +24,9 @@
     font-size: .8rem;
 }
 
-/* isSelected */
-.isSelected {
-    background-color: #375472;
+/* UserInfoNavItemList_isSelected */
+.UserInfoNavItemList_isSelected {
+    background-color: var(--color-secundary);
     border-radius: 1000vh;
     box-shadow:
         0 14px 26px -12px rgb(208 9 77 / 21%),
@@ -33,7 +34,7 @@
         0 8px 10px -5px rgb(208 9 77 / 10%) !important;
 }
 
-.isSelected button {
+.UserInfoNavItemList_isSelected button {
     opacity: 1;
 }
 
@@ -91,5 +92,11 @@
         color: #eee;
         font-weight: bold;
         align-self: center;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .UserInfoNavItemList button img {
+        padding: 4px;
     }
 }
