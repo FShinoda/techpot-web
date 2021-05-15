@@ -15,7 +15,7 @@ import {
 } from "antd";
 
 
-const UpdateImageModal = ({title, onUpdate}) => {
+const UpdateImageModal = ({title, onUpdate, clickText}) => {
     // Show Modal
     const [ showModal, setShowModal ] = useState(false);
 
@@ -29,8 +29,8 @@ const UpdateImageModal = ({title, onUpdate}) => {
     return(
         <div className="UpdateImageModal">
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a className="imgBtn" onClick={() => setShowModal(!showModal)}>
-                <FaCamera />
+            <a className="txtBtn" onClick={() => setShowModal(!showModal)}>
+                {clickText ? (clickText) : <FaCamera className="imgBtn"/>}
             </a>
             <Modal
                 title={"Atualizar foto do " + title}

@@ -80,26 +80,50 @@
 }
 
 .GeneralEdit-sidebar-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    min-height: 150px;
     background-color: var(--color-secundary);
-    padding: 10px 15px;
+    padding: 20px 15px;
     text-align: center;
+}
+
+/* fullname */
+.GeneralEdit-sidebar-header span{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* sidebar profile pic */
+.GeneralEdit-sidebar-header img{
+    width: 70px;
+    border-radius: 15px;
+    margin-bottom: 10px;
 }
 
 .GeneralEdit-sidebar-content{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px 0px;
 }
 
-/* card de edição */
+/* card de edição (direita) */
 .GeneralEdit-card-edit{
+    padding: 30px; /* break */
     border-radius: 15px;
-    width: calc( 90vw - 250px);
-    height: 70vh;
-    max-height: auto;
+    width: calc( 90vw - 250px); /* break */
+    height:fit-content;
     margin: 0 auto;
     margin-top:  40px;
     background-color: var(--color-primary-hover);
 }
+
+.GeneralEdit-card-edit-content{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+

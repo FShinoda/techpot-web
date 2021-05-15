@@ -80,17 +80,31 @@
     /* div mae */
     .EditItem{
         width: 100%;
-        height: 50px;
+        height: 60px;
     
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+
+        padding-left: 30px;
+        cursor: pointer;
+    }
+    .EditItem:hover{
+        border-left: 8px solid var(--color-secundary-hover);
+    }
+
+    .EditItem-active{
+        border-left: 8px solid var(--color-secundary);
+        padding-left: 45px;
+        transition: .3s;
+        color:lightskyblue
     }
 
     /* div icon + title */
     .EditItem-title{
         padding: 0;
-        width: 100%;
+        font-size: 22px;
+        width: auto;
         display: flex;
         justify-content: center;
         margin-right: 15px; /* break */
@@ -98,7 +112,10 @@
     
 
     .EditItem-title-padding{
+        font-size: 20px;
         margin: 0;
+        padding-left: 10px;
+        
     }
 
     .EditItem-drop{

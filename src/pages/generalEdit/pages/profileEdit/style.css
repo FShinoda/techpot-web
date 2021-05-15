@@ -38,6 +38,9 @@ a:hover {
 a:active {
     color: var(--color-secundary-hover);
 }
+p{
+    margin: 0;
+}
 
 /* Ant Design */
 .ant-btn:hover,

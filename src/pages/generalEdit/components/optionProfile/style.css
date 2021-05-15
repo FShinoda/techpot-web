@@ -1,0 +1,92 @@
+.OptionProfile{  
+    display: flex;
+}
+
+/* forms inteiro */
+.OptionProfile-card-edit-content forms{
+    width: 60%;
+    padding-top: 30px;
+}
+
+/* nome + username div */
+.OptionProfile-card-edit-content-name-div{
+    display: flex;
+}
+
+.div-padding-x{
+    padding: 0 15px;
+    padding-bottom: 30px;
+}
+
+/* label */
+.OptionProfile-label{
+    font-size: 18px;
+}
+/* input */
+.input-border-radius{
+    border-radius: 30px;
+}
+/* input nome */
+.OptionProfile-card-edit-name{
+    width: 60%;
+}
+
+/* input username */
+.OptionProfile-card-edit-username{
+    width: 40%;
+}
+
+.OptionProfile-card-preview{
+    background-color: var(--color-primary);
+    padding: 15px; /* break */
+    margin: 15px; /* break */
+    height:fit-content;
+    width: 40%; /* break */
+    border-radius: 15px;
+}
+
+.OptionProfile-card-preview-main{
+    width: 100%;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.OptionProfile-card-preview-bg{
+    
+    position: relative;
+    width: 100%;
+}
+.OptionProfile-card-preview-bg img{
+    
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+.OptionProfile-card-preview-bg-icon{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.OptionProfile-card-preview-profile-img{
+    z-index: 1;
+    width: 25%;
+    margin-top: -50px;
+    border-radius: 15px;
+    
+    
+}
+
+.OptionProfile-card-preview-profile-img img{
+    width: 100%;
+    border-radius: 15px;
+    border: 7px solid var(--color-primary) /* break */
+}
+
+.OptionProfile-card-preview-content{
+    width: 100%;
+    text-align: center;
+}

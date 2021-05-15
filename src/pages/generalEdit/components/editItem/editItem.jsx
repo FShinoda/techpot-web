@@ -4,9 +4,9 @@ import './style.css';
 // Icon
 import { RightOutlined } from '@ant-design/icons';
 
-const EditItem = ({icon, title}) =>{
+const EditItem = ({icon, title, clickEvent, isActive}) =>{
     return(
-        <div className="EditItem">
+        <div className={ isActive ? ("EditItem EditItem-active") : ("EditItem") } onClick={clickEvent}>
                 
             <div className="EditItem-title">
                 <span>{icon}</span>

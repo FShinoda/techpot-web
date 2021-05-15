@@ -31,7 +31,11 @@
     border-top: 1px solid var(--color-primary-hover);
 }
 
-
+/* txt clickable */
+.txtBtn{
+    color: #eee;
+    font-weight: lighter;
+}
 /* Camera Icon */
 .imgBtn {
     border: hidden;

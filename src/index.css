@@ -31,7 +31,15 @@ button{
   border-radius: 30px;
 }
 
-button, input {
+/* Textarea config padrão */
+textarea {
+  width: 100%;
+  min-height: 100px;
+  resize: none;
+  color: #000;
+}
+
+button, input, textarea {
   font-family: var(--font-body);
 }
 
@@ -62,6 +70,8 @@ h6 {
 code {
   font-family: var(--font-code);
 }
+
+
 
 
 :root {
@@ -117,6 +127,11 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.div-flex-column{
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-col-center {
