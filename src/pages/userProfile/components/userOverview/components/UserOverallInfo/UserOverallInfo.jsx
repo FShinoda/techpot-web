@@ -6,13 +6,16 @@ import "./UserOverallInfo.css";
 const UserOverallInfo = ({img, alt, desc, info}) => {
     return(
         <div className="UserOverallInfo">
-            <div className="img flex-center">
-                <div className="imgSpace">
+            {/* IMAGE */}
+            <div className="UserOverallInfo_img flex-center">
+                <div className="UserOverallInfo_imgSpace">
                     <img src={img} alt={alt} />
                 </div>
             </div>
 
-            <div className="desc">
+
+            {/* DESCRIPTION */}
+            <div className="UserOverallInfo_desc">
                 <h6>
                     {desc}<br />
                     <span>{info}</span>
