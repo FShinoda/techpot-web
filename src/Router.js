@@ -16,9 +16,13 @@ import UserProfile from './pages/userProfile/userProfile.jsx';
 /// Edit (pagina de configurações)
 import GeneralEdit from './pages/generalEdit/generalEdit.jsx';
 // Edit Acc
-import AccountEdit from './pages/generalEdit/accountEdit/accountEdit.jsx';
+import AccountEdit from './pages/generalEdit/pages/accountEdit/accountEdit.jsx';
 // Edit Profile
-import ProfileEdit from './pages/generalEdit/profileEdit/profileEdit.jsx';
+import ProfileEdit from './pages/generalEdit/pages/profileEdit/profileEdit.jsx';
+// Edit Portifolio
+import PortfolioEdit from './pages/generalEdit/pages/portfolioEdit/portfolioEdit.jsx';
+// Edit Notif
+import NotifEdit from './pages/generalEdit/pages/notifEdit/notifEdit.jsx';
 
 
 // Group Search 
@@ -38,6 +42,8 @@ const Router = () =>{
             <Route exact path="/editar" component={GeneralEdit} />
             <Route exact path="/editar/conta" component={AccountEdit} />
             <Route exact path="/editar/perfil" component={ProfileEdit} />
+            <Route exact path="/editar/portifolio" component={PortfolioEdit} />
+            <Route exact path="/editar/notificacao" component={NotifEdit} />
             <Route exact path="/grupos" component={GroupSearch} />
 
             {/* 404  */}

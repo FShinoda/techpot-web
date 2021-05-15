@@ -3,13 +3,13 @@ import "antd/dist/antd.css";
 import './style.css';
 
 // Assets
-import userPlaceholder from '../../../assets/userPlaceholder.jpg';
-import profileBackgroundImage from '../../../assets/profileBackgroundImage.jpg';
+import userPlaceholder from '../../../../assets/userPlaceholder.jpg';
+import profileBackgroundImage from '../../../../assets/profileBackgroundImage.jpg';
 
 
 // Components
-import EditHeader from '../components/editHeader/editHeader.jsx';
-import UpdateImageModal from "../components/updateImgModal/updateImgModal.jsx";
+import EditHeader from '../../components/editHeader/editHeader.jsx';
+import UpdateImageModal from "../../components/updateImgModal/updateImgModal.jsx";
 
 
 const ProfileEdit = () =>{

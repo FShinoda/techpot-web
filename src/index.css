@@ -131,6 +131,32 @@ code {
   place-items: center;
 }
 
+/* top-container - serve para mobile onde a navbar ficará fixa,
+dando um margin-top para o conteudo ficar visivel */
+.top-container{ 
+  margin-top: 50px;
+}
+
+/* responsividade dos estilos personalizados */
+@media only screen and (min-width: 414px){
+  .top-container{
+      margin-top: 60px;
+  }
+}
+
+@media only screen and (min-width: 480px){
+
+  .top-container{
+      margin-top: 70px;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .top-container{
+      margin-top: 80px;
+  }
+}
+
 
 /* Fontes */
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');

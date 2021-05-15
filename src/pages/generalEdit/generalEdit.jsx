@@ -16,11 +16,11 @@ const GeneralEdit = () =>{
         <div className="GeneralEdit">
             <EditHeader title="Configurações"/>
 
-            <div className="GeneralEdit-container">
+            <div className="GeneralEdit-container top-container">
                 <Link to="/editar/conta" className="link-counter"><EditItem icon={<LockOutlined />} title={"Minha conta"} /></Link>
                 <Link to="/editar/perfil" className="link-counter"><EditItem icon={<UserOutlined/>} title={"Meu perfil"} /></Link>
                 <Link to="/editar/portifolio" className="link-counter"><EditItem icon={<AuditOutlined />} title={"Meu Portifólio"} /></Link>
-                <Link to="/editar/notificacoes" className="link-counter"><EditItem icon={<BellOutlined />} title={"Notificações"} /> </Link>
+                <Link to="/editar/notificacao" className="link-counter"><EditItem icon={<BellOutlined />} title={"Notificações"} /> </Link>
                 
                 <button className="GeneralEdit-btn-logout">Log out</button>
             
