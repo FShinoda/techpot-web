@@ -1,20 +1,20 @@
 /* USER PROFILE */
 
 
-/* [DIV] graphical */
-.graphical {
+/* [DIV] UserProfile_graphical */
+.UserProfile_graphical {
     width: 90%;
     margin-top: 5%;
     margin-left: 5%;
     margin-right: 5%;
 }
 
-/* Background Image */
-.background {
+/* UserProfile_background Image */
+.UserProfile_background {
     height: 150px;
 }
 
-.backgroundImg {
+.UserProfile_backgroundImg {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -23,65 +23,78 @@
 }
 
 /* Middle Section */
-.middleSection {
+.UserProfile_middleSection {
     display: flex;
     justify-content: flex-end;
 }
 
 /* Friend Counter */
-.friendCount {
+.UserProfile_friendCount {
     display: none;
     font-size: 1.25rem;
+    text-shadow: 0 0 .1ex rgba(232, 10, 86, 1);
 }
 
-.friendCount::after {
+.UserProfile_friendCount::after {
     content: "amigos";
     text-transform: lowercase;
     font-size: .75rem;
 }
 
 /* Friend Buttons */
-.defaultFriend {
+.UserProfile_defaultFriend {
     cursor: pointer;
-    max-width: 60px;
-    padding-top: .75em;
-    padding-bottom: .5em;
-
-
-    /* background-color: var(--color-secundary); */
-    background-color: green;
-
-
+    width: 42px;
+    height: 42px;
+    background-color: var(--color-secundary);
     border: 0 transparent;
     color: #eee;
-    border-radius: 1000vh;
+    border-radius: 8.75px;
+    margin-top: .25em;
 }
 
-.defaultFriend img {
-    max-width: 30%;
+.UserProfile_defaultFriend:hover {
+    background-color: var(--color-secundary-hover);
 }
 
-.defaultFriend span {
+.UserProfile_defaultFriend:active {
+    background-color: var(--color-secundary-hover);
+    transform: translateY(4px);
+}
+
+.UserProfile_defaultFriend img {
+    max-width: 42.5%;
+}
+
+.UserProfile_defaultFriend span {
     display: none;
 }
 
-.sendingFriend {
-    background-color: grey;
+.UserProfile_sendingFriend {
+    background-color: #424242;
 }
 
-.isFriend {
+.UserProfile_sendingFriend:hover {
+    background-color: #212121;
+}
+
+.UserProfile_isFriend {
     background-color: blue;
 }
 
+.UserProfile_isFriend:hover {
+    background-color: darkblue;
+}
+
 /* Profile Photo */
-.profileImg {
+.UserProfile_profileImg {
     display: flex;
     justify-content: center;
     height: 86.75px;
     margin-top: -17.5%;
 }
 
-.userImg {
+.UserProfile_userImg {
     border: 8.75px solid var(--color-primary);
     max-width: 30%;
     height: auto;
@@ -92,8 +105,8 @@
 }
 
 
-/* [DIV] profileId */
-.profileId {
+/* [DIV] UserProfile_profileId */
+.UserProfile_profileId {
     width: 90%;
     max-width: 90%;
     overflow-wrap: break-word;
@@ -103,75 +116,98 @@
     text-align: center;
 }
 
-.profileId h2 {
+.UserProfile_profileId h2 {
     font-size: 1.331rem;
     line-height: 1.15rem;
 }
 
-.profileId h3 {
+.UserProfile_profileId h3 {
     font-size: 1.1rem;
     opacity: .85;
 }
 
+.UserProfile_profileId h3::before {
+    content:"@";
+    font-weight: bold;
+}
 
-/* [DIV] userInfoNav */
-.userInfoNav {
+
+/* [DIV] UserProfile_userInfoNav */
+.UserProfile_userInfoNav {
     width: 90%;
     margin-top: 1.5em;
     margin-left: 5%;
     margin-right: 5%;
 }
 
-.listNav {
+.UserProfile_listNav {
     display: flex;
     justify-content: space-between;
 }
 
-.content {
+.UserProfile_content {
     margin-top: 1em;
 }
 
 
 /* RESPONSIVENESS */
 @media only screen and (min-width: 480px) {
-    .background {
+    .UserProfile_background {
         height: 200px;
     }
 
-    .profileImg {
+    .UserProfile_defaultFriend {
+        width: 55px;
+    }
+    
+    .UserProfile_defaultFriend img {
+        max-width: 37.5%;
+    }
+
+    .UserProfile_profileImg {
         height: 108.4375px;
         margin-top: -12.5%;
     }
 
-    .profileId {
+    .UserProfile_profileId {
         margin-top: -1%;
     }
 }
 
 @media only screen and (min-width: 576px) {
-    .background {
+    .UserProfile_background {
         height: 240px;
     }
 
-    .profileImg {
+    .UserProfile_defaultFriend {
+        width: 64px;
+
+    }
+    
+    .UserProfile_defaultFriend img {
+        max-width: 35%;
+
+    }
+
+    .UserProfile_profileImg {
         height: 122.75px;
         margin-top: -12.5%;
     }
 
-    .content {
+    .UserProfile_content {
         margin-top: 1.5em;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .graphical {
+    .UserProfile_graphical {
         max-width: 70%;
         margin-top: 3.5%;
         margin-left: 15%;
         margin-right: 15%;
     }
 
-    .profileId {
+    .UserProfile_profileId {
         width: 70%;
         max-width: 70%;
         margin-top: -.5%;
@@ -179,62 +215,92 @@
         margin-right: 15%;
     }
 
-    .userInfoNav {
+    .UserProfile_userInfoNav {
         width: 70%;
         margin-left: 15%;
         margin-right: 15%;
     }
 
-    .content {
+    .UserProfile_content {
         margin-top: 2em;
     }
 }
 
 @media only screen and (min-width: 992px) {
-    .background {
+    .UserProfile_background {
         height: 315px;
     }
 
-    .profileImg {
+    .UserProfile_defaultFriend {
+        width: 72px;
+    }
+    
+    .UserProfile_defaultFriend img {
+        max-width: 32.5%;
+    }
+
+    .UserProfile_profileImg {
         height: 148.75px;
         margin-top: -12.5%;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    .graphical {
+    .UserProfile_graphical {
         max-width: 50%;
         margin-top: 1%;
         margin-left: 25%;
         margin-right: 25%;
     }
     
-    .background {
+    .UserProfile_background {
         height: 240px;
     }
 
-    .middleSection {
+    .UserProfile_middleSection {
         justify-content: space-between;
     }
 
-    .friendCount {
+    .UserProfile_friendCount {
         display: inline-block;
     }
 
-    .defaultFriend {
-        max-width: 160px;
+    .UserProfile_defaultFriend {
+        width: 120px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        line-height: .75rem;
     }
-
-    .defaultFriend span {
+    
+    .UserProfile_defaultFriend img {
+        max-width: 20%;
+        padding: 1.75px;
+        margin-right: .25rem;
+    }
+    
+    .UserProfile_defaultFriend span {
         display: inline-block;
     }
 
-    .profileImg {
+    .UserProfile_sendingFriend img {
+        margin-left: .5rem;
+        margin-right: 0;
+    }
+
+    .UserProfile_isFriend img {
+        margin-left: .5rem;
+        margin-right: 0;
+    }
+
+    .UserProfile_profileImg {
         height: 122.75px;
         margin-top: -11.75%;
     }
 
-    .profileId {
+    .UserProfile_profileId {
         width: 50%;
         max-width: 50%;
         margin-top: 0;
@@ -242,81 +308,101 @@
         margin-right: 25%;
     }
 
-    .userInfoNav {
+    .UserProfile_userInfoNav {
         width: 50%;
         margin-left: 25%;
         margin-right: 25%;
         display: flex;
     }
 
-    .listNav {
+    .UserProfile_listNav {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         width: 30%;
     }
 
-    .content {
+    .UserProfile_content {
         margin-top: 0;
         width: 70%;
     }
 }
 
 @media only screen and (min-width: 1440px) {
-    .background {
+    .UserProfile_background {
         height: 265px;
     }
 
-    .friendCount {
+    .UserProfile_friendCount {
         font-size: 1.5rem;
     }
 
-    .profileImg {
+    .UserProfile_profileImg {
         height: 136.75px;
         margin-top: -10%;
     }
 }
 
 @media only screen and (min-width: 1600px) {
-    .background {
+    .UserProfile_background {
         height: 315px;
     }
 
-    .profileImg {
+    .UserProfile_profileImg {
         height: 148.75px;
         margin-top: -10%;
     }
 }
 
 @media only screen and (min-width: 1920px) {
-    .background {
+    .UserProfile_background {
         height: 345px;
     }
+    
+    .UserProfile_defaultFriend {
+        width: 137.5px;
+        height: 50px;
+        line-height: .875rem;
+    }
+    
+    .UserProfile_defaultFriend img {
+        padding: 1px;
+    }
 
-    .profileImg {
+    .UserProfile_sendingFriend img {
+        margin-left: .75rem;
+        margin-right: -.5rem;
+    }
+
+    .UserProfile_isFriend img {
+        margin-left: .75rem;
+        margin-right: -.5rem;
+    }
+
+    .UserProfile_profileImg {
         margin-top: -8.75%;
     }
 }
 
 @media only screen and (min-width: 2304px) {
-    .graphical {
+    .UserProfile_graphical {
         width: 40%;
         margin-left: 30%;
         margin-right: 30%;
     }
     
-    .profileImg {
+    .UserProfile_profileImg {
         margin-top: -9%;
     }
 
-    .profileId {
+    .UserProfile_profileId {
         width: 40%;
         max-width: 40%;
         margin-left: 30%;
         margin-right: 30%;
     }
 
-    .userInfoNav {
+    .UserProfile_userInfoNav {
         width: 40%;
         margin-left: 30%;
         margin-right: 30%;
@@ -324,20 +410,20 @@
 }
 
 @media only screen and (min-width: 2560px) {
-    .graphical {
+    .UserProfile_graphical {
         width: 35%;
         margin-left: 32.5%;
         margin-right: 32.5%;
     }
 
-    .profileId {
+    .UserProfile_profileId {
         width: 35%;
         max-width: 35%;
         margin-left: 32.5%;
         margin-right: 32.5%;
     }
 
-    .userInfoNav {
+    .UserProfile_userInfoNav {
         width: 35%;
         margin-left: 32.5%;
         margin-right: 32.5%;
