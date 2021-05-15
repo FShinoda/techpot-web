@@ -1,0 +1,34 @@
+/* USER FRIEND TAB */
+.UserFriendTab {
+    background-color: var(--color-primary-hover);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+
+/* [DIV] UserFriendTab_heading */
+.UserFriendTab_heading {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+    padding: 1.75px;
+}
+
+
+/* RESPONSIVENESS */
+@media only screen and (min-width: 1200px) {
+    .UserFriendTab_friendList {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .UserFriendTab_friendListFirst {
+        min-width: 49.5%;
+        max-width: 49.5%;
+    }
+
+    .UserFriendTab_friendListSecond {
+        min-width: 49.5%;
+        max-width: 49.5%;
+    }
+}
