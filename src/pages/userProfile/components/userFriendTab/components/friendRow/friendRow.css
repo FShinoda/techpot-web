@@ -1,0 +1,62 @@
+/* FRIEND ROW */
+.FriendRow {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid #375472;
+    border-radius: 12px;
+    margin-bottom: 1em;
+}
+
+
+/* [DIV] FriendRow_avatar */
+.FriendRow_avatar {
+    margin-top: 1em ;
+}
+
+.FriendRow_avatar figure img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+
+/* [DIV] FriendRow_friend */
+.FriendRow_friend {
+    margin-left: .75rem;
+}
+
+.FriendRow_friend h5 {
+    font-weight: bold;
+}
+
+.FriendRow_friend span {
+    opacity: .7;
+}
+
+
+/* RESPONSIVENESS */
+@media only screen and (min-width: 1200px) {
+    .FriendRow {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    
+    .FriendRow_avatar figure img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .FriendRow {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .FriendRow_avatar figure img {
+        width: 48px;
+        height: 48px;
+    }
+}
