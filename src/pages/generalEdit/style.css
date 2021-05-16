@@ -65,78 +65,80 @@
     }
 }
 
+@media only screen and (min-width: 1024px) {
+    /* desk */
+    .GeneralEdit-desktop{
+        display: flex;
+    }
 
-/* desk */
-.GeneralEdit-desktop{
-    display: flex;
+    .GeneralEdit-sidebar{
+        min-height: 100vh;
+        height: auto;
+        width: 250px;
+        background-color: var(--color-primary-hover);
+
+    }
+
+    .GeneralEdit-sidebar-header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 200px;
+        background-color: var(--color-secundary);
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    /* sidebar fullname */
+    .GeneralEdit-sidebar-header span{
+        font-weight: bolder;
+        font-size: 16px;
+        line-height: 18px;
+        padding: 0 30px;
+        padding-bottom: 5px;
+    }
+
+    /* sidebar username */
+    .GeneralEdit-sidebar-header p{
+        font-weight: bolder;
+        color: #ccc;
+        font-size: 14px;
+    }
+
+
+    /* sidebar profile pic */
+    .GeneralEdit-sidebar-header img{
+        width: 70px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+
+    .GeneralEdit-sidebar-content{
+        width: 100%;
+        padding: 20px 0px;
+    }
+
+    /* card de edição (direita) */
+    .GeneralEdit-card-edit{
+        padding: 30px; /* break */
+        border-radius: 15px;
+        width: calc( 90vw - 250px); /* break */
+        height:fit-content;
+        margin: 0 auto;
+        margin-top:  40px;
+        background-color: var(--color-primary-hover);
+    }
+
+    .GeneralEdit-card-edit-content{
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
 }
 
-.GeneralEdit-sidebar{
-    min-height: 100vh;
-    height: auto;
-    width: 250px;
-    background-color: var(--color-primary-hover);
-
-}
-
-.GeneralEdit-sidebar-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 200px;
-    background-color: var(--color-secundary);
-    padding: 20px 15px;
-    text-align: center;
-}
-
-/* sidebar fullname */
-.GeneralEdit-sidebar-header span{
-    font-weight: bolder;
-    font-size: 16px;
-    line-height: 18px;
-    padding: 0 30px;
-    padding-bottom: 5px;
-}
-
-/* sidebar username */
-.GeneralEdit-sidebar-header p{
-    font-weight: bolder;
-    color: #ccc;
-    font-size: 14px;
-}
-
-
-/* sidebar profile pic */
-.GeneralEdit-sidebar-header img{
-    width: 70px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-}
-
-.GeneralEdit-sidebar-content{
-    width: 100%;
-    padding: 20px 0px;
-}
-
-/* card de edição (direita) */
-.GeneralEdit-card-edit{
-    padding: 30px; /* break */
-    border-radius: 15px;
-    width: calc( 90vw - 250px); /* break */
-    height:fit-content;
-    margin: 0 auto;
-    margin-top:  40px;
-    background-color: var(--color-primary-hover);
-}
-
-.GeneralEdit-card-edit-content{
-    display: flex;
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-}
 
 @media only screen and (min-width: 1200px){
     /* card de edição (direita) */
