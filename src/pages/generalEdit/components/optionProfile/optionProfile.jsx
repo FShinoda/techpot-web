@@ -24,13 +24,17 @@ const OptionProfile = () => {
                     </div>
                     <div className="div-flex-column div-padding-x OptionProfile-card-edit-username">
                         <label className="OptionProfile-label">Usuário</label>
-                        <Input size="large" placeholder="Nome de Usuário" prefix={<SmileOutlined />} className="input-border-radius" />
+                        <Input size="large" placeholder="Nome de Usuário" prefix={<SmileOutlined />} />
                     </div>
                 </div>
                 <div className="div-padding-x">
                     <label className="OptionProfile-label">Bio</label>
-                    <textarea>
+                    <textarea placeholder="Escreva sobre você...">
                     </textarea>
+                </div>
+
+                <div className="div-padding-x">
+                    <button className="OptionProfile-submit">Salvar</button>
                 </div>
 
 
