@@ -43,6 +43,7 @@
     height:fit-content;
     width: 40%; /* break */
     border-radius: 15px;
+    margin: 0 auto;
 }
 
 .OptionProfile-card-preview-main{
@@ -89,5 +90,6 @@
 .OptionProfile-card-preview-content{
     width: 100%;
     text-align: center;
+
 }
 
