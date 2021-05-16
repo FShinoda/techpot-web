@@ -29,11 +29,20 @@ button{
   padding: 5px 0;
   border: none;
   border-radius: 30px;
+  color: #eee;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover{
+  background-color: var(--color-secundary-hover);
+  transition: .3s;
 }
 
 /* Textarea config padrão */
 textarea {
   width: 100%;
+  padding: 10px;
   min-height: 100px;
   resize: none;
   color: #000;
