@@ -1,0 +1,122 @@
+.Event{
+    background-color: var(--color-primary-hover);
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.Event-photo-div{
+    width: 100%;
+}
+.Event-photo-div img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.Event-ticket{
+    background-color: var(--color-primary);
+    width: 90%;
+    margin-top: -50px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+
+}
+
+.Event-ticket-info{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+    padding-bottom: 30px;
+    border: none;
+    border-bottom: solid 2px #2c435c;
+    border-bottom-style:dashed;
+}
+.Event-ticket-info h2{
+    line-height: 26px;
+}
+.Event-ticket-info p{
+    color: #bbb;
+}
+
+.event-ticket-info-line{
+    display: flex;
+    align-items: center;
+    padding-top: 4px;
+}
+
+.event-ticket-info-line img{
+    width: 20px;
+}
+
+.event-ticket-info-icon{
+    color:lightskyblue;
+    padding-right: 5px;
+}
+
+.event-ticket-info-icon-share{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* bolinha no meio do ticket */
+.Event-ticket-info-separator{
+    background-color: var(--color-primary-hover);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    padding: 15px;
+    left: 40%;
+    bottom: -25px;
+    height: 50px;
+    width: 50px;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.15);
+    border: 1px solid #2c435c;
+}
+
+
+/* 2a parte do ticket */
+.Event-ticket-code{
+    background-color: var(--color-primary-hover);
+    border: solid 2px var(--color-primary);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
+.Event-ticket-code-calendar{
+    padding-bottom: 20px; /* entre calendar e qr */
+    padding-top: 10px; /* entre titulo e calendar */
+}
+
+.Event-ticket-code-calendar p{
+    color: #ccc;
+}
+
+.Event-ticket-code-calendar button{
+    margin-top:10px;
+    padding: 8px 15px;
+}
+
+.div-margin-bottom{
+    margin-bottom: 10px;
+}
+
+.Event-ticket-code-qr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Event-ticket-code-qr img{
+    padding-top: 15px;
+    width: 100px;
+
+}

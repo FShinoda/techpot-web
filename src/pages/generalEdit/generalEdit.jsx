@@ -54,34 +54,34 @@ const GeneralEdit = () =>{
                 </div>
                 
             ) : (
-                null
-            )}
-            <div className="GeneralEdit-desktop">
-                <div className="GeneralEdit-sidebar">
-                    <div className="GeneralEdit-sidebar-header">
-                        <img src={profilePlaceholder} />
-                        <span>Fernanda Carreira Martins shinoda</span>
-                        <p>@Fshinoda</p>
+                <div className="GeneralEdit-desktop">
+                    <div className="GeneralEdit-sidebar">
+                        <div className="GeneralEdit-sidebar-header">
+                            <img src={profilePlaceholder} />
+                            <span>Fernanda Carreira Martins shinoda</span>
+                            <p>@Fshinoda</p>
+                        </div>
+                        <div className="GeneralEdit-sidebar-content">
+                            <EditItem key="1" icon={<LockOutlined />} title={"Minha conta"} clickEvent={() => {setCurrentOption("1"); setCurrentTitle("conta");}} isActive={currentOption === "1" ? true : false}/>
+                            <EditItem key="2" icon={<UserOutlined/>} title={"Meu perfil"} clickEvent={() => {setCurrentOption("2"); setCurrentTitle("perfil");}} isActive={currentOption === "2" ? true : false}/>
+                            <EditItem key="3" icon={<AuditOutlined />} title={"Meu Portifólio"} clickEvent={() => {setCurrentOption("3"); setCurrentTitle("portifolio");}} isActive={currentOption === "3" ? true : false}/>
+                            <EditItem key="4" icon={<BellOutlined />} title={"Notificações"} clickEvent={() => {setCurrentOption("4")}} isActive={currentOption === "4" ? true : false}/>
+                        </div>
                     </div>
-                    <div className="GeneralEdit-sidebar-content">
-                        <EditItem key="1" icon={<LockOutlined />} title={"Minha conta"} clickEvent={() => {setCurrentOption("1"); setCurrentTitle("conta");}} isActive={currentOption === "1" ? true : false}/>
-                        <EditItem key="2" icon={<UserOutlined/>} title={"Meu perfil"} clickEvent={() => {setCurrentOption("2"); setCurrentTitle("perfil");}} isActive={currentOption === "2" ? true : false}/>
-                        <EditItem key="3" icon={<AuditOutlined />} title={"Meu Portifólio"} clickEvent={() => {setCurrentOption("3"); setCurrentTitle("portifolio");}} isActive={currentOption === "3" ? true : false}/>
-                        <EditItem key="4" icon={<BellOutlined />} title={"Notificações"} clickEvent={() => {setCurrentOption("4")}} isActive={currentOption === "4" ? true : false}/>
-                    </div>
-                </div>
 
-                <div className="GeneralEdit-card-edit">
-                    <div className="GeneralEdit-card-edit-title">
-                        <h2>Configurações de {currentTitle}</h2>
-                    </div>
-                    <div className="GeneralEdit-card-edit-content">
-                        {getCurrentOption(currentOption)}
+                    <div className="GeneralEdit-card-edit">
+                        <div className="GeneralEdit-card-edit-title">
+                            <h2>Configurações de {currentTitle}</h2>
+                        </div>
+                        <div className="GeneralEdit-card-edit-content">
+                            {getCurrentOption(currentOption)}
+                            
+                        </div>
                         
                     </div>
-                    
                 </div>
-            </div>
+            )}
+            
 
         </div>
     )

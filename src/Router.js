@@ -10,8 +10,10 @@ import { Switch, Route } from 'react-router-dom';
 // Feed
 import MainFeed from './pages/feed/mainFeed.jsx';
 
+
 // Perfil de Usuário
 import UserProfile from './pages/userProfile/userProfile.jsx';
+
 
 /// Edit (pagina de configurações)
 import GeneralEdit from './pages/generalEdit/generalEdit.jsx';
@@ -27,6 +29,9 @@ import NotifEdit from './pages/generalEdit/pages/notifEdit/notifEdit.jsx';
 
 // Group Search 
 import GroupSearch from './pages/groupSearchMob/groupSearch';
+
+// Event
+import Event from './pages/event/event.jsx';
 
 import Navbar from "./components/navbar/navbar.jsx";
 
@@ -45,6 +50,7 @@ const Router = () =>{
             <Route exact path="/editar/portifolio" component={PortfolioEdit} /> {/* Mobile only */}
             <Route exact path="/editar/notificacao" component={NotifEdit} /> {/* Mobile only */}
             <Route exact path="/grupos" component={GroupSearch} />
+            <Route exact path="/evento" component={Event} />
 
             {/* 404  */}
             {/* <Route path="*" component={} /> */}

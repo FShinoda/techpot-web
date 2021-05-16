@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 // Assets - placeholder!
-import groupPlaceholder from '../../assets/groupPlaceholder.jpeg';
+import groupPlaceholder from '../../assets/img/group/groupPlaceholder.jpeg';
 
 // Components
 import GroupItem from './components/groupItem/groupItem';
