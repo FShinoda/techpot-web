@@ -125,6 +125,10 @@
 
 }
 
+.Event-ticket-code-qr{
+    padding-bottom: 15px;
+}
+
 @media only screen and (min-width: 414px){
     /* foto do evento */
     .Event-photo-div img{
@@ -258,6 +262,8 @@
         width: 150px;
     
     }
+
+    
 
     
 }

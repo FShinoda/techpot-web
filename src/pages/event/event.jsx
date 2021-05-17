@@ -79,6 +79,8 @@ const Event = () =>{
                         <p>Escaneie o QR code para se inscrever automaticamente no evento.</p>
                         <img src={qrPlaceholder} alt="QR code"/>
                     </div>
+
+                    <p>Ou se inscreva <a>aqui</a></p>
                     
 
                 </div>
