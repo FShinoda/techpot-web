@@ -102,6 +102,7 @@ code {
     
   --color-primary-hover: #253a4f;
   --color-secundary-hover: #a0063c;
+  --color-secundary-text: #f97da7;
   --color-terciary-hover: #00af4f;
 }
 
@@ -153,6 +154,17 @@ code {
 .grid-center {
   display: grid;
   place-items: center;
+}
+
+/* btn styling outlined */
+.btn-outlined{
+  background-color: var(--color-primary-hover);
+  border: 2px solid var(--color-secundary-hover);
+}
+
+/* btn styling success */
+.btn-success{
+  background-color: #18a860;
 }
 
 /* top-container - serve para mobile onde a navbar ficará fixa,
