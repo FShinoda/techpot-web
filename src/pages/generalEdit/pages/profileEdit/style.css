@@ -28,11 +28,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: var(--color-secundary-hover);
+    color: var(--color-secundary-text);
 }
 
 a:hover {
-    color: var(--color-secundary-hover);
+    color: var(--color-secundary-text);
+    text-decoration:underline
 }
 
 a:active {

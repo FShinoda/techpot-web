@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.css';
 
 // Assets - placeholder
@@ -8,9 +8,23 @@ import qrPlaceholder from '../../assets/img/event/qrPlaceholder.jpeg';
 import logo from '../../assets/logo.png';
 
 // Antd Icons
-import {ClockCircleOutlined, DownOutlined, CalendarOutlined, GlobalOutlined, EnvironmentOutlined, ShareAltOutlined, LinkedinOutlined, TwitterOutlined } from '@ant-design/icons';
+import {
+    ClockCircleOutlined, 
+    DownOutlined, 
+    CalendarOutlined,
+    CarryOutOutlined, 
+    GlobalOutlined, 
+    EnvironmentOutlined, 
+    ShareAltOutlined, 
+    LinkedinOutlined,
+    WhatsAppOutlined, 
+    TwitterOutlined, 
+    LinkOutlined} from '@ant-design/icons';
 
 const Event = () =>{
+
+    const [isInCalendar, setIsInCalendar] = useState(false);
+
     return(
         <div className="Event">
             <div className="Event-photo-div">
@@ -38,7 +52,7 @@ const Event = () =>{
                             
                         </div>
                         {/* conteudo */}
-                        <h6>Webinar</h6>
+                        <h6>Oficina</h6>
                     </div>
 
                     {/* Essa div aqui só renderiza se o evento for presencial */}
@@ -59,7 +73,9 @@ const Event = () =>{
                         </div>
                         <div className="event-ticket-info-line">
                             <TwitterOutlined className="event-ticket-info-icon-share"/>
+                            <WhatsAppOutlined className="event-ticket-info-icon-share"/>
                             <LinkedinOutlined className="event-ticket-info-icon-share"/>
+                            <LinkOutlined className="event-ticket-info-icon-share"/>
                         </div>
                         
                     </div>
@@ -72,15 +88,18 @@ const Event = () =>{
                 <div className="Event-ticket-code">
                     <h2>Inscreva-se</h2>
                     <div className="Event-ticket-code-calendar">
-                        <p>Adicione o evento ao seu calendário</p>
-                        <button><CalendarOutlined /> Adicionar</button>
+                        <p>1. Adicione o evento ao seu calendário</p>
+                        {isInCalendar ? 
+                        (<button onClick={() => setIsInCalendar(false)} className="btn-success"><CarryOutOutlined /> Adicionado</button>): 
+                        (<button onClick={() => setIsInCalendar(true)}><CalendarOutlined /> Adicionar</button>)}
+                        
                     </div>
                     <div className="Event-ticket-code-qr">
-                        <p>Escaneie o QR code para se inscrever automaticamente no evento.</p>
+                        <p>2. Escaneie o QR code para se inscrever automaticamente no evento.</p>
                         <img src={qrPlaceholder} alt="QR code"/>
                     </div>
 
-                    <p>Ou se inscreva <a>aqui</a></p>
+                    <p>Ou se inscreva <a>aqui</a>.</p>
                     
 
                 </div>
