@@ -5,7 +5,7 @@ import './style.css';
 import eventPlaceholder from '../../assets/img/event/eventPlaceholder.jpg';
 import eventPlaceholder2 from '../../assets/img/event/eventPlaceholder2.jpg';
 import qrPlaceholder from '../../assets/img/event/qrPlaceholder.jpeg';
-import logo from '../../assets/logo.png';
+import userPlaceholder from '../../assets/img/userPlaceholder.jpg';
 
 // Antd Icons
 import {
@@ -102,6 +102,22 @@ const Event = () =>{
                     <p>Ou se inscreva <a>aqui</a>.</p>
                     
 
+                </div>
+            </div>
+
+            <div className="Event-info">
+                <div className="Event-info-card">
+                    <div className="Event-info-organizator">
+{/*                         <img src={userPlaceholder} alt="Foto do organizador do evento"/>
+ */}                        <p>Organizado por</p>
+                        <h5>Flavin do pneu</h5>
+                    </div>
+                    
+                </div>
+                <div className="Event-info-card">
+                    <h4>Sobre</h4>
+                    <p>Hackatruck vai oferecer sovete de graça e curso de python (o melhor), switft, cloud e nodeRED por 2 semana consecutiva. Detalhes no site: http://hackatruques.com.br</p>
+                    
                 </div>
             </div>
 

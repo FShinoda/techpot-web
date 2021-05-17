@@ -129,6 +129,16 @@
     padding-bottom: 15px;
 }
 
+.Event-info{
+    width: 90%;
+}
+.Event-info-card{
+    padding: 15px;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    width: 100%;
+}
+
 @media only screen and (min-width: 414px){
     /* foto do evento */
     .Event-photo-div img{
@@ -273,14 +283,14 @@
     
     /* foto do evento */
     .Event-photo-div img{
-        height: 500px;
+        height: 400px;
         border-radius: 0 0 10px 10px;
         border: 3px solid var(--color-primary);
         border-top: none;
     }
     
     .Event-ticket{
-        width: 1000px;
+        width: 900px;
         display: flex;
         margin-top: -100px;
         box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.15);
@@ -294,16 +304,16 @@
         border-right-style:dashed;
     }
     .Event-ticket-info h2{
-        line-height: 28px;
-        font-size: 26px;
+        line-height: 26px;
+        font-size: 22px;
         font-weight: bold;
     }
     .Event-ticket-info-p{
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .Event-ticket-info h6{
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     
     .event-ticket-info-line{
@@ -319,11 +329,11 @@
     .event-ticket-info-icon{
         color: #688fb6;
         padding-right: 5px;
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .event-ticket-info-icon-share{
-        font-size: 32px;
+        font-size: 28px;
         margin-right: 5px;
     }
 
@@ -335,13 +345,8 @@
     /* bolinha no meio do ticket */
     .Event-ticket-info-separator{
         background-color: var(--color-primary-hover);
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 100%;
         padding: 15px;
-        left: 575px;
+        left: 540px;
         top: calc(50% - 30px); 
         /*30px pois é metade do tam da div, logo o elemento é centralizado */
         height: 60px;
@@ -358,23 +363,28 @@
         border-radius: 0 10px 10px 0;
         padding: 40px;
     }
-    .Event-ticket-code h2{
-        font-size: 1.3em;
-        font-size: 26px;
+
+    /* titulo direita */
+    .Event-ticket-code h2{ 
+        font-size: 24px;
         line-height: 26px;
+    }
+    .Event-ticket-code p{
+        font-size: 14px;
     }
     
     .Event-ticket-code-calendar{
-        padding-bottom: 30px; /* entre calendar e qr */
+        padding-bottom: 20px; /* entre calendar e qr */
         padding-top: 20px; /* entre titulo e calendar */
     }
-    
+
     .Event-ticket-code-calendar p{
         color: #ccc; 
     }
     
     .Event-ticket-code-calendar button{
-        width: 150px;
+        font-size: 14px;
+        width: 120px;
         margin-top:10px;
         padding: 8px 15px;
     }
@@ -391,11 +401,11 @@
     
     .Event-ticket-code-qr img{
         padding-top: 15px;
-        width: 150px;
+        width: 100px;
     
     }
     
     .Event-ticket-code-qr{
-        padding-bottom: 30px;
+        padding-bottom: 20px;
     }
 }

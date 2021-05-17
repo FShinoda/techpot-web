@@ -3,7 +3,7 @@ import "antd/dist/antd.css";
 import './style.css';
 
 // Assets
-import userPlaceholder from '../../../../assets/userPlaceholder.jpg';
+import userPlaceholder from '../../../../assets/img/userPlaceholder.jpg';
 import profileBackgroundImage from '../../../../assets/profileBackgroundImage.jpg';
 
 

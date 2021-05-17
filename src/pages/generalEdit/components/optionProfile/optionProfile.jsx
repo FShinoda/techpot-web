@@ -10,7 +10,7 @@ import { UserOutlined, BellOutlined, AuditOutlined, LockOutlined, SmileOutlined 
 
 // Assets
 import bgPlaceholder from '../../../../assets/profileBackgroundImage.jpg'
-import profilePlaceholder from '../../../../assets/userPlaceholder.jpg';
+import profilePlaceholder from '../../../../assets/img/userPlaceholder.jpg';
 
 const OptionProfile = () => {
     return (

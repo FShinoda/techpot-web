@@ -166,6 +166,9 @@ code {
 .btn-success{
   background-color: #44926b;
 }
+.btn-success:hover{
+  background-color: #2d7551;
+}
 
 /* top-container - serve para mobile onde a navbar ficará fixa,
 dando um margin-top para o conteudo ficar visivel */
