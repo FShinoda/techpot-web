@@ -19,13 +19,13 @@ const Event = () =>{
             <div className="Event-ticket">
                 <div className="Event-ticket-info">
                     <h2>Hackatruck PRESENCIAL na frente da temakeria Makis Place</h2>
-                    <p className="div-margin-bottom"><ClockCircleOutlined className="event-ticket-info-icon"/> 19:00 PM - 23:00 PM</p>
+                    <p className="div-margin-bottom Event-ticket-info-p"><ClockCircleOutlined className="event-ticket-info-icon"/> 19:00 PM - 23:00 PM</p>
 
 
                     <div className="event-ticket-info-date div-margin-bottom">
                         <div className="event-ticket-info-line">
                             <CalendarOutlined className="event-ticket-info-icon"/>
-                            <p>Data</p>
+                            <p className="Event-ticket-info-p">Data</p>
                         </div>
                         {/* conteudo */}
                         <h6>Segunda, Maio 16 2021</h6>
@@ -34,7 +34,7 @@ const Event = () =>{
                     <div className="event-ticket-info-category div-margin-bottom">
                         <div className="event-ticket-info-line">
                             <GlobalOutlined className="event-ticket-info-icon"/>
-                            <p>Categoria</p>
+                            <p className="Event-ticket-info-p">Categoria</p>
                             
                         </div>
                         {/* conteudo */}
@@ -45,7 +45,7 @@ const Event = () =>{
                     <div className="event-ticket-info-address div-margin-bottom">
                         <div className="event-ticket-info-line">
                             <EnvironmentOutlined className="event-ticket-info-icon"/>
-                            <p>Local</p>
+                            <p className="Event-ticket-info-p">Local</p>
                             
                         </div>
                         {/* conteudo */}
@@ -55,7 +55,7 @@ const Event = () =>{
                     <div className="event-ticket-info-share div-margin-bottom">
                         <div className="event-ticket-info-line">
                             <ShareAltOutlined className="event-ticket-info-icon"/>
-                            <p>Compartilhar</p>
+                            <p className="Event-ticket-info-p">Compartilhar</p>
                         </div>
                         <div className="event-ticket-info-line">
                             <TwitterOutlined className="event-ticket-info-icon-share"/>
