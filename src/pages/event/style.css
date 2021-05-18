@@ -132,12 +132,63 @@
 .Event-info{
     width: 90%;
 }
+
+/* info below ticket */
+
+.Event-info{
+    margin-top: 15px;
+}
+
 .Event-info-card{
     padding: 15px;
     background-color: var(--color-primary);
     border-radius: 10px;
     width: 100%;
+    margin-top: 15px; /* break */
 }
+
+.Event-info-organizator-img{
+    display: flex;
+    align-items: center;
+}
+
+.Event-info-card p{
+    color: #ccc;
+    font-size: 12px; /* break */
+}
+
+.Event-info-card h5{
+    font-weight: bold;
+    margin-top: 5px;
+    line-height: 16px; /* break */
+}
+
+.Event-info-card h4{
+    font-weight: bold;
+    margin-bottom: 5px; /* break */
+}
+
+
+.Event-info-organizator{
+    display: flex;
+}
+
+.Event-info-organizator img{
+    width: 50px; /* break */
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px; /*break */
+}
+
+.Event-sub-counter{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+.Event-subscription{
+    font-weight: lighter;
+}
+
 
 @media only screen and (min-width: 414px){
     /* foto do evento */
@@ -161,6 +212,24 @@
     
     }
 
+    .Event-info-card p{
+        color: #ccc;
+        font-size: 14px; /* break */
+    }
+
+    .Event-info-card h5{
+        font-weight: bold;
+        margin-top: 5px;
+        font-size: 18px;
+        line-height: 16px; /* break */
+    }
+    
+    .Event-info-card h4{
+        font-weight: bold;
+        margin-bottom: 5px; /* break */
+    }
+
+    
     
 }
 
@@ -201,6 +270,31 @@
         padding-top: 20px;
         width: 125px;
     
+    }
+
+    .Event-info-card p{
+        color: #ccc;
+        font-size: 16px; /* break */
+    }
+
+    .Event-info-card h5{
+        font-weight: bold;
+        margin-top: 5px;
+        font-size: 18px;
+        line-height: 16px; /* break */
+    }
+    
+    .Event-info-card h4{
+        font-weight: bold;
+        margin-bottom: 5px; /* break */
+        font-size: 20px;
+    }
+
+    .Event-info-organizator img{
+        width: 55px; /* break */
+        height: 55px;
+        border-radius: 100%;
+        margin-right: 10px; /*break */
     }
 
     
@@ -407,5 +501,72 @@
     
     .Event-ticket-code-qr{
         padding-bottom: 20px;
+    }
+
+
+
+    /* info below ticket */
+    .Event-info{
+        width: 900px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .Event-info-card{
+        height: fit-content;
+        padding: 15px;
+        background-color: var(--color-primary);
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 15px; /* break */
+    }
+
+    .Event-info-left{
+        width: 120%;
+        margin-right: 20px;
+    }
+    
+    .Event-info-organizator-img{
+        display: flex;
+        align-items: center;
+    }
+    
+    .Event-info-card p{
+        color: #ccc;
+        font-size: 15px; /* break */
+    }
+    
+    .Event-info-card h5{
+        font-weight: bold;
+        margin-top: 5px;
+        font-size: 18px;
+        line-height: 16px; /* break */
+    }
+    
+    .Event-info-card h4{
+        font-weight: bold;
+        margin-bottom: 5px; /* break */
+        font-size: 20px;
+    }
+    
+    
+    .Event-info-organizator{
+        display: flex;
+    }
+    
+    .Event-info-organizator img{
+        width: 50px; /* break */
+        height: 50px;
+        border-radius: 100%;
+        margin-right: 10px; /*break */
+    }
+    
+    .Event-sub-counter{
+        padding-bottom: 5px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 15px;
+    }
+    .Event-subscription{
+        font-weight: lighter;
     }
 }

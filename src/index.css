@@ -133,6 +133,12 @@ code {
 
 
 /* Estilos personalizados */
+
+.flex-align{
+  display: flex;
+  align-items: center;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;

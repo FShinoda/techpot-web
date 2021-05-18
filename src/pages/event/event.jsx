@@ -7,6 +7,9 @@ import eventPlaceholder2 from '../../assets/img/event/eventPlaceholder2.jpg';
 import qrPlaceholder from '../../assets/img/event/qrPlaceholder.jpeg';
 import userPlaceholder from '../../assets/img/userPlaceholder.jpg';
 
+// Antd
+import { Avatar} from 'antd';
+
 // Antd Icons
 import {
     ClockCircleOutlined, 
@@ -108,17 +111,45 @@ const Event = () =>{
             <div className="Event-info">
                 <div className="Event-info-card">
                     <div className="Event-info-organizator">
-{/*                         <img src={userPlaceholder} alt="Foto do organizador do evento"/>
- */}                        <p>Organizado por</p>
-                        <h5>Flavin do pneu</h5>
+                        <div className="Event-info-organizator-img">
+                            <img src={userPlaceholder} alt="Foto do organizador do evento"/>
+                        </div>
+                        <div>
+                            <p>Organizado por</p>
+                            <h5>Flavio Marques</h5>
+                            <p>@flavinn_do_pneu</p>
+                        </div>
+                         
                     </div>
                     
                 </div>
-                <div className="Event-info-card">
-                    <h4>Sobre</h4>
-                    <p>Hackatruck vai oferecer sovete de graça e curso de python (o melhor), switft, cloud e nodeRED por 2 semana consecutiva. Detalhes no site: http://hackatruques.com.br</p>
-                    
+
+                <div className="Event-info-left">
+                    <div className="Event-info-card">
+                        <h4>Sobre</h4>
+                        <p>Hackatruck vai oferecer sovete de graça e curso de python (o melhor), switft, cloud e nodeRED por 2 semana consecutiva. 
+                            <br/>Detalhes no site: http://hackatruques.com.br. Acesse já e ganhe uma camiseta azul do hackatruques e sorvete especial
+                            sabor burguês, ou melhor - pistache... uma delicia.
+                        </p>
+                        
+                    </div>
+
+                    <div className="Event-info-card">
+                        <div className="Event-sub-counter flex-center">
+                            <h4 className="Event-subscription">Inscritos: <b>180</b></h4>
+                        </div>
+                        <div className="flex-center">
+                            <Avatar.Group maxCount={2}>
+                                <Avatar src={userPlaceholder} />
+                                <Avatar src={userPlaceholder} />
+                                <Avatar src={userPlaceholder} />
+                                <Avatar src={userPlaceholder} />
+                            </Avatar.Group>
+                        </div>
+                        
+                    </div>
                 </div>
+                
             </div>
 
         </div>
