@@ -1,16 +1,17 @@
 .Navbar {
+    width: 100vw;
+    height: auto;
+    display: flex;
     position: fixed;
     background-color: #d0094d;
     color: white;
-    border-radius: 0px 0px 0px 25px;
-    width: 100vw;
-    display: flex;
+    border-radius: 0px 0px 25px 25px;
     align-items: center;
     justify-content: space-between;
 }
 
 .header-caixa {
-    padding: 0 20px;
+    padding: 0 30px;
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -18,30 +19,56 @@
     width: 100%;
 }
 
+.header-user{
+    display: flex;
+    width: 15vw;
+}
+
+.header-user p{
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.header-lefticons img{
+    width: 32px;
+ }
+ .header-user img{
+    width: 48px;
+}
+
+.header-lefticons{
+    display: flex;
+    width: 30vw;
+    justify-content: space-between;
+    padding: 10px;
+}
 
 .header-logo{
     position: absolute;
-    left: 50%;
+    left: 46%;
+    top: 0px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+}
+
+#logo{
+    width: 100px;
 }
 
 .header-righticons{
     display: flex;
+    width: 35vw;
+    justify-content: space-between;
+    padding: 10px;
 }
 
-.Navbar img{
-    width: 24px;
-}
-
-#logo{
-    width: 80px;
+.header-righticons img{
+   width: 32px;
 }
 
 .Navbar input{
     border: 5px solid #fff;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 25vw;
     padding-left: 20px;
 
