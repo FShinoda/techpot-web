@@ -1,45 +1,79 @@
 .Navbar {
-    position: relative;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    position: fixed;
     background-color: #d0094d;
     color: white;
-    border-radius: 0px 0px 0px 25px;
+    border-radius: 0px 0px 25px 25px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header-caixa {
+    padding: 0 30px;
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
-    align-items: center;
+    width: 100%;
+}
+
+.header-user{
+    display: flex;
+    width: 15vw;
+}
+
+.header-user p{
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.header-lefticons img{
+    width: 32px;
+ }
+ .header-user img{
+    width: 48px;
+}
+
+.header-lefticons{
+    display: flex;
+    width: 30vw;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .header-logo{
-    padding: 0.5rem 0rem 0rem 5rem;
+    position: absolute;
+    left: 46%;
+    top: 0px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
 
-
-.header-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding: 0px;
+#logo{
+    width: 100px;
 }
 
-.header-search{
-    padding-left: 15vw;
+.header-righticons{
+    display: flex;
+    width: 35vw;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header-righticons img{
+   width: 32px;
 }
 
 .Navbar input{
     border: 5px solid #fff;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 25vw;
     padding-left: 20px;
 
-    /* background-image:url("../src/assets/icone_lupa.png");
+    
+    /* background-image:url({search});
     background-size: 25px;
     background-color: white;
     background-position: 97%;
