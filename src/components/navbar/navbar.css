@@ -19,31 +19,32 @@
     width: 100%;
 }
 
-.header-user{
+.header-user {
     display: flex;
     width: 15vw;
 }
 
-.header-user p{
+.header-user p {
     padding: 0 10px;
     font-weight: bold;
 }
 
-.header-lefticons img{
+.header-lefticons img {
     width: 32px;
- }
- .header-user img{
+}
+
+.header-user img {
     width: 48px;
 }
 
-.header-lefticons{
+.header-lefticons {
     display: flex;
     width: 30vw;
     justify-content: space-between;
     padding: 10px;
 }
 
-.header-logo{
+.header-logo {
     position: absolute;
     left: 46%;
     top: 0px;
@@ -51,31 +52,149 @@
     align-items: baseline;
 }
 
-#logo{
+#logo {
     width: 100px;
 }
 
-.header-righticons{
+.header-righticons {
     display: flex;
     width: 35vw;
     justify-content: space-between;
     padding: 10px;
 }
 
-.header-righticons img{
-   width: 32px;
+.header-righticons img {
+    width: 32px;
 }
 
-.Navbar input{
+.Navbar input {
     border: 5px solid #fff;
     border-radius: 10px;
     width: 25vw;
     padding-left: 20px;
-
-    
     /* background-image:url({search});
     background-size: 25px;
     background-color: white;
     background-position: 97%;
     background-repeat: no-repeat; */
+}
+
+/*responsiveness*/
+
+@media only screen and (max-width: 940px) {
+    .header-caixa {
+        padding: 0 15px;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .header-user {
+        display: flex;
+        width: 20vw;
+    }
+    .header-user p {
+        padding: 0 10px;
+        font-weight: bold;
+    }
+    .header-lefticons img {
+        width: 18px;
+    }
+    .header-user img {
+        width: 24px;
+    }
+    .header-lefticons {
+        display: flex;
+        width: 40vw;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .header-logo {
+        position: absolute;
+        left: 46%;
+        top: 0px;
+        display: flex;
+        align-items: baseline;
+    }
+    #logo {
+        width: 60px;
+    }
+    .header-righticons {
+        display: flex;
+        width: 35vw;
+        justify-content: space-between;
+        padding: 5px;
+    }
+    .header-righticons img {
+        width: 18px;
+    }
+
+    .Navbar input {
+        border: 5px solid #fff;
+        border-radius: 10px;
+        max-width: 20vw;
+        padding-left: 5px;
+        /* background-image:url({search});
+        background-size: 25px;
+        background-color: white;
+        background-position: 97%;
+        background-repeat: no-repeat; */
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .header-caixa {
+        padding: 0 10px;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .header-user {
+    }
+    .header-user p {
+       display: none;
+       visibility: hidden;
+       width: 0vw;
+    }
+    .header-lefticons img {
+        width: 18px;
+    }
+    .header-user img {
+        width: 18px;
+    }
+    .header-lefticons {
+        display: flex;
+        width: 40vw;
+        justify-content: space-between;
+        padding: 5px;
+    }
+    .header-logo {
+        position: absolute;
+        left: 46%;
+        top: 0px;
+        display: flex;
+        align-items: baseline;
+    }
+    #logo {
+        width: 40px;
+    }
+    .header-righticons {
+        display: flex;
+        width: 40vw;
+        justify-content: space-between;
+        padding: 5px;
+    }
+    .header-righticons img {
+        width: 18px;
+    }
+    .Navbar input {
+        border: 5px solid #fff;
+        border-radius: 10px;
+        max-width: 10vw;
+        padding-left: 5px;
+        font-size: 0px;
+    }
 }
