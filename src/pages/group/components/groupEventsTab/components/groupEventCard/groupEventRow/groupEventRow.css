@@ -1,0 +1,44 @@
+/* GROUP EVENT ROW */
+.GroupEventRow {
+    margin-bottom: 1em;
+    border-bottom: 1.5px solid var(--color-primary);
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+
+/* [DIV] GroupEventRow-img */
+.GroupEventRow-img {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.GroupEventRow-img img {
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+}
+
+
+/* [DIV] GroupEventRow-desc */
+.GroupEventRow-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.GroupEventRow-desc h2 {
+    color: var(--color-secundary);
+    line-height: .5rem;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.GroupEventRow-desc h1 {
+    color: var(--color-primary);
+    line-height: 1.25rem;
+    font-size: 1.331rem;
+    padding-top: .25em;
+    padding-bottom: .5em;
+}
