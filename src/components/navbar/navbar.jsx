@@ -32,7 +32,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <img src={Notification} alt="Icon-Notification" />
-                    <img src={Message} alt="Icon-Message" />
+                    <img id="icon-mensagem" src={Message} alt="Icon-Message" />
                 </div>
             </div>
             <div className="header-logo">

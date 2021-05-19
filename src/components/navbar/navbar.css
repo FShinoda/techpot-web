@@ -30,7 +30,7 @@
 }
 
 .header-lefticons img {
-    
+    height: 32px;
     width: 32px;
 }
 
@@ -68,6 +68,10 @@
     width: 32px;
 }
 
+#icon-mensagem{
+    width: 41px;
+    height: 32px;
+}
 
 .barra{
    display: flex;
@@ -79,6 +83,7 @@
 }
 
 .Navbar input {
+    color: black;
     WIDTH: 90%;
     border: none;
 }
@@ -113,9 +118,10 @@
     }
     .header-lefticons img {
         width: 18px;
+        height: 18px;
     }
     .header-user img {
-        width: 24px;
+        width: 28px;
     }
     .header-lefticons {
         display: flex;
@@ -135,7 +141,7 @@
     }
     .header-righticons {
         display: flex;
-        width: 35vw;
+        width: 40vw;
         justify-content: space-between;
         padding: 5px;
     }
@@ -156,7 +162,7 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 440px) {
     .header-caixa {
         padding: 0 10px;
         display: flex;
@@ -177,6 +183,7 @@
     }
     .header-user img {
         width: 18px;
+        height: 18px;
     }
     .header-lefticons {
         display: flex;
@@ -210,4 +217,5 @@
         padding-left: 5px;
         font-size: 0px;
     }
+
 }
