@@ -1,0 +1,79 @@
+.CriarPost{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+    padding: 0 15px; /* break */
+}
+.Functions{
+    color: #666;
+
+}
+.Post{
+    background-color: #eee;    
+    width: 100%;
+   
+    margin: 15px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.Post-header{
+   /*  background-color: brown; */
+    display: flex;
+}
+
+/* imagem de perfil */
+.Post-header img{
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    border: 2px solid var(--color-primary);
+    margin-right: 10px;
+}
+
+.Post-header-text h6{
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 8px;
+}
+
+.Post-header-text p{
+    color: #888;
+    font-size: 12px;
+}
+
+
+.Post-content{
+    padding: 10px 0;
+}
+
+.Post-content p{
+    color: #666;
+    font-size: 12px;
+}
+
+
+.Post-footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #888;
+    font-size: 20px;
+}
+.Post-footer p{
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.Post-icon{
+    margin-left: 5px;
+}
+
+.Post-heart{
+    margin-right: 10px;
+}
