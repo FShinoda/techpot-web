@@ -30,6 +30,7 @@
 }
 
 .header-lefticons img {
+    
     width: 32px;
 }
 
@@ -67,16 +68,28 @@
     width: 32px;
 }
 
-.Navbar input {
-    border: 5px solid #fff;
-    border-radius: 10px;
-    width: 25vw;
+
+.barra{
+   display: flex;
+   background-color: #fff;
+   border: 5px solid #fff;
+   border-radius: 10px;
     padding-left: 20px;
-    /* background-image:url({search});
-    background-size: 25px;
-    background-color: white;
-    background-position: 97%;
-    background-repeat: no-repeat; */
+   width: 25vw;
+}
+
+.Navbar input {
+    WIDTH: 90%;
+    border: none;
+}
+
+.lupa{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+.barra img{
+    width: 25px;
 }
 
 /*responsiveness*/

@@ -23,16 +23,20 @@ const Navbar = () => {
                     <img src={Calendar} alt="Icon-Calendar" />
                 </div>
 
-                <div className="header-logo">
-                    <img id="logo" src={Logo} alt="Logo Techpot" />
-                </div>
 
                 <div className="header-righticons">
-                    <input placeholder="Pesquisar..."></input>
-
-                    <img src={Notification} alt="Icon-Notification"/>
+                    <div className='barra'>
+                        <input placeholder="Pesquisar..."></input>
+                        <div className="Lupa">
+                            <img src={Search} alt="Icon-Lupa" />
+                        </div>
+                    </div>
+                    <img src={Notification} alt="Icon-Notification" />
                     <img src={Message} alt="Icon-Message" />
                 </div>
+            </div>
+            <div className="header-logo">
+                <img id="logo" src={Logo} alt="Logo Techpot" />
             </div>
         </div>
     )
