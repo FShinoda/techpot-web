@@ -13,12 +13,14 @@ import Calendar from 'react-calendar';
 // Componentes
 import ContainerInfo from './components/containerInfo/containerInfo';
 import ContainerItem from './components/containerItem/containerItem';
+import Post from '../../components/post/post.jsx';
 
 const MainFeed = () =>{
 
     const [value, onChange] = useState(new Date());
     return(
         <div className="MainFeed">
+            
             <div className="container-left">
                 <ContainerInfo titulo="Recommended Pages">
                     <ContainerItem titulo="Fast Pizza" descricao="Pizza e Fast Food" icone={<PlusOutlined/>}/>
@@ -35,11 +37,15 @@ const MainFeed = () =>{
             </div>
 
             <div className="container-center">
+                <div className="MainFeed-create-div">
+                    <PlusOutlined />
+                </div>
                 {/* Para testar o component post e createPost coloque aqui */}
-                <div className="componente-a"></div>
-                <div className="componente-a"></div>
-                <div className="componente-a"></div>
-                <div className="componente-a"></div>
+                <Post />
+                <Post />
+                <Post />
+                <Post />
+                <Post />
             </div>
 
             <div className="container-right">

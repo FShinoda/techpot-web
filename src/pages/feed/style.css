@@ -7,105 +7,151 @@
     justify-content: center;
 }
 
-/* div mãe da etc da esquerda */
-.container-left{
-    background-color: var(--color-primary);
-    width: 25vw;
-    height: auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    
-
+.container-left,
+.container-right{
+    display: none;
 }
 
 /* div mãe do FEED (centro) - posts && create-post*/
 .container-center{
     background-color: var(--color-primary);
-    width: 50vw;
+    width: 100vw;
     height: auto;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center; 
-
+    padding: 0 15px; /* break */
 }
 
-/* div mãe da etc da direita */
-.container-right{
-    background-color: var(--color-primary);
-    width: 25vw;
-    height: auto;
-    
-    display: flex;
-    flex-direction: column;
+/* floating button to create post */
+.MainFeed-create-div{
+    position: fixed;
+    right: 15px; /* break */
+    bottom: 15px; /* break */
+    display: flex; 
+    justify-content: center;
     align-items: center;
-
+    width: 50px; /* break */
+    height: 50px; /* break */
+    background-color: var(--color-secundary);
+    font-size: 16px; /* break */
+    border-radius: 100%;
+    box-shadow: 2px 3px rgba(27, 27, 27, 0.2);
 }
 
 
-/* placeholders */
-.componente-a{
-    background-color:rgb(220, 233, 233); 
-    width: 70%;
-    height: 500px;
-    margin: 15px;
+@media screen and (min-width: 414px){
+    .container-center{
+        padding: 0 20px; /* break */
+    }
+}
+
+@media screen and (min-width: 480px){
+    .container-center{
+        padding: 0 25px; /* break */
+    }
+
+    /* floating button to create post */
+    .MainFeed-create-div{
+        right: 20px; /* break */
+        bottom: 20px; /* break */
+        width: 60px; /* break */
+        height: 60px; /* break */
+        font-size: 18px; /* break */
+    }
+}
+
+@media screen and (min-width: 576px){
+    .container-center{
+        padding: 0 35px; /* break */
+    }
+}
+
+@media screen and (min-width: 768px){
+    .container-center{
+        padding: 0 50px; /* break */
+    }
+
+    /* floating button to create post */
+    .MainFeed-create-div{
+        right: 30px; /* break */
+        bottom: 30px; /* break */
+    }
 }
 
 
-/* react Calendar */
-
-.react-calendar {
-    max-width: 90%;
-}
-.react-calendar__navigation{
-    background-color: crimson;
-    
-}
-.react-calendar__navigation button:enabled:hover,
-.react-calendar__navigation button:enabled:focus {
-  background-color: rgb(223, 66, 97);
-}
-
-.react-calendar__navigation__arrow,
-.react-calendar__navigation__label
-{
-    color: #eee;
-    font-weight: bold;
-}
-
-.react-calendar__tile--now {
-    background: rgb(255, 155, 173);
-    
-}
-.react-calendar__tile--now:enabled:hover,
-.react-calendar__tile--now:enabled:focus {
-    background: rgb(255, 182, 195);
-}
-.react-calendar__tile--active {
-    background: crimson;
-    color: white;
-}
-.react-calendar__tile--active:enabled:hover,
-.react-calendar__tile--active:enabled:focus {
-    background: rgb(248, 30, 73);
-}
-
-
-
-/* deixei 1024px por causa do ipad pro*/
-@media screen and (max-width: 1024px){
-    .container-left,
-    .container-right{
+@media screen and (min-width: 1024px){
+    .MainFeed-create-div{
         display: none;
     }
 
-    .container-center{
-        width: 100vw;
+    /* div mãe da etc da esquerda */
+    .container-left{
+        background-color: var(--color-primary);
+        width: 25vw;
         height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .container-center{
+        width: 50vw;
+        justify-content: flex-start;
     
+    }
+
+    /* div mãe da etc da direita */
+    .container-right{
+        background-color: var(--color-primary);
+        width: 25vw;
+        height: auto;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+    /* react Calendar */
+
+    .react-calendar {
+        max-width: 90%;
+    }
+    .react-calendar__navigation{
+        background-color: crimson;
+        
+    }
+    .react-calendar__navigation button:enabled:hover,
+    .react-calendar__navigation button:enabled:focus {
+    background-color: rgb(223, 66, 97);
+    }
+
+    .react-calendar__navigation__arrow,
+    .react-calendar__navigation__label
+    {
+        color: #eee;
+        font-weight: bold;
+    }
+
+    .react-calendar__tile--now {
+        background: rgb(255, 155, 173);
+        
+    }
+    .react-calendar__tile--now:enabled:hover,
+    .react-calendar__tile--now:enabled:focus {
+        background: rgb(255, 182, 195);
+    }
+    .react-calendar__tile--active {
+        background: crimson;
+        color: white;
+    }
+    .react-calendar__tile--active:enabled:hover,
+    .react-calendar__tile--active:enabled:focus {
+        background: rgb(248, 30, 73);
     }
 }

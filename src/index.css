@@ -98,12 +98,14 @@ code {
   /* Cores */
   --color-primary: #1e2e3e;
   --color-secundary: #d0094d;
-  --color-terciary: #04d361;
+  --color-terciary: #44926b;
     
   --color-primary-hover: #253a4f;
   --color-secundary-hover: #a0063c;
+  --color-terciary-hover: #2d7551;
+
+  --color-primary-text: #688fb6;
   --color-secundary-text: #f97da7;
-  --color-terciary-hover: #00af4f;
 }
 
 
@@ -170,10 +172,10 @@ code {
 
 /* btn styling success */
 .btn-success{
-  background-color: #44926b;
+  background-color: var(--color-terciary);
 }
 .btn-success:hover{
-  background-color: #2d7551;
+  background-color: var(--color-terciary-hover);
 }
 
 /* top-container - serve para mobile onde a navbar ficará fixa,

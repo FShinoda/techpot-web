@@ -432,7 +432,7 @@
     }
 
     .event-ticket-info-icon-share:hover{
-        color: #688fb6;
+        color: var(--color-primary-text);
         cursor: pointer;
     }
     
