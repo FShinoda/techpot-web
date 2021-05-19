@@ -1,0 +1,81 @@
+/* GROUP EVENT CARD */
+.GroupEventCard {
+    background-color: #eee;
+    border-radius: 12px;
+    margin-bottom: 1em;
+}
+
+
+/* [DIV] GroupEventCard-heading */
+.GroupEventCard-heading {
+    background-color: var(--color-secundary);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border: 1px solid var(--color-secundary);
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.GroupEventCard-heading h1 {
+    font-size: 1.25rem;
+    font-weight: bolder;
+}
+
+.GroupEventCard-heading button {
+    font-size: 1rem;
+    border-radius: 12px;
+    padding-left: .25em;
+    padding-right: .25em;
+}
+
+
+/* [DIV] GroupEventCard-body */
+.GroupEventCard-body {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.GroupEventCard-body-null {
+    display: flex;
+    flex-direction: column;
+}
+
+.GroupEventCard-body-null img {
+    max-width: 25%;
+}
+
+.GroupEventCard-body-null span {
+    color: var(--color-primary);
+    font-size: 1.25em;
+}
+
+
+/* [DIV] GroupEventCard-footer */
+.GroupEventCard-footer {
+    margin-top: -1em;
+}
+
+.GroupEventCard-footer button {
+    background-color: transparent;
+    color: var(--color-secundary);
+    font-weight: bolder;
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+.GroupEventCard-footer button:hover {
+    background-color: var(--color-secundary);
+    color: #eee;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+
+/* RESPONSIVENESS */
+@media only screen and (min-width: 1200px) {
+    .GroupEventCard-heading button {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
