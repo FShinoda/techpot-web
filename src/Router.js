@@ -35,6 +35,10 @@ import Event from './pages/event/event.jsx';
 
 import Navbar from "./components/navbar/navbar.jsx";
 
+// Group
+import Group from "./pages/group/group.jsx";
+
+
 const Router = () =>{
     return(
         <Switch>
@@ -49,6 +53,7 @@ const Router = () =>{
             <Route exact path="/editar/perfil" component={ProfileEdit} /> {/* Mobile only */}
             <Route exact path="/editar/portifolio" component={PortfolioEdit} /> {/* Mobile only */}
             <Route exact path="/editar/notificacao" component={NotifEdit} /> {/* Mobile only */}
+            <Route exact path="/grupo" component={Group} />
             <Route exact path="/grupos" component={GroupSearch} />
             <Route exact path="/evento" component={Event} />
 
