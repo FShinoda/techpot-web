@@ -7,6 +7,9 @@ import "./group.css";
 import GroupNavItemList from "./components/groupNavItemList/groupNavItemList.jsx";
 import GroupMembersTab from "./components/groupMembersTab/groupMembersTab.jsx";
 import GroupEventsTab from "./components/groupEventsTab/groupEventsTab.jsx";
+import GroupAboutTab from "./components/groupAboutTab/groupAboutTab.jsx";
+import Criarpost from "../../components/criarpost/criarpost.jsx";
+import Post from "../../components/post/post.jsx";
 
 
 /* IMAGES */
@@ -31,9 +34,14 @@ const Group = () => {
     const getNavContent = (current) => {
         switch(current) {
             case "feed":
-                return <div style={{height: "100px", backgroundColor: "#d0094d"}}></div>;
+                return(
+                    <div className="groupFeed">
+                        <Criarpost />
+                        <Post />
+                    </div>
+                );
             case "about":
-                return <div style={{height: "10000px", backgroundColor: "#041361"}}></div>;
+                return <GroupAboutTab groupCreationDate={"20/03/2021"} creatorName={"Antonio Kzeriar"} adminName={"Antonio Kzeriar"} membersCount={"206"} postCount={"13"} newMembersCount={"4"} />;
             case "events":
                 return <GroupEventsTab />;
             case "members":
