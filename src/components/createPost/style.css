@@ -67,10 +67,23 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    margin-top: 10px;
 }
 
 .CreatePost-modal-submit button{
     padding: 5px 20px;
+}
+
+@media only screen and (min-width: 414px){
+    .CreatePost-modal-header img{
+        width: 45px;
+        height: 45px;
+    }
+    
+    .CreatePost-modal-submit button{
+        padding: 5px 20px;
+        font-size: 15px;
+    }
 }
 
 @media screen and (min-width: 480px){
@@ -82,6 +95,33 @@
         height: 60px; /* break */
         font-size: 18px; /* break */
     }
+
+    .CreatePost-modal-header img{
+        width: 45px;
+        height: 45px;
+    }
+    
+    .CreatePost-modal-header h6{
+        color: var(--color-primary);
+        font-weight: 600;
+        font-size: 16px;
+    }
+    
+    .CreatePost-modal-content textarea{
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        resize: none;
+        height: 120px;
+        margin-top: 15px;
+    }
+    
+    .CreatePost-modal-submit button{
+        padding: 5px 20px;
+        font-size: 15px;
+    }
+
+    
+    
 }
 
 @media screen and (min-width: 768px){
@@ -89,6 +129,26 @@
     .CreatePost{
         right: 30px; /* break */
         bottom: 30px; /* break */
+    }
+
+    .CreatePost-modal-header img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .CreatePost-modal-header h6{
+        color: var(--color-primary);
+        font-weight: 600;
+        font-size: 17px;
+    }
+    
+    .CreatePost-modal-content textarea{
+        height: 150px;
+    }
+    
+    .CreatePost-modal-submit button{
+        padding: 5px 20px;
+        font-size: 16px;
     }
 }
 
@@ -136,6 +196,29 @@
 
     .CreatePost-btn p{
         margin-left: 5px;
+        font-size: 17px;
+    }
+
+
+    /* modal */
+    .CreatePost-modal-header img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .CreatePost-modal-header h6{
+        color: var(--color-primary);
+        font-weight: 600;
+        font-size: 20px;
+    }
+    
+    .CreatePost-modal-content textarea{
+        height: 150px;
+        font-size: 18px;
+    }
+    
+    .CreatePost-modal-submit button{
+        padding: 5px 25px;
         font-size: 17px;
     }
 }

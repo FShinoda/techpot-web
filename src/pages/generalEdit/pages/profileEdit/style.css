@@ -47,6 +47,17 @@ p{
     padding-top: 15px;
 }
 
+.ant-modal-header{
+    border-radius: 10px 10px 0 0;
+}
+
+.ant-modal-title{
+    font-size: 19px;
+}
+.ant-modal-content{
+    border-radius: 10px;
+}
+
 .ant-cascader-menu-item {
     color: #222;
 }
