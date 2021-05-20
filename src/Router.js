@@ -35,7 +35,6 @@ import Event from './pages/event/event.jsx';
 
 import Navbar from "./components/navbar/navbar.jsx";
 
-import Criarpost from "./components/criarpost/criarpost.jsx";
 
 // Group
 import Group from "./pages/group/group.jsx";
@@ -46,7 +45,6 @@ const Router = () =>{
         <Switch>
             {/* Páginas-exemplo a serem deletadas futuramente */}
             <Route exact path="/testnav" component={Navbar} />
-            <Route exact path="/criarpost" component={Criarpost} />
             {/* Páginas que usaremos de fato */}
             <Route exact path="/feed" component={MainFeed} />
             <Route exact path="/perfil" component={UserProfile} />

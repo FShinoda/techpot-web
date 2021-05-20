@@ -18,6 +18,7 @@ const Post = () =>{
             <div className="Post-header">
                 <img src={userPlaceholder} alt="Foto de perfil do usuário que postou"/>
                 <div className="Post-header-text">
+                    {/* talvez colocar um link aqui para ir ao perfil de quem postou? */}
                     <h6>Flávio Marques</h6>
                     <p>Oferta de Estágios 2021.1 - 30 min</p>
                 </div>    

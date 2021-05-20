@@ -14,7 +14,8 @@ import Calendar from 'react-calendar';
 import ContainerInfo from './components/containerInfo/containerInfo';
 import ContainerItem from './components/containerItem/containerItem';
 import Post from '../../components/post/post.jsx';
-
+import CreatePost from '../../components/createPost/createPost.jsx';
+ 
 const MainFeed = () =>{
 
     const [value, onChange] = useState(new Date());
@@ -37,9 +38,7 @@ const MainFeed = () =>{
             </div>
 
             <div className="container-center">
-                <div className="MainFeed-create-div">
-                    <PlusOutlined />
-                </div>
+                <CreatePost/>
                 {/* Para testar o component post e createPost coloque aqui */}
                 <Post />
                 <Post />
@@ -54,8 +53,8 @@ const MainFeed = () =>{
                     <ContainerItem titulo="Lucas" descricao="3h" />
                     <ContainerItem titulo="Joana" descricao="1d" />
                 </ContainerInfo>
-                <Calendar onChange={onChange} value={value} maxDetail="month" />
-            </div>
+{/*                 <Calendar onChange={onChange} value={value} maxDetail="month" />
+ */}            </div>
         </div>
     )
 }

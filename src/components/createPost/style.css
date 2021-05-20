@@ -1,0 +1,141 @@
+.CreatePost{
+    position: fixed;
+    right: 15px; /* break */
+    bottom: 15px; /* break */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* break */
+    height: 50px; /* break */
+    background-color: var(--color-secundary);
+    font-size: 16px; /* break */
+    border-radius: 100%;
+    box-shadow: 2px 3px rgba(27, 27, 27, 0.2);
+    z-index: 2;
+}
+
+.CreatePost-mobile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CreatePost-info{
+    display: none;
+
+}
+
+.CreatePost-info img{
+    display: none;
+}
+
+.CreatePost-btn{
+    display: none;
+}
+
+.CreatePost-modal-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.CreatePost-modal-header img{
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--color-primary);
+    margin-right: 6px;
+    margin-top: 5px;
+}
+
+.CreatePost-modal-header h6{
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.CreatePost-modal-content textarea{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    resize: none;
+    height: 120px;
+    margin-top: 15px;
+}
+
+.CreatePost-modal-submit{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.CreatePost-modal-submit button{
+    padding: 5px 20px;
+}
+
+@media screen and (min-width: 480px){
+    /* floating button to create post */
+    .CreatePost{
+        right: 20px; /* break */
+        bottom: 20px; /* break */
+        width: 60px; /* break */
+        height: 60px; /* break */
+        font-size: 18px; /* break */
+    }
+}
+
+@media screen and (min-width: 768px){
+    /* floating button to create post */
+    .CreatePost{
+        right: 30px; /* break */
+        bottom: 30px; /* break */
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .CreatePost{
+        position: static;
+        background-color: #eee;    
+        width: 100%;
+        height: auto;
+        margin: 15px; /* break */
+        padding: 15px; /* break */
+        border-radius: 15px;
+        max-width: 720px;
+    }
+    .CreatePost-mobile{
+        display: none;
+    }
+    
+    .CreatePost-info{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+    
+    }
+    
+    .CreatePost-info img{
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 15px;
+        border: 2px solid var(--color-primary);
+    }
+    
+    .CreatePost-btn{
+        display: flex;
+        align-items: center;
+        padding: 5px 15px;
+        width: 100%;
+        margin-left: 10px;
+        border: 2px solid #ccc;
+        border-radius: 30px;
+        color: #bbb;
+        cursor: pointer;
+    }
+
+    .CreatePost-btn p{
+        margin-left: 5px;
+        font-size: 17px;
+    }
+}

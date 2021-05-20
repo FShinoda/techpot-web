@@ -52,15 +52,6 @@
     .container-center{
         padding: 0 25px; /* break */
     }
-
-    /* floating button to create post */
-    .MainFeed-create-div{
-        right: 20px; /* break */
-        bottom: 20px; /* break */
-        width: 60px; /* break */
-        height: 60px; /* break */
-        font-size: 18px; /* break */
-    }
 }
 
 @media screen and (min-width: 576px){
@@ -73,24 +64,15 @@
     .container-center{
         padding: 0 50px; /* break */
     }
-
-    /* floating button to create post */
-    .MainFeed-create-div{
-        right: 30px; /* break */
-        bottom: 30px; /* break */
-    }
 }
 
 
 @media screen and (min-width: 1024px){
-    .MainFeed-create-div{
-        display: none;
-    }
 
     /* div mãe da etc da esquerda */
     .container-left{
         background-color: var(--color-primary);
-        width: 25vw;
+        width: 30vw;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -99,15 +81,16 @@
     }
 
     .container-center{
-        width: 50vw;
+        width: 40vw;
         justify-content: flex-start;
+        padding: 0 
     
     }
 
     /* div mãe da etc da direita */
     .container-right{
         background-color: var(--color-primary);
-        width: 25vw;
+        width: 30vw;
         height: auto;
         
         display: flex;
@@ -154,4 +137,41 @@
     .react-calendar__tile--active:enabled:focus {
         background: rgb(248, 30, 73);
     }
+}
+
+@media screen and (min-width: 1024px){
+    .MainFeed-create-div{
+        display: none;
+    }
+
+    /* div mãe da etc da esquerda */
+    .container-left{
+        background-color: var(--color-primary);
+        width: 25vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-end;
+        justify-content: flex-start;
+    }
+
+    .container-center{
+        width: 50vw;
+        justify-content: flex-start;
+        padding: 0 50px
+    
+    }
+
+    /* div mãe da etc da direita */
+    .container-right{
+        background-color: var(--color-primary);
+        width: 25vw;
+        height: auto;
+        
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+
+    }
+
 }
