@@ -1,0 +1,81 @@
+/* GROUP ABOUT TAB */
+
+
+/* [DIV] GroupAboutTab-first */
+/* GroupAboutTab-info */
+.GroupAboutTab-info {
+    background-color: var(--color-primary-hover);
+    margin-bottom: 1em;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.GroupAboutTab-info h1 {
+    margin-bottom: .5em;
+}
+
+.GroupAboutTab-info-row {
+    display: flex;
+    align-items: center;
+    opacity: .9;
+}
+
+.GroupAboutTab-info-row h4 {
+    margin-left: .5rem;
+    font-weight: bolder;
+}
+
+.GroupAboutTab-info-row h4 span {
+    font-weight: 400;
+}
+
+/* GroupAboutTab-activity */
+.GroupAboutTab-activity {
+    background-color: var(--color-primary-hover);
+    margin-bottom: 1em;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.GroupAboutTab-activity h1 {
+    margin-bottom: .5em;
+}
+.GroupAboutTab-activity-row {
+    display: flex;
+    align-items: center;
+}
+
+.GroupAboutTab-activity h4 {
+    margin-left: .5rem;
+}
+
+
+/* [DIV] GroupAboutTab-second */
+.GroupAboutTab-second {
+    background-color: #eee;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 1em;
+}
+
+.GroupAboutTab-second-bio h2 {
+    color: var(--color-primary);
+    font-weight: bolder;
+}
+
+.GroupAboutTab-second-bio p {
+    color: var(--color-primary-hover);
+    font-size: 1.15em;
+}
+
+
+/* RESPONSIVENESS */
+@media only screen and (min-width: 1600px) {
+    .GroupAboutTab {
+        display: flex;
+    }
+
+    .GroupAboutTab-second {
+        margin-left: 2.5%;
+    }
+}

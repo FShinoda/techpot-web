@@ -5,7 +5,7 @@ import "./groupEventRow.css";
 /* GROUP EVENT ROW */
 const GroupEventRow = ({eventImg, eventImgAlt, date, title, creatorImg, creatorImgAlt, creatorName}) => {
     return(
-        <div className="GroupEventRow flex-center">
+        <div className="GroupEventRow">
             <div className="GroupEventRow-img">
                 <img src={eventImg} alt={eventImgAlt} />
             </div>

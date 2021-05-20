@@ -39,6 +39,9 @@ import Navbar from "./components/navbar/navbar.jsx";
 // Group
 import Group from "./pages/group/group.jsx";
 
+// Login
+import LoginPage from "./pages/login/login.jsx";
+
 
 const Router = () =>{
     return(
@@ -46,6 +49,7 @@ const Router = () =>{
             {/* Páginas-exemplo a serem deletadas futuramente */}
             <Route exact path="/testnav" component={Navbar} />
             {/* Páginas que usaremos de fato */}
+            <Route exact path="/login" component={LoginPage} />
             <Route exact path="/feed" component={MainFeed} />
             <Route exact path="/perfil" component={UserProfile} />
             <Route exact path="/enpditar" component={GeneralEdit} />
