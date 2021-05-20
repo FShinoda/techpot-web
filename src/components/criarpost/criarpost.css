@@ -8,13 +8,35 @@
     padding: 0 15px; /* break */
 }
 .Functions{
-    color: #666;
-
+    color: #eee;
+}
+.botoes{
+    display: inline-block;
+}
+.botoes li{
+    display: inline-block;
+	padding: 1vh;
+    margin: 1vh;
+    
+}
+.Publicar{
+    float: left;
+    padding: 3vh;
+    width: 30vh;
+}
+.Albuns{
+    float: right;
+    padding: 3vh;
+    width: 30vh;
+}
+.Video{
+    float: right;
+    padding: 3vh;
+    width: 30vh;
 }
 .Post{
     background-color: #eee;    
     width: 100%;
-   
     margin: 15px;
     padding: 15px;
     border-radius: 15px;

@@ -12,12 +12,24 @@ const Criarpost = () =>{
     const [isHearted, setIsHearted] = useState(false);
     const [isCommentOpen, setIsCommentOpen] = useState(false);
     return(
-        <div className="CriarPost">
-    <div className="Functions">
-        <p>A</p>
-        <p>B</p>
-        <p>C</p>
-    </div>
+    <div className="CriarPost">
+    <ul class= "botoes">
+    <li>
+    <button className="Publicar">
+    <span>Publicar</span>
+    </button> 
+    </li>
+    <li>
+    <button className="Albuns">
+    <span>Álbuns</span>
+    </button>
+        </li>
+        <li>
+        <button className="Video">
+        <span>Vídeo</span>
+        </button>
+        </li>
+        </ul>
         <div className="Post">
             {/* "cabeçalho" do post com imagem, nome e info */}
             <div className="Post-header">
