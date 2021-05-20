@@ -144,6 +144,7 @@
     
     .CreatePost-modal-content textarea{
         height: 150px;
+        color: #666;
     }
     
     .CreatePost-modal-submit button{
@@ -190,7 +191,7 @@
         margin-left: 10px;
         border: 2px solid #ccc;
         border-radius: 30px;
-        color: #bbb;
+        color: #666;
         cursor: pointer;
     }
 
