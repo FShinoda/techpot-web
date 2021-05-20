@@ -8,17 +8,24 @@ import userPlaceholder from '../../assets/img/userPlaceholder.jpg';
 import { Modal, Cascader } from 'antd';
 
 // Antd Icons
-import { EditOutlined, PlusOutlined } from '@ant-design/icons';
+import { EditOutlined, PlusOutlined, LoadingOutlined, CheckOutlined} from '@ant-design/icons';
 
 const CreatePost = () =>{
 
+    const [postState, setPostState ] = useState(null);
+    const [confirmLoading, setConfirmLoading] = useState(false);
     const [isModalVisible, setIsModalVisible] = useState(false);
     const showModal = () => {
         setIsModalVisible(true);
     };
     
-    const handleOk = () => {
-        setIsModalVisible(false);
+    const handleSubmit = () => {
+        setPostState("postando");
+        setConfirmLoading(true);
+        setTimeout(() =>{
+            setIsModalVisible(false);
+            setConfirmLoading(false);
+        }, 2000);
     };
     
     const handleCancel = () => {
@@ -65,7 +72,14 @@ const CreatePost = () =>{
                     <textarea placeholder="Digite algo..."></textarea>
                 </div>
                 <div className="CreatePost-modal-submit">
-                    <button>Criar post</button>
+                    {postState === null ? (
+                        <button onClick={handleSubmit}>Criar post</button>
+                    ) : postState === "postando" ? (
+                        <button style={{backgroundColor: "var(--color-secundary-hover"}}><LoadingOutlined /> Criando...</button>
+                    ) : (
+                        <button className="btn-success"><CheckOutlined /> Post criado</button>
+                    )}
+                    
                 </div>
             </Modal>
         </div>
