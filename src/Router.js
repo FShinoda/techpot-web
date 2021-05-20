@@ -40,6 +40,9 @@ import Criarpost from "./components/criarpost/criarpost.jsx";
 // Group
 import Group from "./pages/group/group.jsx";
 
+// Login
+import LoginPage from "./pages/login/login.jsx";
+
 
 const Router = () =>{
     return(
@@ -48,6 +51,7 @@ const Router = () =>{
             <Route exact path="/testnav" component={Navbar} />
             <Route exact path="/criarpost" component={Criarpost} />
             {/* Páginas que usaremos de fato */}
+            <Route exact path="/login" component={LoginPage} />
             <Route exact path="/feed" component={MainFeed} />
             <Route exact path="/perfil" component={UserProfile} />
             <Route exact path="/enpditar" component={GeneralEdit} />
