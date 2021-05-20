@@ -60,7 +60,7 @@ const CreatePost = () =>{
                     <p>Divulgue uma ideia...</p>
                 </div>
             </div>
-            <Modal title="Criar post" visible={isModalVisible} onCancel={handleCancel} footer={null}>
+            <Modal title="Criar post" centered visible={isModalVisible} onCancel={handleCancel} footer={null}>
                 <div className="CreatePost-modal-header">
                     <img src={userPlaceholder} alt="Sua foto de perfil"/>
                     <div>
