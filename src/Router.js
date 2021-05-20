@@ -52,7 +52,7 @@ const Router = () =>{
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/feed" component={MainFeed} />
             <Route exact path="/perfil" component={UserProfile} />
-            <Route exact path="/enpditar" component={GeneralEdit} />
+            <Route exact path="/editar" component={GeneralEdit} />
             <Route exact path="/editar/conta" component={AccountEdit} /> {/* Mobile only */}
             <Route exact path="/editar/perfil" component={ProfileEdit} /> {/* Mobile only */}
             <Route exact path="/editar/portifolio" component={PortfolioEdit} /> {/* Mobile only */}

@@ -8,7 +8,7 @@ import GroupNavItemList from "./components/groupNavItemList/groupNavItemList.jsx
 import GroupMembersTab from "./components/groupMembersTab/groupMembersTab.jsx";
 import GroupEventsTab from "./components/groupEventsTab/groupEventsTab.jsx";
 import GroupAboutTab from "./components/groupAboutTab/groupAboutTab.jsx";
-import Criarpost from "../../components/criarpost/criarpost.jsx";
+import CreatePost from "../../components/createPost/createPost.jsx";
 import Post from "../../components/post/post.jsx";
 
 
@@ -36,7 +36,7 @@ const Group = () => {
             case "feed":
                 return(
                     <div className="groupFeed">
-                        <Criarpost />
+                        <CreatePost />
                         <Post />
                     </div>
                 );
