@@ -212,16 +212,25 @@ dando um margin-top para o conteudo ficar visivel */
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 
-/*
-  RESPONSIVIDADE
+/* RESPONSIVENESS */
+@media only screen and (min-width: 480px) {}
 
-  Pontos de Quebra na Largura:
-  - xxs/ppp: '320px';
-  - xs/pp: '480px';
-  - sm/p: '576px';
-  - md/m: '768px';
-  - lg/g: '992px';
-  - xl/gg: '1200px';
-  - xxl/ggg: '1600px';
-*/
+@media only screen and (min-width: 576px) {}
 
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 1024px) {}
+
+@media only screen and (min-width: 1200px) {}
+
+@media only screen and (min-width: 1440px) {}
+
+@media only screen and (min-width: 1600px) {}
+
+@media only screen and (min-width: 1920px) {}
+
+@media only screen and (min-width: 2304px) {}
+
+@media only screen and (min-width: 2560px) {}
