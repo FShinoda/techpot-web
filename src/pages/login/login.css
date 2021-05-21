@@ -2,132 +2,258 @@
 .LoginPage {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-/* [DIV] LoginPage-logo */
-.LoginPage-logo {
-    display: none;
+/* [DIV] LoginPage-img */
+.LoginPage-img {
+    position: fixed;
+    margin-bottom: 50vh;
+}
+
+.LoginPage-img img {
+    width: 128px;
+    height: 128px;
 }
 
 
 /* [DIV] LoginPage-content */
-.LoginPage-unfixed-text-area {
+.LoginPage-content {
+    width: 100vw;
+    height: 100vh;
+}
+
+.LoginPage-content-red {
+    background-color: var(--color-secundary);
+    width: 100vw;
+    height: 25vh;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-bottom: 15vh;
+}
+
+.LoginPage-content-red-text {
     display: none;
 }
 
-.LoginPage-content {
-    flex-direction: column;
+.LoginPage-content-blue {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
-.LoginPage-content-logo {
-    margin-bottom: 2.5em;
-}
-
-.LoginPage-content-logo img {
-    width: 96px;
-    height: 96px;
-}
-
-.LoginPage-content-box {
-    flex-direction: column;
-    border: 4px solid var(--color-secundary);
+.LoginPage-content-blue-box {
+    width: 90%;
+    border: 2px solid var(--color-secundary);
     border-radius: 12px;
 }
 
-.LoginPage-content-box-top {
-    padding: 12px;
+.LoginPage-content-blue-box-heading {
+    display: flex;
+    justify-content: center;
     width: 100%;
     background-color: var(--color-secundary);
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
-.LoginPage-content-box-top h1 {
-    font-size: 2.5rem;
-    text-align: center;
+.LoginPage-content-blue-box-heading h1 {
+    font-size: 2em;
     font-family: var(--font-logo);
 }
 
-.LoginPage-content-box-bottom {
+.LoginPage-content-blue-box-buttons {
     display: flex;
     flex-direction: column;
-    padding: 12px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-.LoginPage-content-box-bottom button {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    font-size: 1rem;
-    font-weight: bolder;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 12px;
-    padding-right: 12px;
+.LoginPage-content-blue-box-buttons button {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.21rem;
+    padding: 12px;
 }
 
 
 /* RESPONSIVENESS */
+@media only screen and (min-width: 480px) {
+    .LoginPage-content-blue-box {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .LoginPage-content-blue-box {
+        width: 80%;
+    }
+}
+
 @media only screen and (min-width: 768px) {
-    .LoginPage-content-logo img {
-        width: 128px;
-        height: 128px;
+    .LoginPage-img img {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .LoginPage-content-blue-box {
+        width: 70%;
+    }
+
+    .LoginPage-content-blue-box-heading {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .LoginPage-content-blue-box-heading h1 {
+        font-size: 1.75rem;
+    }
+
+    .LoginPage-content-blue-box-buttons {
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .LoginPage-content-blue-box {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .LoginPage-content-blue-box {
+        width: 50%;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    .LoginPage-logo {
-        display: flex;
-        position: fixed;
+    .LoginPage-img {
+        margin-bottom: 0;
     }
     
-    .LoginPage-logo img {
-        width: 128px;
-        height: 128px;
+    .LoginPage-img img {
+        width: 176px;
+        height: 176px;
     }
 
-    .LoginPage-unfixed {
+    .LoginPage-content {
         display: flex;
     }
 
-    .LoginPage-unfixed-text {
+    .LoginPage-content-red {
         width: 50vw;
         height: 100vh;
-        background-color: var(--color-secundary);
+        margin-bottom: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
 
-    .LoginPage-unfixed-text-area {
-        display: block;
-        width: 80%;
+    .LoginPage-content-red-text {
+        display: inline-block;
+        margin-left: 5%;
         font-size: 3em;
         line-height: 2em;
         text-shadow: 4px 4px #9f073b, 8px 8px #9f073b;
     }
 
-    .LoginPage-content {
+    .LoginPage-content-blue {
         width: 50vw;
+        display: flex;
+        align-items: center;
     }
 
-    .LoginPage-content-logo {
-        display: none;
+    .LoginPage-content-blue-box {
+        width: 70%;
+        height: 50%;
+        margin-left: 15%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .LoginPage-content-red-text {
+        font-size: 3.5em;
+    }
+    
+    .LoginPage-content-blue-box {
+        width: 60%;
+        height: 45%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .LoginPage-content-red-text {
+        font-size: 3.75em;
+    }
+    
+    .LoginPage-content-blue-box {
+        height: 40%;
     }
 }
 
 @media only screen and (min-width: 1920px) {
-    .LoginPage-logo img {
-        width: 160px;
-        height: 160px;
+    .LoginPage-img img {
+        width: 192px;
+        height: 192px;
+    }
+
+    .LoginPage-content-blue-box {
+        height: 45%;
+    }
+
+    .LoginPage-content-blue-box-buttons {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 4em;
+        margin-bottom: 2.5em;
     }
 }
 
 @media only screen and (min-width: 2304px) {
-    .LoginPage-logo img {
-        width: 192px;
-        height: 192px;
+    .LoginPage-img img {
+        width: 224px;
+        height: 224px;
+    }
+
+    .LoginPage-content-red-text {
+        font-size: 4em;
+    }
+
+    .LoginPage-content-blue-box {
+        height: 40%;
+    }
+
+    .LoginPage-content-blue-box-heading h1 {
+        font-size: 2.25rem;
+    }
+
+    .LoginPage-content-blue-box-buttons {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 7.5em;
+    }
+
+    .LoginPage-content-blue-box-buttons button {
+        margin-bottom: 3em;
+        font-size: 2em;
     }
 }
 
 @media only screen and (min-width: 2560px) {
-    .LoginPage-logo img {
-        width: 224px;
-        height: 224px;
+    .LoginPage-img img {
+        width: 256px;
+        height: 256px;
     }
 }
