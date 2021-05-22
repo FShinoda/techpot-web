@@ -1,45 +1,234 @@
-import React from 'react';
-import './navbar.css';
+import React, { useState } from "react";
+import "../../../node_modules/antd/dist/antd.css";
+import "./navbar.css";
 
-import Logo from '../../assets/logo-redborder.png';
-import Notification from "../../assets/icone_sino.png"
-import Message from "../../assets/icone_mensagem.png";
-import ProfPic from "../../assets/userProfilePlaceholder.jpg";
-import GroupPic from "../../assets/icone_grupo.png";
-import Calendar from "../../assets/icone_evento.png";
-import Search from "../../assets/icone_lupa.png";
 
+/* ANT DESIGN */
+import { Drawer } from "antd";
+
+
+/* IMAGES */
+import logo from "../../assets/logo-redborder.png";
+import icon from "../../assets/icone_grupo.png";
+import searchIcon from "../../assets/icone_lupa-branco.png";
+import searchIconRed from "../../assets/icone_lupa.png";
+
+
+/* ICONS */
+import { FiMenu } from "react-icons/fi";
+import { DoubleRightOutlined } from "@ant-design/icons";
+import { ImSearch } from "react-icons/im";
+
+
+/* NAVBAR */
 const Navbar = () => {
+    // Mobile ( < 1024px) or Desktop ( >= 1024px) Design
+    const isMobile = false;
 
-    return (
+
+    // Mobile Itens
+    const [ showMenu, setShowMenu ] = useState(false);
+
+    const [ showSearch, setShowSearch ] = useState(false);
+
+
+    return(
         <div className="Navbar">
-            <div className="header-caixa">
-                <div className="header-lefticons">
-                    <div className="header-user">
-                        <img src={ProfPic} alt="Icon-ProfilePic" />
-                        <p>Anônimo</p>
-                    </div>
-                    <img src={GroupPic} alt="Icon-GroupPic" />
-                    <img src={Calendar} alt="Icon-Calendar" />
-                </div>
+            {
+                isMobile
+                ?
+                    <div className="Navbar-Mob">
+                        <div className="Navbar-Mob-menu">
+                            <button onClick={() => setShowMenu(!showMenu)}>
+                                <FiMenu />
+                            </button>
 
+                            {
+                                showMenu ?
+                                    <Drawer className="Navbar-Mob-menu-drawer" title="TECHPOT" placement={"left"} closable={true} onClose={() => setShowMenu(!showMenu)} visible={true} zIndex={9999} headerStyle={{ backgroundColor: "#d0094d", border: "none", boxShadow: "0px 4px 4px 0px rgba(22, 22, 22, 0.2)", borderRadius: "0px" }}>
+                                        <button className="Navbar-Mob-menu-drawer-button">
+                                            <div className="Nav-drawer-left">
+                                                <img src={icon} alt={""} />
+                                                <h6>Meu Perfil</h6>
+                                            </div>
 
-                <div className="header-righticons">
-                    <div className='barra'>
-                        <input placeholder="Pesquisar..."></input>
-                        <div className="Lupa">
-                            <img src={Search} alt="Icon-Lupa" />
+                                            <div className="Nav-drawer-right">
+                                                <DoubleRightOutlined />
+                                            </div>
+                                        </button>
+
+                                        <button className="Navbar-Mob-menu-drawer-button">
+                                            <div className="Nav-drawer-left">
+                                                <img src={icon} alt={""} />
+                                                <h6>Grupos</h6>
+                                            </div>
+
+                                            <div className="Nav-drawer-right">
+                                                <DoubleRightOutlined />
+                                            </div>
+                                        </button>
+
+                                        <button className="Navbar-Mob-menu-drawer-button">
+                                            <div className="Nav-drawer-left">
+                                                <img src={icon} alt={""} />
+                                                <h6>Eventos</h6>
+                                            </div>
+
+                                            <div className="Nav-drawer-right">
+                                                <DoubleRightOutlined />
+                                            </div>
+                                        </button>
+
+                                        <button className="Navbar-Mob-menu-drawer-button">
+                                            <div className="Nav-drawer-left">
+                                                <img src={icon} alt={""} />
+                                                <h6>Mensagens</h6>
+                                            </div>
+
+                                            <div className="Nav-drawer-right">
+                                                <DoubleRightOutlined />
+                                            </div>
+                                        </button>
+
+                                        <button className="Navbar-Mob-menu-drawer-button">
+                                            <div className="Nav-drawer-left">
+                                                <img src={icon} alt={""} />
+                                                <h6>Notificações</h6>
+                                            </div>
+
+                                            <div className="Nav-drawer-right">
+                                                <DoubleRightOutlined />
+                                            </div>
+                                        </button>
+
+                                        <button className="Navbar-Mob-menu-drawer-button">
+                                            <div className="Nav-drawer-left">
+                                                <img src={icon} alt={""} />
+                                                <h6>Configurações</h6>
+                                            </div>
+
+                                            <div className="Nav-drawer-right">
+                                                <DoubleRightOutlined />
+                                            </div>
+                                        </button>
+
+                                    </Drawer>
+
+                                : null
+                            }
+                        </div>
+
+                        <div className="Navbar-Mob-logo">
+                            <img src={logo} alt={"Logo da TECHPOT."} />
+                        </div>
+
+                        <div className="Navbar-Mob-search">
+                            <button className="Navbar-Mob-search-button" onClick={() => setShowSearch(!showSearch)}>
+                                <img src={searchIcon} alt={"Ícone de busca."} />
+                            </button>
+
+                            {
+                                showSearch ?
+                                    <Drawer className="Navbar-Mob-search-drawer" title="PESQUISAR" placement={"right"} closable={true} onClose={() => setShowSearch(!showSearch)} visible={true} zIndex={9999} headerStyle={{ backgroundColor: "#d0094d", border: "none", boxShadow: "0px 4px 4px 0px rgba(22, 22, 22, 0.2)", borderRadius: "0px" }}>
+                                        <div className="Navbar-Mob-search-drawer-bar">
+                                            <div className="Navbar-Mob-search-drawer-bar-icon">
+                                                <ImSearch />
+                                            </div>
+
+                                            <input type="text" placeholder="    Pesquisar . . ." />
+                                        </div>
+
+                                        <div className="Navbar-Mob-search-drawer-sug">
+                                            <h3>Sugestões</h3>
+
+                                            {/* <div></div> */}
+                                        </div>
+                                    </Drawer>
+                                    
+                                :   null
+                            }
                         </div>
                     </div>
-                    <img src={Notification} alt="Icon-Notification" />
-                    <img id="icon-mensagem" src={Message} alt="Icon-Message" />
-                </div>
-            </div>
-            <div className="header-logo">
-                <img id="logo" src={Logo} alt="Logo Techpot" />
-            </div>
+                :
+                    <div className="Navbar-Desk">
+                        <div className="Navbar-Desk-nav">
+                            <div className="Navbar-Desk-nav-left">
+                                <div className="Navbar-Desk-nav-left-user">
+                                    <button className="Navbar-Desk-nav-left-user-button">
+                                        <img src={icon} alt={"Foto do usuário."} />
+                                    </button>
+                                </div>
+
+                                <div className="Navbar-Desk-nav-left-icons">
+                                    <div className="Navbar-Desk-nav-left-icons-config">
+                                        <button className="Navbar-Desk-nav-left-icons-buttons">
+                                            <img src={icon} alt={"Ícone de configurações."} />
+                                        </button>
+                                    </div>
+
+                                    <div className="Navbar-Desk-nav-left-icons-groups">
+                                        <button className="Navbar-Desk-nav-left-icons-buttons">
+                                            <img src={icon} alt={"Ícone de grupos."} />
+                                        </button>
+                                    </div>
+
+                                    <div className="Navbar-Desk-nav-left-icons-events">
+                                        <button className="Navbar-Desk-nav-left-icons-buttons">
+                                            <img src={icon} alt={"Ícone de eventos."} />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="Navbar-Desk-nav-right">
+                                <div className="Navbar-Desk-nav-right-search">
+                                    {
+                                        showSearch ?
+                                            <div className="Navbar-Desk-search-box-true">
+                                                <div className="Navbar-Desk-true-input">
+                                                    <input type="text" placeholder="    Pesquisar . . ." />
+                                                </div>
+
+                                                <button className="Navbar-Desk-search-button" onClick={() => setShowSearch(!showSearch)}>
+                                                    <img src={searchIconRed} alt={"Ícone de pesquisa."} />
+                                                </button>
+                                            </div>
+                                        :
+                                            <div className="Navbar-Desk-search-box-false">
+                                                <div className="Navbar-Desk-false-input">
+                                                    <input readOnly/>
+                                                </div>
+
+                                                <button className="Navbar-Desk-search-button" onClick={() => setShowSearch(!showSearch)}>
+                                                    <img src={searchIcon} alt={"Ícone de pesquisa."} />
+                                                </button>
+                                            </div>  
+                                    }
+                                </div>
+
+                                <div className="Navbar-Desk-nav-right-icons">
+                                    <div className="Navbar-Desk-nav-right-icons-notify">
+                                        <button className="Navbar-Desk-nav-right-icons-buttons">
+                                            <img src={icon} alt={"Ícone de notificações."} />
+                                        </button>
+                                    </div>
+
+                                    <div className="Navbar-Desk-nav-right-icons-message">
+                                        <button className="Navbar-Desk-nav-right-icons-buttons">
+                                            <img src={icon} alt={"Ícone de mensagens."} />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="Navbar-Desk-logo">
+                            <img src={logo} alt={"Logo da TECHPOT."} />
+                        </div>
+                    </div>
+            }
         </div>
-    )
-}
+    );
+};
 
 export default Navbar;

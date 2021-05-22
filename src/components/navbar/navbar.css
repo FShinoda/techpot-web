@@ -1,221 +1,360 @@
+/* NAVBAR */
 .Navbar {
     width: 100vw;
-    height: auto;
-    display: flex;
     position: fixed;
-    background-color: #d0094d;
-    color: white;
-    border-radius: 0px 0px 25px 25px;
-    align-items: center;
-    justify-content: space-between;
+    top: 0;
+    left: 0;
+    z-index: 9990;
 }
 
-.header-caixa {
-    padding: 0 30px;
+
+/* [DIV] Navbar-Mobile */
+.Navbar-Mob {
+    height: 48px;
+    background-color: var(--color-secundary);
     display: flex;
-    position: relative;
     justify-content: space-between;
     align-items: center;
+    border-bottom-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+}
+
+/* Navbar-Mob-menu */
+.Navbar-Mob-menu {
+    margin-left: 1.5rem;
+    margin-top: .5em;
+}
+
+.Navbar-Mob-menu button {
+    font-size: 2em;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    transition: 0;
+}
+
+.Navbar-Mob-menu button:hover {
+    background-color: transparent;
+    transition: 0;
+}
+
+/* [ANT-DESIGN] Navbar-Mob-menu-drawer */
+.ant-drawer-content {
+    background-color: #eee;
+}
+
+.ant-drawer-title {
+    color: #eee;
+    font-family: var(--font-logo);
+    font-weight: 400;
+    font-size: 2em;
+}
+
+.ant-drawer-close {
+    color: #eee;
+    font-weight: bolder;
+    transition: color 0.3s;
+}
+
+.ant-drawer-close:focus,
+.ant-drawer-close:hover {
+  color: #eee;
+  background-color: transparent;
+}
+
+.ant-drawer-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.Navbar-Mob-menu-drawer-button {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.Navbar-Mob-menu-drawer-button:hover {
+    background-color: transparent;
+}
+
+.Nav-drawer-left {
+    display: flex;
+    align-items: center;
+}
+
+.Nav-drawer-left img {
+    width: 32px;
+    height: 32px;
+}
+
+.Nav-drawer-left h6 {
+    color: var(--color-primary-text);
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-left: 1rem;
+}
+
+.Nav-drawer-right {
+    color: var(--color-primary-text);
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+/* Navbar-Mob-logo */
+.Navbar-Mob-logo img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Navbar-Mob-search */
+.Navbar-Mob-search {
+    margin-right: 1.5rem;
+}
+
+.Navbar-Mob-search-button {
+    background-color: transparent;
+}
+
+.Navbar-Mob-search-button:hover {
+    background-color: transparent;
+}
+
+.Navbar-Mob-search-button img {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+}
+
+.Navbar-Mob-search-drawer-bar {
+    display: flex;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.Navbar-Mob-search-drawer-bar-icon {
+    color: var(--color-primary);
+    font-size: .85rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.Navbar-Mob-search-drawer-bar input {
+    border: none;
+    font-size: 1.25em;
+    color: var(--color-primary);
     width: 100%;
 }
 
-.header-user {
-    display: flex;
-    width: 15vw;
+.Navbar-Mob-search-drawer-sug {
+    text-align: center;
+    margin-top: 2em;
 }
 
-.header-user p {
-    padding: 0 10px;
-    font-weight: bold;
+.Navbar-Mob-search-drawer-sug h3 {
+    text-decoration: underline;
+    font-weight: bolder;
+    color: var(--color-primary-text);
 }
 
-.header-lefticons img {
-    height: 32px;
-    width: 32px;
+
+/* [DIV] Navbar-Desktop */
+.Navbar-Desk {
+    display: none;
+    flex-direction: column;
+    align-items: center;
 }
 
-.header-user img {
-    width: 48px;
-}
-
-.header-lefticons {
-    display: flex;
-    width: 30vw;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.header-logo {
+.Navbar-Desk-nav {
+    width: 100%;
+    height: 64px;
+    background-color: var(--color-secundary);
+    border-bottom-left-radius: 64px;
+    border-bottom-right-radius: 64px;
     position: absolute;
-    left: 46%;
-    top: 0px;
     display: flex;
-    align-items: baseline;
 }
 
-#logo {
-    width: 100px;
-}
-
-.header-righticons {
+/* Navbar-Desk-nav-left */
+.Navbar-Desk-nav-left {
+    height: 100%;
+    width: 50%;
     display: flex;
-    width: 35vw;
+    align-items: center;
     justify-content: space-between;
-    padding: 10px;
 }
 
-.header-righticons img {
+.Navbar-Desk-nav-left-user {
+    margin-left: 5rem;
+
+}
+
+.Navbar-Desk-nav-left-user button {
+    background-color: transparent;
+}
+
+.Navbar-Desk-nav-left-user button:hover {
+    background-color: transparent;
+}
+
+.Navbar-Desk-nav-left-user-button img {
+    width: 48px;
+    height: 48px;
+}
+
+.Navbar-Desk-nav-left-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5rem;
+}
+
+.Navbar-Desk-nav-left-icons-buttons {
+    background-color: transparent;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.Navbar-Desk-nav-left-icons-buttons:hover {
+    background-color: transparent;
+}
+
+.Navbar-Desk-nav-left-icons-buttons img {
     width: 32px;
-}
-
-#icon-mensagem{
-    width: 41px;
     height: 32px;
 }
 
-.barra{
-   display: flex;
-   background-color: #fff;
-   border: 5px solid #fff;
-   border-radius: 10px;
-    padding-left: 20px;
-   width: 25vw;
-}
-
-.Navbar input {
-    color: black;
-    WIDTH: 90%;
-    border: none;
-}
-
-.lupa{
-    width: 10%;
+/* Navbar-Desk-nav-right */
+.Navbar-Desk-nav-right {
+    height: 100%;
+    width: 50%;
     display: flex;
-    justify-content: center;
-}
-.barra img{
-    width: 25px;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-/*responsiveness*/
+.Navbar-Desk-nav-right-search {
+    display: flex;
+}
 
-@media only screen and (max-width: 940px) {
-    .header-caixa {
-        padding: 0 15px;
-        display: flex;
-        position: relative;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
+.Navbar-Desk-search-box-true {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #eee;
+}
+
+.Navbar-Desk-true-input input {
+    width: 160px;
+    margin-left: .75rem;
+    border: none;
+    background-color: transparent;
+    color: var(--color-primary);
+    font-size: .85rem;
+}
+
+.Navbar-Desk-search-box-false {
+    display: flex;
+    align-items: center;
+}
+
+.Navbar-Desk-false-input input {
+    cursor: default;
+    border: none;
+    background-color: transparent;
+}
+
+.Navbar-Desk-false-input input:active {
+    pointer-events: none;
+}
+
+.Navbar-Desk-search-button {
+    background-color: transparent;
+    margin-left: .75rem;
+}
+
+.Navbar-Desk-search-button:hover {
+    background-color: transparent;
+}
+
+.Navbar-Desk-search-button img {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+}
+
+.Navbar-Desk-nav-right-icons {
+    display: flex;
+    margin-right: 3.5rem;
+}
+
+.Navbar-Desk-nav-right-icons-buttons {
+    background-color: transparent;
+    margin-left: 2rem;
+}
+
+.Navbar-Desk-nav-right-icons-buttons:hover {
+    background-color: transparent;
+}
+
+.Navbar-Desk-nav-right-icons-buttons img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Navbar-Desk-logo */
+.Navbar-Desk-logo {
+    position: relative;
+    margin-top: 16px; /* Nav height(64) - Img height/2(48) */
+}
+
+.Navbar-Desk-logo img {
+    width: 96px;
+    height: 96px;
+}
+
+
+/* RESPONSIVENESS */
+@media only screen and (min-width: 480px) {
+    .Navbar-Mob {
+        height: 56px;
     }
-    .header-user {
-        display: flex;
-        width: 20vw;
+
+    .Navbar-Mob-logo img {
+        width: 56px;
+        height: 56px;
     }
-    .header-user p {
-        padding: 0 10px;
-        font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+    .Navbar-Mob {
+        height: 60px;
     }
-    .header-lefticons img {
-        width: 18px;
-        height: 18px;
-    }
-    .header-user img {
-        width: 28px;
-    }
-    .header-lefticons {
-        display: flex;
-        width: 40vw;
-        justify-content: space-between;
-        padding: 10px;
-    }
-    .header-logo {
-        position: absolute;
-        left: 46%;
-        top: 0px;
-        display: flex;
-        align-items: baseline;
-    }
-    #logo {
+
+    .Navbar-Mob-logo img {
         width: 60px;
-    }
-    .header-righticons {
-        display: flex;
-        width: 40vw;
-        justify-content: space-between;
-        padding: 5px;
-    }
-    .header-righticons img {
-        width: 18px;
-    }
-
-    .Navbar input {
-        border: 5px solid #fff;
-        border-radius: 10px;
-        max-width: 20vw;
-        padding-left: 5px;
-        /* background-image:url({search});
-        background-size: 25px;
-        background-color: white;
-        background-position: 97%;
-        background-repeat: no-repeat; */
+        height: 60px;
     }
 }
 
-@media only screen and (max-width: 440px) {
-    .header-caixa {
-        padding: 0 10px;
-        display: flex;
-        position: relative;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-    .header-user {
-    }
-    .header-user p {
-       display: none;
-       visibility: hidden;
-       width: 0vw;
-    }
-    .header-lefticons img {
-        width: 18px;
-    }
-    .header-user img {
-        width: 18px;
-        height: 18px;
-    }
-    .header-lefticons {
-        display: flex;
-        width: 40vw;
-        justify-content: space-between;
-        padding: 5px;
-    }
-    .header-logo {
-        position: absolute;
-        left: 46%;
-        top: 0px;
-        display: flex;
-        align-items: baseline;
-    }
-    #logo {
-        width: 40px;
-    }
-    .header-righticons {
-        display: flex;
-        width: 40vw;
-        justify-content: space-between;
-        padding: 5px;
-    }
-    .header-righticons img {
-        width: 18px;
-    }
-    .Navbar input {
-        border: 5px solid #fff;
-        border-radius: 10px;
-        max-width: 10vw;
-        padding-left: 5px;
-        font-size: 0px;
+@media only screen and (min-width: 992px) {
+    .Navbar-Mob {
+        height: 64px;
     }
 
+    .Navbar-Mob-logo img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .Navbar-Mob {
+        display: none;
+    }
+
+    .Navbar-Desk {
+        display: flex;
+    }
 }
