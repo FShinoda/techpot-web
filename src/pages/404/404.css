@@ -1,0 +1,19 @@
+/* ERROR 404 */
+.ERR_404 {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.ERR_404 h1 {
+    font-size: 5em;
+    line-height: 1em;
+}
+
+.ERR_404 p {
+    font-size: 1.5em;
+}
+
+.ERR_404 a {
+    font-size: 1.5em;
+}
