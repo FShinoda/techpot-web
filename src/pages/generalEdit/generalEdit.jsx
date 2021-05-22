@@ -40,8 +40,6 @@ const GeneralEdit = () =>{
 
     return(
         <div className="GeneralEdit">
-            {/* <Navbar /> */}
-
             {isMobile ? (
                 <div>
                     <EditHeader title="Configurações"/>

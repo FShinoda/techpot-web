@@ -24,8 +24,6 @@ const MainFeed = () =>{
     const [value, onChange] = useState(new Date());
     return(
         <div className="MainFeed">
-            <Navbar />
-            
             <div className="container-left">
                 <ContainerInfo titulo="Recommended Pages">
                     <ContainerItem titulo="Fast Pizza" descricao="Pizza e Fast Food" icone={<PlusOutlined/>}/>
