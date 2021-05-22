@@ -43,9 +43,11 @@
 
 .UserOverallInfo_desc h6 span {
     font-size: 1rem;
-    color: var(--color-secundary);
+    color: var(--color-secundary-text);
     color: #e80a56;
-    text-shadow: 0 0 .1ex rgba(232, 10, 86, 1);
+    color: #eee;
+    /* text-shadow: 0 0 .1ex rgba(232, 10, 86, 1); */
+    /* text-shadow: 0 0 .1ex rgba(	249, 125, 167, 1); */
 }
 
 
