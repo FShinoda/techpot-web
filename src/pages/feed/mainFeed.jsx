@@ -3,6 +3,9 @@ import React, {useState} from 'react';
 import 'react-calendar/dist/Calendar.css';
 import './style.css';
 
+import Navbar from "../../components/navbar/navbar.jsx";
+
+
 // Icons
 import {PlusOutlined} from '@ant-design/icons';
 
@@ -21,6 +24,7 @@ const MainFeed = () =>{
     const [value, onChange] = useState(new Date());
     return(
         <div className="MainFeed">
+            <Navbar />
             
             <div className="container-left">
                 <ContainerInfo titulo="Recommended Pages">
