@@ -134,6 +134,19 @@ code {
   display: none;
 }
 
+/* Placeholder */
+::-webkit-input-placeholder { /* Edge */
+  color: var(--color-primary-text);
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+  color: var(--color-primary-text);
+}
+
+::placeholder {
+  color: var(--color-primary-text);
+}
+
 
 /* Estilos personalizados */
 
