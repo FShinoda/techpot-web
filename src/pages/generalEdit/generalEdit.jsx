@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import './style.css';
 import { Input } from 'antd';
 
+import Navbar from "../../components/navbar/navbar.jsx";
+
 // Components
 import EditItem from './components/editItem/editItem.jsx';
 import EditHeader from './components/editHeader/editHeader.jsx';
@@ -38,6 +40,8 @@ const GeneralEdit = () =>{
 
     return(
         <div className="GeneralEdit">
+            {/* <Navbar /> */}
+
             {isMobile ? (
                 <div>
                     <EditHeader title="Configurações"/>
