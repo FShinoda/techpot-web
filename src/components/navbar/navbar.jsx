@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../../../node_modules/antd/dist/antd.css";
 import "./navbar.css";
 
@@ -12,6 +13,10 @@ import logo from "../../assets/logo-redborder.png";
 import icon from "../../assets/icone_grupo.png";
 import searchIcon from "../../assets/icone_lupa-branco.png";
 import searchIconRed from "../../assets/icone_lupa.png";
+import iconUser from "../../assets/icon_user.png";
+import iconEvent from "../../assets/icone_evento.png";
+import iconMessage from "../../assets/icon_message.png";
+import iconNotification from "../../assets/icon_notification.png";
 
 
 /* ICONS */
@@ -47,71 +52,82 @@ const Navbar = () => {
                                 showMenu ?
                                     <Drawer className="Navbar-Mob-menu-drawer" title="TECHPOT" placement={"left"} closable={true} onClose={() => setShowMenu(!showMenu)} visible={true} zIndex={9999} headerStyle={{ backgroundColor: "#d0094d", border: "none", boxShadow: "0px 4px 4px 0px rgba(22, 22, 22, 0.2)", borderRadius: "0px" }}>
                                         <button className="Navbar-Mob-menu-drawer-button">
-                                            <div className="Nav-drawer-left">
-                                                <img src={icon} alt={""} />
-                                                <h6>Meu Perfil</h6>
-                                            </div>
+                                            <Link className="link-counter" to={"/perfil"}>
+                                                <div className="Nav-drawer-left">
+                                                    {/* <img src={iconUser} alt={""} /> */}
+                                                    <h6>Meu Perfil</h6>
+                                                </div>
 
-                                            <div className="Nav-drawer-right">
-                                                <DoubleRightOutlined />
-                                            </div>
+                                                <div className="Nav-drawer-right">
+                                                    <DoubleRightOutlined />
+                                                </div>
+                                            </Link>
                                         </button>
 
                                         <button className="Navbar-Mob-menu-drawer-button">
-                                            <div className="Nav-drawer-left">
-                                                <img src={icon} alt={""} />
-                                                <h6>Grupos</h6>
-                                            </div>
+                                            <Link className="link-counter" to={"/grupos"}>
+                                                <div className="Nav-drawer-left">
+                                                    {/* <img src={icon} alt={""} /> */}
+                                                    <h6>Grupos</h6>
+                                                </div>
 
-                                            <div className="Nav-drawer-right">
-                                                <DoubleRightOutlined />
-                                            </div>
+                                                <div className="Nav-drawer-right">
+                                                    <DoubleRightOutlined />
+                                                </div>
+                                            </Link>
                                         </button>
 
                                         <button className="Navbar-Mob-menu-drawer-button">
-                                            <div className="Nav-drawer-left">
-                                                <img src={icon} alt={""} />
-                                                <h6>Eventos</h6>
-                                            </div>
+                                            <Link className="link-counter" to={"/eventos"}>
+                                                <div className="Nav-drawer-left">
+                                                    {/* <img src={iconEvent} alt={""} /> */}
+                                                    <h6>Eventos</h6>
+                                                </div>
 
-                                            <div className="Nav-drawer-right">
-                                                <DoubleRightOutlined />
-                                            </div>
+                                                <div className="Nav-drawer-right">
+                                                    <DoubleRightOutlined />
+                                                </div>
+                                            </Link>
                                         </button>
 
                                         <button className="Navbar-Mob-menu-drawer-button">
-                                            <div className="Nav-drawer-left">
-                                                <img src={icon} alt={""} />
-                                                <h6>Mensagens</h6>
-                                            </div>
+                                            <Link className="link-counter" to={"/"}>
+                                                <div className="Nav-drawer-left">
+                                                    {/* <img src={iconMessage} alt={""} /> */}
+                                                    <h6>Mensagens</h6>
+                                                </div>
 
-                                            <div className="Nav-drawer-right">
-                                                <DoubleRightOutlined />
-                                            </div>
+                                                <div className="Nav-drawer-right">
+                                                    <DoubleRightOutlined />
+                                                </div>
+                                            </Link>
                                         </button>
 
                                         <button className="Navbar-Mob-menu-drawer-button">
-                                            <div className="Nav-drawer-left">
-                                                <img src={icon} alt={""} />
-                                                <h6>Notificações</h6>
-                                            </div>
+                                            <Link className="link-counter" to={"/"}>
+                                                <div className="Nav-drawer-left">
+                                                    {/* <img src={iconNotification} alt={""} /> */}
+                                                    <h6>Notificações</h6>
+                                                </div>
 
-                                            <div className="Nav-drawer-right">
-                                                <DoubleRightOutlined />
-                                            </div>
+                                                <div className="Nav-drawer-right">
+                                                    <DoubleRightOutlined />
+                                                </div>
+                                            </Link>
                                         </button>
 
                                         <button className="Navbar-Mob-menu-drawer-button">
-                                            <div className="Nav-drawer-left">
-                                                <img src={icon} alt={""} />
-                                                <h6>Configurações</h6>
-                                            </div>
+                                            <Link className="link-counter" to={"/editar"}>
+                                                <div className="Nav-drawer-left">
+                                                    {/* <img src={icon} alt={""} /> */}
+                                                    <h6>Configurações</h6>
+                                                </div>
 
-                                            <div className="Nav-drawer-right">
-                                                <DoubleRightOutlined />
-                                            </div>
+                                                <div className="Nav-drawer-right">
+                                                    <DoubleRightOutlined />
+                                                </div>
+                                            </Link>
                                         </button>
-
                                     </Drawer>
 
                                 : null
@@ -155,26 +171,34 @@ const Navbar = () => {
                             <div className="Navbar-Desk-nav-left">
                                 <div className="Navbar-Desk-nav-left-user">
                                     <button className="Navbar-Desk-nav-left-user-button">
-                                        <img src={icon} alt={"Foto do usuário."} />
+                                        <Link className="link-counter" to={"/perfil"}>
+                                            <img src={iconUser} alt={"Foto do usuário."} />
+                                        </Link>
                                     </button>
                                 </div>
 
                                 <div className="Navbar-Desk-nav-left-icons">
                                     <div className="Navbar-Desk-nav-left-icons-config">
                                         <button className="Navbar-Desk-nav-left-icons-buttons">
-                                            <img src={icon} alt={"Ícone de configurações."} />
+                                            <Link className="link-counter" to={"/editar"}>
+                                                <img src={icon} alt={"Ícone de configurações."} />
+                                            </Link>
                                         </button>
                                     </div>
 
                                     <div className="Navbar-Desk-nav-left-icons-groups">
                                         <button className="Navbar-Desk-nav-left-icons-buttons">
-                                            <img src={icon} alt={"Ícone de grupos."} />
+                                            <Link className="link-counter" to={"/grupos"}>
+                                                <img src={icon} alt={"Ícone de grupos."} />
+                                            </Link>
                                         </button>
                                     </div>
 
                                     <div className="Navbar-Desk-nav-left-icons-events">
                                         <button className="Navbar-Desk-nav-left-icons-buttons">
-                                            <img src={icon} alt={"Ícone de eventos."} />
+                                            <Link className="link-counter" to={"/eventos"}>
+                                                <img src={iconEvent} alt={"Ícone de eventos."} />
+                                            </Link>
                                         </button>
                                     </div>
                                 </div>
@@ -209,13 +233,17 @@ const Navbar = () => {
                                 <div className="Navbar-Desk-nav-right-icons">
                                     <div className="Navbar-Desk-nav-right-icons-notify">
                                         <button className="Navbar-Desk-nav-right-icons-buttons">
-                                            <img src={icon} alt={"Ícone de notificações."} />
+                                            <Link className="link-counter" to={"/"}>
+                                                <img src={iconNotification} alt={"Ícone de notificações."} />
+                                            </Link>
                                         </button>
                                     </div>
 
                                     <div className="Navbar-Desk-nav-right-icons-message">
                                         <button className="Navbar-Desk-nav-right-icons-buttons">
-                                            <img src={icon} alt={"Ícone de mensagens."} />
+                                            <Link className="link-counter" to={"/"}>
+                                                <img src={iconMessage} alt={"Ícone de mensagens."} />
+                                            </Link>
                                         </button>
                                     </div>
                                 </div>

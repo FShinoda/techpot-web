@@ -68,6 +68,11 @@
     flex-direction: column;
 }
 
+.link-counter {
+    display: flex;
+    justify-content: space-between;
+}
+
 .Navbar-Mob-menu-drawer-button {
     display: flex;
     justify-content: space-between;
@@ -263,6 +268,7 @@
     cursor: default;
     border: none;
     background-color: transparent;
+    display: none;
 }
 
 .Navbar-Desk-false-input input:active {
