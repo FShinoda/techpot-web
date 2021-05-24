@@ -196,6 +196,15 @@
 
 }
 
+.link-User {
+    display: flex;
+    align-items: center;
+}
+
+.link-User:hover {
+    text-decoration: none;
+}
+
 .Navbar-Desk-nav-left-user button {
     background-color: transparent;
 }

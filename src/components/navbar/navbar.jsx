@@ -171,8 +171,10 @@ const Navbar = () => {
                             <div className="Navbar-Desk-nav-left">
                                 <div className="Navbar-Desk-nav-left-user">
                                     <button className="Navbar-Desk-nav-left-user-button">
-                                        <Link className="link-counter" to={"/perfil"}>
+                                        <Link className="link-counter link-User" to={"/perfil"}>
                                             <img src={iconUser} alt={"Foto do usuário."} />
+
+                                            <h4>firstName</h4>
                                         </Link>
                                     </button>
                                 </div>
