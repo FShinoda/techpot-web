@@ -17,6 +17,7 @@ import iconUser from "../../assets/icon_user.png";
 import iconEvent from "../../assets/icone_evento.png";
 import iconMessage from "../../assets/icon_message.png";
 import iconNotification from "../../assets/icon_notification.png";
+import iconSettings from "../../assets/icon_settings.png";
 
 
 /* ICONS */
@@ -183,7 +184,7 @@ const Navbar = () => {
                                     <div className="Navbar-Desk-nav-left-icons-config">
                                         <button className="Navbar-Desk-nav-left-icons-buttons">
                                             <Link className="link-counter" to={"/editar"}>
-                                                <img src={icon} alt={"Ícone de configurações."} />
+                                                <img src={iconSettings} alt={"Ícone de configurações."} />
                                             </Link>
                                         </button>
                                     </div>
