@@ -1,5 +1,4 @@
-/* eslint-disable eqeqeq */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./userProfile.css";
 
 
@@ -19,16 +18,48 @@ import userProfilePlaceholder from "../../assets/userProfilePlaceholder.jpg";
 /* ICONS */
 import icon from "../../assets/icone_lupa-branco.png";
 
+// Redux
+import { useSelector, useDispatch } from "react-redux";
+import { userInfo, USER_INFO_CLEANUP } from '../../store/_entities/User';
+
+// React Router
+import { useParams } from 'react-router-dom';
+
+// Helpers
+import { formatUserName } from '../../helpers/formatUserName';
+import { firstLetterUppercase } from '../../helpers/UpperFirstLetter';
+
+
 
 /* USER PROFILE PAGE */
 const UserProfile = () => {
-    // User Info Navigation
-    const [ currentNav, setCurrentNav ] = useState("1");
+    const dispatch = useDispatch();
     
+    const { id } = useParams();
+    
+    const user_id = useSelector(state => state.entitie.user.id);
+    const user_profile = useSelector((state) => state.entitie.user.profile);
+    const other_user_profile = useSelector(state => state.entitie.user.otherUserProfile);
+    
+    const [ currentNav, setCurrentNav ] = useState("1");
+    const [ isUserProfile, setIsUserProfile ] = useState(user_id === parseInt(id) ? true : false)
+    const [ friendStatus, setFriendStatus ] = useState("notFriend");
+
+    useEffect(() => {
+        if (!isUserProfile) {
+            dispatch(userInfo(id, false));
+        }
+
+        return () => {
+            dispatch(USER_INFO_CLEANUP());
+        }
+
+    }, [dispatch])
+
     const getNavContent = (current) => {
         switch(current) {
             case "1":
-                return <UserOverview />;
+                return <UserOverview user_profile={isUserProfile ? user_profile : other_user_profile}/>;
             case "2":
                 return <UserGroupTab />;
             case "3":
@@ -40,11 +71,6 @@ const UserProfile = () => {
         }
     };
 
-
-    // Friend Status
-    const [ friendStatus, setFriendStatus ] = useState("notFriend");
-    
-
     return(
         <div className="UserProfile">
             {/* BACKGROUND IMAGE AND PROFILE PHOTO */}
@@ -52,7 +78,7 @@ const UserProfile = () => {
                 <div className="UserProfile_background">
                     <img className="UserProfile_backgroundImg" src={profileBackgroundImage} alt="Imagem de fundo do perfil do usuário." />
                     <div className="UserProfile_middleSection">
-                        <code className="UserProfile_friendCount">0</code>
+                        <code className="UserProfile_friendCount">0 </code>
                         {
                             friendStatus == "notFriend"
                             ?
@@ -84,8 +110,8 @@ const UserProfile = () => {
 
             {/* NAME AND IDENDITY */}
             <div className="UserProfile_profileId">
-                <h2>João Kitajima</h2>
-                <h3>kitajima</h3>
+                <h2>{isUserProfile ? user_profile.u ? formatUserName(user_profile.u.name)  : "Usuario" : other_user_profile.u ? formatUserName(other_user_profile.u.name)  : "Usuario" }</h2>
+                <h3>@{isUserProfile ? user_profile.u ? user_profile.u.username  : "Usuario" : other_user_profile.u ? other_user_profile.u.username  : "Usuario" }</h3>
             </div>
             
 

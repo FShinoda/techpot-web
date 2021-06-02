@@ -18,6 +18,7 @@ import { Link } from "react-router-dom";
 
 const ModalUserPreferences = ({ anchorLeft, anchorTop, onClose }) => {
   const usuarioPerfil = useSelector((state) => state.entitie.user.profile);
+  const usuarioId = useSelector(state => state.entitie.user.id)
 
   const dispatch = useDispatch();
 
@@ -57,7 +58,7 @@ const ModalUserPreferences = ({ anchorLeft, anchorTop, onClose }) => {
 
           <div className="BotaoMeuPerfilContainer" onClick={onClose}>
             <Link
-              to={usuarioPerfil.u ? `/perfil/${usuarioPerfil.u.username}` : '/'}
+              to={usuarioPerfil.u ? `/perfil/${usuarioId}/${usuarioPerfil.u.username}` : '/'}
               className="BotaoMeuPerfil"
             >
               Meu perfil

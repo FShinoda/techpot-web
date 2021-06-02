@@ -14,7 +14,8 @@ import rockLee from "../../../../assets/rock-lee.jpg";
 
 
 /* USER OVERVIEW */
-const UserOverview = () => {
+const UserOverview = ({ user_profile }) => {
+
     return(
         <div className="UserOverview">
             {/* OVERALL INFO */}
@@ -25,12 +26,12 @@ const UserOverview = () => {
                 <UserOverallInfo img={rockLee} alt={"Imagem do grupo."} desc={"Grupo em destaque: "} info={"Rock Lee do Pagode Namora D+"} />
             </div>
 
-
             {/* BIO */}
             <div className="UserOverview_userBio">
                 <h3>Sobre</h3>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id tincidunt massa. Quisque vitae enim id tortor dignissim gravida. In vitae nisl ac neque tempus blandit sed in eros. Etiam aliquam tristique ullamcorper. Nulla non luctus ipsum, in porttitor massa. Quisque ornare arcu sit amet libero congue, in gravida risus mattis. Fusce sit amet tortor vel turpis ullamcorper vestibulum sed sed nisl. Fusce orci dolor, aliquet vel sodales vel, tempus nec lacus.</p>
+                <p>{user_profile.u ? user_profile.u.bio ? user_profile.u.bio : "Parece que esse usuario gosta de manter o misterio" : " " }</p>
+
             </div>
         </div>
     );

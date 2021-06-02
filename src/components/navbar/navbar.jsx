@@ -41,8 +41,7 @@ const Navbar = () => {
   // Mobile Itens
   const [showMenu, setShowMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const [showModalUserPreferences, setShowModalUserPreferences] =
-    useState(false);
+  const [showModalUserPreferences, setShowModalUserPreferences] = useState(false);
   const [anchorLeft, setAnchorLeft] = useState(null);
   const [anchorTop, setAnchorTop] = useState(null);
 

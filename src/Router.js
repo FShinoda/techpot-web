@@ -112,7 +112,7 @@ const UseNavbar = () => {
 
       <ProtectedRoute path={["/", "/feed"]} exact component={MainFeed} />
 
-      <ProtectedRoute path="/perfil/:username" exact component={UserProfile} />
+      <ProtectedRoute path="/perfil/:id/:username" exact component={UserProfile} />
 
       <ProtectedRoute path="/grupos" exact component={GroupSearch} />
 

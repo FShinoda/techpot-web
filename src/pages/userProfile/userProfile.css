@@ -126,11 +126,6 @@
     opacity: .85;
 }
 
-.UserProfile_profileId h3::before {
-    content:"@";
-    font-weight: bold;
-}
-
 
 /* [DIV] UserProfile_userInfoNav */
 .UserProfile_userInfoNav {
