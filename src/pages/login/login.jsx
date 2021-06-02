@@ -8,6 +8,7 @@ import logo from "../../assets/logo-redborder.png";
 
 /* LOGIN PAGE */
 const LoginPage = () => {
+    console.log()
     return(
         <div className="LoginPage">
             <div className="LoginPage-img">
@@ -30,7 +31,7 @@ const LoginPage = () => {
                         <div className="LoginPage-content-blue-box-buttons">
                             <button>Visitantes</button>
 
-                            <button>Alunos e Professores</button>
+                            <button><a href={process.env.REACT_APP_LOGIN_URL}>Alunos e Professores</a></button>
                         </div>
                     </div>
                 </div>

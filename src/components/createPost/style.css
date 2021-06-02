@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     width: 50px; /* break */
-    height: 50px; /* break */
+    height: 80px; /* break */
     background-color: var(--color-secundary);
     font-size: 16px; /* break */
     border-radius: 100%;

@@ -1,0 +1,162 @@
+.Post{
+    background-color: #eee;    
+    width: 100%;
+    height: auto;
+    margin: 15px; /* break */
+    padding: 15px; /* break */
+    border-radius: 15px;
+    max-width: 720px;
+}
+
+.Post-header{
+    display: flex;
+}
+
+/* imagem de perfil */
+.Post-header img{
+    width: 45px; /* break */
+    height: 45px; /* break */
+    border-radius: 15px;
+    border: 2px solid var(--color-primary); /* break */
+    margin-right: 10px; /* break */
+}
+
+.Post-header-text h6{
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 16px; /* break */
+    line-height: 18px; /* break */
+    margin-top: 8px; /* break */
+}
+
+.Post-header-text p{
+    color: #888;
+    font-size: 12px; /* break */
+}
+
+
+.Post-content{
+    padding: 10px 0; /* break */
+}
+
+.Post-content p{
+    color: #666;
+    font-size: 12px; /* break */
+}
+
+
+.Post-footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #888;
+    font-size: 20px; /* break */
+}
+.Post-footer p{
+    font-size: 16px; /* break */
+    line-height: 16px;
+}
+
+.Post-icon{
+    margin-left: 5px; 
+}
+
+.Post-heart{
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 414px){
+    .Post-content p{
+        color: #666;
+        font-size: 14px; /* break */
+    }
+
+    /* icon size change */
+    .Post-footer{
+        font-size: 22px; /* break */
+    }
+}
+
+@media only screen and (min-width: 480px){
+
+    .Post-header-text h6{
+        color: var(--color-primary);
+        font-weight: 700;
+        font-size: 17px; /* break */
+        line-height: 19px; /* break */
+        margin-top: 8px; /* break */
+    }
+
+    .Post-header-text p{
+        color: #888;
+        font-size: 13px; /* break */
+    }
+    .Post-content p{
+        color: #666;
+        font-size: 15px; /* break */
+    }
+
+    /* icon size change */
+    .Post-footer{
+        font-size: 22px; /* break */
+    }
+}
+
+@media only screen and (min-width: 768px){
+
+    .Post-header-text h6{
+        color: var(--color-primary);
+        font-weight: 700;
+        font-size: 18px; /* break */
+        line-height: 20px; /* break */
+        margin-top: 8px; /* break */
+    }
+
+    .Post-header-text p{
+        color: #888;
+        font-size: 14px; /* break */
+    }
+    .Post-content p{
+        color: #666;
+        font-size: 16px; /* break */
+    }
+
+    /* icon size change */
+    .Post-footer{
+        font-size: 24px; /* break */
+    }
+
+    .Post-footer p{
+        font-size: 17px; /* break */
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    /* imagem de perfil */
+    .Post-header img{
+        width: 50px; /* break */
+        height: 50px; /* break */
+        border-radius: 15px;
+        border: 2px solid var(--color-primary); /* break */
+        margin-right: 10px; /* break */
+    }
+
+    
+    .Post-content p{
+        color: #666;
+        font-size: 17px; /* break */
+    }
+
+    /* icon size change */
+    .Post-footer{
+        font-size: 26px; /* break */
+    }
+
+    .Post-footer p{
+        font-size: 18px; /* break */
+    }
+
+    .Post-icon:hover{
+        transform: scale(1.1);
+    }
+}

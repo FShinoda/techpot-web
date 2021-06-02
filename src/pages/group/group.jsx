@@ -9,7 +9,7 @@ import GroupMembersTab from "./components/groupMembersTab/groupMembersTab.jsx";
 import GroupEventsTab from "./components/groupEventsTab/groupEventsTab.jsx";
 import GroupAboutTab from "./components/groupAboutTab/groupAboutTab.jsx";
 import CreatePost from "../../components/createPost/createPost.jsx";
-import Post from "../../components/post/post.jsx";
+import Post from "../../components/post-v2/post.jsx";
 
 
 /* IMAGES */

@@ -1,64 +1,90 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 
-import 'react-calendar/dist/Calendar.css';
-import './style.css';
+import "react-calendar/dist/Calendar.css";
+import "./style.css";
 
 import Navbar from "../../components/navbar/navbar.jsx";
 
-
 // Icons
-import {PlusOutlined} from '@ant-design/icons';
+import { PlusOutlined } from "@ant-design/icons";
 
 // Calendar
-import Calendar from 'react-calendar';
-
+import Calendar from "react-calendar";
 
 // Componentes
-import ContainerInfo from './components/containerInfo/containerInfo';
-import ContainerItem from './components/containerItem/containerItem';
-import Post from '../../components/post/post.jsx';
-import CreatePost from '../../components/createPost/createPost.jsx';
- 
-const MainFeed = () =>{
+import ContainerInfo from "./components/containerInfo/containerInfo";
+import ContainerItem from "./components/containerItem/containerItem";
+import Post from "../../components/Post/index";
+import CreatePost from "../../components/createPost/createPost.jsx";
 
-    const [value, onChange] = useState(new Date());
-    return(
-        <div className="MainFeed">
-            <div className="container-left">
-                <ContainerInfo titulo="Recommended Pages">
-                    <ContainerItem titulo="Fast Pizza" descricao="Pizza e Fast Food" icone={<PlusOutlined/>}/>
-                    <ContainerItem titulo="Lonely Droid" descricao="Technology" icone={<PlusOutlined/>}/>
-                    <ContainerItem titulo="Meta Movies" descricao="Movies / Entertainment" icone={<PlusOutlined/>}/>
-                </ContainerInfo>
+// Redux
+import { useSelector } from 'react-redux';
 
-                <ContainerInfo titulo="Stories">
-                    <ContainerItem titulo="Gabriel" descricao="1h" />
-                    <ContainerItem titulo="Lucas" descricao="3h" />
-                    <ContainerItem titulo="Joana" descricao="1d" />
-                </ContainerInfo>
-                
-            </div>
+const MainFeed = () => {
+  const [value, onChange] = useState(new Date());
 
-            <div className="container-center">
-                <CreatePost/>
-                {/* Para testar o component post e createPost coloque aqui */}
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-                <Post />
-            </div>
+  const postListUser = useSelector(
+    (state) => state.entitie.post.postListByUser
+  );
 
-            <div className="container-right">
-                <ContainerInfo titulo="Stories">
-                    <ContainerItem titulo="Gabriel" descricao="1h" />
-                    <ContainerItem titulo="Lucas" descricao="3h" />
-                    <ContainerItem titulo="Joana" descricao="1d" />
-                </ContainerInfo>
-{/*                 <Calendar onChange={onChange} value={value} maxDetail="month" />
- */}            </div>
-        </div>
-    )
-}
+  return (
+    <div className="MainFeed">
+      <div className="container-left">
+        <ContainerInfo titulo="Recommended Pages">
+          <ContainerItem
+            titulo="Fast Pizza"
+            descricao="Pizza e Fast Food"
+            icone={<PlusOutlined />}
+          />
+          <ContainerItem
+            titulo="Lonely Droid"
+            descricao="Technology"
+            icone={<PlusOutlined />}
+          />
+          <ContainerItem
+            titulo="Meta Movies"
+            descricao="Movies / Entertainment"
+            icone={<PlusOutlined />}
+          />
+        </ContainerInfo>
+
+        <ContainerInfo titulo="Stories">
+          <ContainerItem titulo="Gabriel" descricao="1h" />
+          <ContainerItem titulo="Lucas" descricao="3h" />
+          <ContainerItem titulo="Joana" descricao="1d" />
+        </ContainerInfo>
+      </div>
+
+      <div className="container-center">
+        <CreatePost />
+        {/* Para testar o component post e createPost coloque aqui */}
+        {postListUser.map((posts) => (
+          <Post
+            key={posts.post_id}
+            post_body={posts.post_body}
+            post_id={posts.post_id}
+            data_criacao={posts.post_data_criacao}
+            post_body_html={posts.post_body_html}
+            post_body={posts.post_body}
+            grupo={posts.group_name}
+            id_criador={posts.user_id}
+            nome_criador={posts.user_name}
+            like_count={posts.post_like_count}
+          />
+        ))}
+      </div>
+
+      <div className="container-right">
+        <ContainerInfo titulo="Stories">
+          <ContainerItem titulo="Gabriel" descricao="1h" />
+          <ContainerItem titulo="Lucas" descricao="3h" />
+          <ContainerItem titulo="Joana" descricao="1d" />
+        </ContainerInfo>
+        {/*                 <Calendar onChange={onChange} value={value} maxDetail="month" />
+         */}{" "}
+      </div>
+    </div>
+  );
+};
 
 export default MainFeed;
