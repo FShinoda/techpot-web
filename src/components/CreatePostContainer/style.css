@@ -1,0 +1,93 @@
+.postBoxContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    border-radius: 20px;
+    border-color: rgb(197, 197, 197);
+    box-shadow: 8px 5px 15px #111b24;
+    background-color: #fff;
+    padding: 20px; 
+    margin-bottom: 30px;
+
+    width: 100%;
+    height: auto;
+    max-width: 720px;
+    
+
+}
+
+
+.postBoxTextInput{
+    height: 50px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 20px;
+    cursor: pointer;
+    color: rgb(131, 131, 131);
+    padding-left: 15px ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.postBoxTextInput:hover{
+    background-color: rgb(207, 207, 207) ;
+}
+
+.postBoxInfo{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.postBoxUserPicture{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 30%; 
+    margin-right: 20px;
+}
+
+.postBoxProfilePic{
+    width: auto;
+    height: 100%;
+}
+
+.postBoxButtonContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.postBoxSendButton{
+    display: block;
+    background-color: var(--color-terciary);
+    color: #fff;
+    padding: 10px 17px;
+    border-radius: 10px;
+
+    text-decoration: none;
+}
+.postBoxMediaButton{
+    text-decoration: none;
+    color: rgb(158, 158, 158);
+    margin-left: 5px;
+}
+
+.postBoxImageMediaContainer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 960px){
+    .postBoxContainer{
+        display: none;
+    }
+}

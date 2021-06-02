@@ -14,18 +14,23 @@ import Calendar from "react-calendar";
 // Componentes
 import ContainerInfo from "./components/containerInfo/containerInfo";
 import ContainerItem from "./components/containerItem/containerItem";
+import CreatePostContainer from '../../components/CreatePostContainer';
+import ModalCreatePost from "../../components/ModalCreatePost"
 import Post from "../../components/Post/index";
-import CreatePost from "../../components/createPost/createPost.jsx";
+// import CreatePost from "../../components/createPost/createPost.jsx"; // TODO -> Review if this can be removed
 
 // Redux
 import { useSelector } from 'react-redux';
 
 const MainFeed = () => {
   const [value, onChange] = useState(new Date());
+  const [showModalCreatePost, setShowModalCreatePost] = useState(false);
 
-  const postListUser = useSelector(
-    (state) => state.entitie.post.postListByUser
-  );
+  const postListUser = useSelector((state) => state.entitie.post.postListByUser);
+
+  const openModalCreatePost = () => {
+    setShowModalCreatePost(!showModalCreatePost);
+  };
 
   return (
     <div className="MainFeed">
@@ -56,8 +61,8 @@ const MainFeed = () => {
       </div>
 
       <div className="container-center">
-        <CreatePost />
-        {/* Para testar o component post e createPost coloque aqui */}
+        <CreatePostContainer openCreatePostModal={openModalCreatePost} />
+
         {postListUser.map((posts) => (
           <Post
             key={posts.post_id}
@@ -80,9 +85,14 @@ const MainFeed = () => {
           <ContainerItem titulo="Lucas" descricao="3h" />
           <ContainerItem titulo="Joana" descricao="1d" />
         </ContainerInfo>
-        {/*                 <Calendar onChange={onChange} value={value} maxDetail="month" />
+        {/*<Calendar onChange={onChange} value={value} maxDetail="month" />
          */}{" "}
       </div>
+
+      {showModalCreatePost && (
+        <ModalCreatePost onClose={() => setShowModalCreatePost(!showModalCreatePost)} />
+      )}
+        
     </div>
   );
 };

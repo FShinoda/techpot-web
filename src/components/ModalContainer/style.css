@@ -1,0 +1,35 @@
+.modalContainer-container {
+    position: absolute;
+    top: 5%;
+    z-index: 5;
+    width: 600px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+/* Top bar  */
+
+.modalContainer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+    color: #7c7c7c;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+/* Overlay  */
+
+.modalContainer-overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #1e2e3e88;
+}
