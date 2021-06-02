@@ -11,13 +11,13 @@ import { USER_LOGOUT } from "../../store/_entities/User";
 
 // Helpers
 import { firstLetterUppercase } from "../../helpers/UpperFirstLetter";
+import history from "../../helpers/history";
 
 // Router
 import { Link } from "react-router-dom";
 
 const ModalUserPreferences = ({ anchorLeft, anchorTop, onClose }) => {
   const usuarioPerfil = useSelector((state) => state.entitie.user.profile);
-  const usuarioId = useSelector((state) => state.entitie.user.id);
 
   const dispatch = useDispatch();
 
@@ -57,7 +57,7 @@ const ModalUserPreferences = ({ anchorLeft, anchorTop, onClose }) => {
 
           <div className="BotaoMeuPerfilContainer" onClick={onClose}>
             <Link
-              to={`/usuario/perfil/${usuarioId}`}
+              to={usuarioPerfil.u ? `/perfil/${usuarioPerfil.u.username}` : '/'}
               className="BotaoMeuPerfil"
             >
               Meu perfil

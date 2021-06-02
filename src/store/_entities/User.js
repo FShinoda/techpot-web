@@ -83,7 +83,7 @@ const slice = createSlice({
             
             deleteCookie('_auth');
             localStorage.removeItem("_firstAccess")
-            history.push("/")
+            history.push("/login")
         },
 
         USER_CREATED_SUCCESSFUL: (usuario, action) => {
