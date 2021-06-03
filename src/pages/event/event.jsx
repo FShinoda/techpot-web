@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 
 // Assets - placeholder
@@ -9,6 +9,17 @@ import userPlaceholder from '../../assets/img/userPlaceholder.jpg';
 
 // Antd
 import { Avatar} from 'antd';
+
+// React Router
+import { useParams } from "react-router-dom";
+
+// Redux
+import { useSelector, useDispatch } from "react-redux";
+import {
+  infoEvent,
+  listInvitedEvent,
+  listSubEvent,
+} from "../../store/_entities/Event";
 
 // Antd Icons
 import {
@@ -24,9 +35,45 @@ import {
     TwitterOutlined, 
     LinkOutlined} from '@ant-design/icons';
 
+// Helpers
+import { DateFormatter } from "../../helpers/dateFormatter";
+import { formatUserName } from "../../helpers/formatUserName";
+
+import { EventAvailable } from '@material-ui/icons';
+
 const Event = () =>{
+    const dispatch = useDispatch();
+
+    const { id } = useParams();
+
+    const eventInfo = useSelector((state) => state.entitie.event.info);
+    const inviteList = useSelector((state) => state.entitie.event.inviteList);
+    const subList = useSelector((state) => state.entitie.event.subscribeList);
+  
+    useEffect(() => {
+      dispatch(infoEvent(id));
+      dispatch(listInvitedEvent(id));
+      dispatch(listSubEvent(id));
+    }, []);
 
     const [isInCalendar, setIsInCalendar] = useState(false);
+
+    let fullInitDate;
+    let initTime;
+    let fullEndDate;
+    let endTime;
+  
+    // Formating date
+    if (eventInfo.row) {
+      const dataInicio = new DateFormatter(eventInfo.data_inicio);
+      fullInitDate = dataInicio.getFullDate();
+      initTime = dataInicio.getHour();
+  
+      const dataFim = new DateFormatter(eventInfo.row.dateEnd);
+      fullEndDate = dataFim.getFullDate();
+      endTime = dataFim.getHour();
+    }
+
 
     return(
         <div className="Event">
@@ -35,9 +82,8 @@ const Event = () =>{
             </div>
             <div className="Event-ticket">
                 <div className="Event-ticket-info">
-                    <h2>Hackatruck PRESENCIAL na frente da temakeria Makis Place</h2>
-                    <p className="div-margin-bottom Event-ticket-info-p"><ClockCircleOutlined className="event-ticket-info-icon"/> 19:00 PM - 23:00 PM</p>
-
+                    <h2>{eventInfo.row ? eventInfo.row.event_name : "Nome evento"}</h2>
+                    <p className="div-margin-bottom Event-ticket-info-p"><ClockCircleOutlined className="event-ticket-info-icon"/>{eventInfo.row ? initTime + "-" + endTime : " "}</p>
 
                     <div className="event-ticket-info-date div-margin-bottom">
                         <div className="event-ticket-info-line">
@@ -45,17 +91,16 @@ const Event = () =>{
                             <p className="Event-ticket-info-p">Data</p>
                         </div>
                         {/* conteudo */}
-                        <h6>Segunda, Maio 16 2021</h6>
+                        <h6>{eventInfo.row ? fullInitDate : "Data evento"}</h6>
                     </div>
 
                     <div className="event-ticket-info-category div-margin-bottom">
                         <div className="event-ticket-info-line">
                             <GlobalOutlined className="event-ticket-info-icon"/>
                             <p className="Event-ticket-info-p">Categoria</p>
-                            
                         </div>
                         {/* conteudo */}
-                        <h6>Oficina</h6>
+                        <h6>{eventInfo.row ? eventInfo.row.category_name : "Nome categoria evento"}</h6>
                     </div>
 
                     {/* Essa div aqui só renderiza se o evento for presencial */}
@@ -66,6 +111,7 @@ const Event = () =>{
                             
                         </div>
                         {/* conteudo */}
+                        {/* TODO -> Add endereco no BD  */}
                         <h6>R. Maj. Maragliano, 391 - Vila Mariana, São Paulo - SP, 04017-030</h6>
                     </div>
                     
@@ -116,8 +162,8 @@ const Event = () =>{
                         </div>
                         <div>
                             <p>Organizado por</p>
-                            <h5>Flavio Marques</h5>
-                            <p>@flavinn_do_pneu</p>
+                            <h5>{eventInfo.row ? formatUserName(eventInfo.row.user_name) : "Nome organizador"}</h5>
+                            <p>@{eventInfo.row ? eventInfo.row.user_username : "Username organizador"}</p>
                         </div>
                          
                     </div>
@@ -127,11 +173,7 @@ const Event = () =>{
                 <div className="Event-info-left">
                     <div className="Event-info-card">
                         <h4>Sobre</h4>
-                        <p>Hackatruck vai oferecer sovete de graça e curso de python (o melhor), switft, cloud e nodeRED por 2 semana consecutiva. 
-                            <br/>Detalhes no site: http://hackatruques.com.br. Acesse já e ganhe uma camiseta azul do hackatruques e sorvete especial
-                            sabor burguês, ou melhor - pistache... uma delicia.
-                        </p>
-                        
+                        <p>{eventInfo.row ? eventInfo.row.event_desc : "Descricao evento"}</p>
                     </div>
 
                     <div className="Event-info-card">

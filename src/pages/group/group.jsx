@@ -90,9 +90,18 @@ const Group = () => {
         }
     };
 
+    /* 
+        TODO -> Fix create post modal. 
+            - Place on the middle 
+            - Remove the choose group section
+    */
 
     return(
-        <div className="Group">
+        <div className="Group-container">
+            {showModalCreatePost && (
+                <ModalCreatePost onClose={() => setShowModalCreatePost(!showModalCreatePost)} />
+            )}
+
             {/* BANNER AND GROUP INFO */}
             <div className="Group-top">
                 <div className="Group-banner">
@@ -140,9 +149,7 @@ const Group = () => {
                 </div>
             </div>
 
-            {showModalCreatePost && (
-                <ModalCreatePost onClose={() => setShowModalCreatePost(!showModalCreatePost)} />
-            )}
+
         </div>
     );
 };

@@ -120,7 +120,7 @@ const UseNavbar = () => {
 
       <ProtectedRoute exact path="/eventos" component={EventSearch} />
 
-      <ProtectedRoute exact path="/evento" component={Event} />
+      <ProtectedRoute exact path="/evento/:id/:eventname" component={Event} />
 
       <ProtectedRoute exact path="/editar" component={GeneralEdit} />
 

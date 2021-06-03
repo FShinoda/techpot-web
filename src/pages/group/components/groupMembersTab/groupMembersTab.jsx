@@ -38,7 +38,6 @@ const GroupMembersTab = ({ members }) => {
                     {members.map((user) => (
                         <MemberRow redirect={`/perfil/${user.user_id}/${user.user_username}`} img={avt_01} alt={"Foto de membro."} memberName={formatUserName(user.user_name)} memberNick={"@" + user.user_username} />
                     ))}
-                    
                 </div>
 {/* 
                 <div className="GroupMembersTab-second">
