@@ -98,9 +98,8 @@ const ModalCreatePost = ({ onClose }) => {
       </div>
 
       <div className="modalCreatePost-bottom">
-        <div className="modalCreatePost-media-row2">
-          {/* <Image style={icon}/>
-                        <YouTube style={icon}/> */}
+        {/* TODO -> Remove this line */}
+        <div className="modalCreatePost-media-row2"> 
         </div>
 
         <div className="modalCreatePost-postbtt-col2">

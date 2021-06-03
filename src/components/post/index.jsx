@@ -27,7 +27,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { likePost, unlikePost } from "../../store/_entities/Post";
 
 // Helpers
-import { DateFormatter } from "../../helpers/dataFormatter";
+import { DateFormatter } from "../../helpers/dateFormatter";
 import { formatUserName } from "../../helpers/formatUserName";
 
 const Post = ({
@@ -44,7 +44,6 @@ const Post = ({
   const [likeCount, setLikeCount] = useState(like_count);
 
   const dataCriacao = new DateFormatter(data_criacao);
-
   let relativeTime = dataCriacao.getRelativeTime();
 
   // Usuario

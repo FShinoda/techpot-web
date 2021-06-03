@@ -116,7 +116,7 @@ const UseNavbar = () => {
 
       <ProtectedRoute path="/grupos" exact component={GroupSearch} />
 
-      <ProtectedRoute exact path="/grupo" component={Group} />
+      <ProtectedRoute exact path="/grupo/:id/:groupname" component={Group} />
 
       <ProtectedRoute exact path="/eventos" component={EventSearch} />
 

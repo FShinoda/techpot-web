@@ -16,6 +16,7 @@ const slice = createSlice({
         errorMessage: '',
         groupList: [],
         groupInfo: {},
+
     },
 
     reducers: {
@@ -44,7 +45,6 @@ const slice = createSlice({
         GROUP_INFO_SUCCESSFUL: (grupo, action) => {
             grupo.loading = false;
             grupo.groupInfo = { g: action.payload.g };
-
         },
 
         GROUP_CREATED_SUCCESSFUL: (grupo, action) => {

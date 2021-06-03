@@ -13,9 +13,12 @@ import avt_03 from "../../../../assets/img_avatar_03.png";
 import avt_04 from "../../../../assets/img_avatar_04.png";
 import avt_05 from "../../../../assets/img_avatar_05.png";
 
+// Helpers
+import { formatUserName } from '../../../../helpers/formatUserName';
+
 
 /* GROUP MEMBERS TAB */
-const GroupMembersTab = () => {
+const GroupMembersTab = ({ members }) => {
     return(
         <div className="GroupMembersTab">
             {/* TAB HEADING */}
@@ -30,17 +33,20 @@ const GroupMembersTab = () => {
 
             {/* TAB LIST */}
             <div className="GroupMembersTab-memberList">
+                {/* TODO -> Fix this. Use grid  */}
                 <div className="GroupMembersTab-first">
-                    <MemberRow redirect={"/editar"} img={avt_01} alt={"Foto de membro."} memberName={"Márcio Absolutista"} memberNick={"@absolutista"} />
-                    <MemberRow redirect={"/editar"} img={avt_02} alt={"Foto de membro."} memberName={"Curupira Artilheiro"} memberNick={"@pira_art"} />
-                    <MemberRow redirect={"/editar"} img={avt_03} alt={"Foto de membro."} memberName={"Eric Deus Clapton"} memberNick={"@deus_palmatom"} />
+                    {members.map((user) => (
+                        <MemberRow redirect={`/perfil/${user.user_id}/${user.user_username}`} img={avt_01} alt={"Foto de membro."} memberName={formatUserName(user.user_name)} memberNick={"@" + user.user_username} />
+                    ))}
+                    
                 </div>
-
+{/* 
                 <div className="GroupMembersTab-second">
                     <MemberRow redirect={"/editar"} img={avt_05} alt={"Foto de membro."} memberName={"Mayushii Desu"} memberNick={"@mayushii_desu!"} />
                     <MemberRow redirect={"/editar"} img={avt_04} alt={"Foto de membro."} memberName={"Chris Lindão"} memberNick={"@O_Lindo"} />
                     <MemberRow redirect={"/editar"} img={avt_02} alt={"Foto de membro."} memberName={"Saiki Yare Yare"} memberNick={"@yare_yare"} />
-                </div>
+                </div> */}
+
             </div>
         </div>
     );

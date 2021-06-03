@@ -8,9 +8,21 @@ import { HiOutlineUserGroup } from "react-icons/hi";
 import { IoIosPaper } from "react-icons/io";
 import { FaUserFriends } from "react-icons/fa";
 
+// Helpers
+import { formatUserName } from '../../../../helpers/formatUserName';
+import { DateFormatter } from '../../../../helpers/dateFormatter';
+
+ 
 
 /* GROUP ABOUT TAB */
-const GroupAboutTab = ({groupCreationDate, creatorName, adminName, membersCount, postCount, newMembersCount}) => {
+const GroupAboutTab = (groupInfomation) => {
+
+    const {create_date, description, creatorName, num_members, members_list} = groupInfomation.groupInfomation;
+
+    const admin_list = members_list.filter(admin => admin.role_id === 1);
+
+    const formatted_date = new DateFormatter(create_date).getFullDate();
+
     return(
         <div className="GroupAboutTab">
             <div className="GroupAboutTab-first">
@@ -22,7 +34,7 @@ const GroupAboutTab = ({groupCreationDate, creatorName, adminName, membersCount,
                         <h4>
                             Data de Criação:&#160;
                             <span>
-                                {groupCreationDate}
+                                {formatted_date}
                             </span>
                         </h4>
                     </div>
@@ -30,19 +42,11 @@ const GroupAboutTab = ({groupCreationDate, creatorName, adminName, membersCount,
                     <div className="GroupAboutTab-info-row">
                         <UserOutlined />
                         <h4>
-                            Criador:&#160;
+                            Administradores:&#160;
                             <span>
-                                {creatorName}
-                            </span>
-                        </h4>
-                    </div>
-
-                    <div className="GroupAboutTab-info-row">
-                        <UserOutlined />
-                        <h4>
-                            Administrador:&#160;
-                            <span>
-                                {adminName}
+                                {admin_list.map((admin, i, arr) => (
+                                    formatUserName(admin.user_name) + (arr.length === i + 1 ? " " : ", ")
+                                ))}
                             </span>
                         </h4>
                     </div>
@@ -52,7 +56,7 @@ const GroupAboutTab = ({groupCreationDate, creatorName, adminName, membersCount,
                         <h4>
                             Membros:&#160;
                             <span>
-                                {membersCount} no total
+                                {members_list.length}
                             </span>
                         </h4>
                     </div>
@@ -63,12 +67,12 @@ const GroupAboutTab = ({groupCreationDate, creatorName, adminName, membersCount,
 
                     <div className="GroupAboutTab-activity-row GroupAboutTab-activity-postCount">
                         <IoIosPaper />
-                        <h4>{postCount} publicações no último mês</h4>
+                        <h4>publicações no último mês</h4>
                     </div>
 
                     <div className="GroupAboutTab-activity-row GroupAboutTab-activity-newMembersCount">
                         <FaUserFriends />
-                        <h4>{newMembersCount} novos membros no último mês</h4>
+                        <h4>{num_members} novos membros no último mês</h4>
                     </div>
                 </div>
             </div>
@@ -76,7 +80,7 @@ const GroupAboutTab = ({groupCreationDate, creatorName, adminName, membersCount,
             <div className="GroupAboutTab-second">
                 <div className="GroupAboutTab-second-bio">
                     <h2>Sobre</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit est quis lacus interdum, non laoreet lorem feugiat. Aenean sollicitudin id dui id vehicula. Quisque a velit id lacus ornare rutrum eu a ante. Praesent eget lacus diam. Curabitur ultrices sit amet eros at porta. Quisque dolor tortor, vulputate in pretium sit amet, viverra sit amet neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc leo purus, pretium sed condimentum ut, ultricies nec augue. Aliquam neque tortor, lobortis in libero eu, fringilla faucibus arcu. Nam fermentum id nunc ac viverra. Sed lectus mi, volutpat ornare consequat ut, malesuada sit amet enim. Suspendisse nec quam id dolor vulputate maximus non ut nisl. Suspendisse potenti. Curabitur ultricies erat velit, sit amet ullamcorper metus sodales nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>{description}</p>
                 </div>
             </div>
         </div>
