@@ -3,8 +3,9 @@ import "./eventSearch.css";
 
 // Components
 import EventItem from "./components/eventItem/eventItem";
+import ModalCreateEvent from '../../components/ModalCreateEvent';
 
-// Assets - placeholder
+// Assets
 import groupPlaceholder from "../../assets/img/group/groupPlaceholder.jpeg";
 
 // Antd Icons
@@ -17,7 +18,11 @@ const EventSearch = () => {
   // Evento
   const eventList = useSelector((state) => state.entitie.event.eventsList);
 
+  const [showModalCreateEvent, setShowModalCreateEvent] = useState(false);
 
+  const openModalCreateEvent = () => {
+    setShowModalCreateEvent(!showModalCreateEvent);
+  };
 
   return (
     <div className="GroupSearch">
@@ -33,7 +38,7 @@ const EventSearch = () => {
       <div className="GroupSearch-container">
         <div className="GroupSearch-banner">
           <h2 className="GroupSearch-title">Eventos</h2>
-          <button  className="GroupSearch-btn-newGroup">Novo Evento</button>
+          <button onClick={openModalCreateEvent} className="GroupSearch-btn-newGroup">Novo Evento</button>
         </div>
 
         <div className="GroupSearch-groups">
@@ -52,6 +57,10 @@ const EventSearch = () => {
       <div className="GroupSearch-load-more">
         <button className="btn-load">Carregar Mais</button>
       </div>
+
+      {showModalCreateEvent && (
+        <ModalCreateEvent onClose={() => setShowModalCreateEvent(!showModalCreateEvent)} />
+      )}
 
     </div>
   );

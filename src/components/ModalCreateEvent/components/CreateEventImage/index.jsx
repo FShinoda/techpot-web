@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 
 // Assets
-import CreateGroupImagePlaceholder from '../../../../assets/CreateGroupImagePlaceholder.jpg'
+import CreateGroupImagePlaceholder from '../../../../assets/img/group/CreateGroupImagePlaceholder.jpg'
 
 // AntD
 // import 'antd/dist/antd.css';

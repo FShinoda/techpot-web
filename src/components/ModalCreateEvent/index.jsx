@@ -21,7 +21,7 @@ import CreateEventInvite from './components/CreateEventInvite/index';
 
 
 // Helpers
-import { DateFormatter } from '../../helpers/dataFormatter';
+import { DateFormatter } from '../../helpers/dateFormatter';
 
 
 const useStyles = makeStyles((theme) => ({

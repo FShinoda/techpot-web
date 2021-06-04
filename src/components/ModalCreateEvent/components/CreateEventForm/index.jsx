@@ -119,20 +119,21 @@ const CreateEventForm = ({ values, eventInfoForm, activeStep, isLastStep, handle
                         </div>
 
                         <div className="createEvent-date-container">
+                            {/* TODO -> Fixed this field (Required = true) */}
                             <Form.Item
                                 name="eventDate"
                                 rules={[
                                     {
                                         type: 'array',
-                                        required: true,
+                                        required: false,
                                         message: 'A data do evento é obrigatório',
                                     },
                                 ]}
 
                             >
-                                <div className="createEvent-date">
+                                {/* <div className="createEvent-date"> */}
                                     <RangePicker placeholder={["Data inicío", "Data Fim"]} showTime bordered={false} />
-                                </div>
+                                {/* </div> */}
                             </Form.Item>
 
                         </div>
