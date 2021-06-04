@@ -75,7 +75,7 @@ const Post = ({
   return (
     <div className="postContainer font-techpot">
       <div className="postHeader">
-        <Link to={`/usuario/perfil/${id_criador}`}>
+        <Link to={`/perfil/${id_criador}/${formatUserName(nome_criador)}`}>
           <div className="postProfilePictureContainer">
             <img
               src={userPlaceholder}

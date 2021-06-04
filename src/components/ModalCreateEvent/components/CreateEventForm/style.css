@@ -1,0 +1,68 @@
+.createEvent-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modalcreateEventContainerPadrao {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    background-color: rgba(224, 224, 224, 0);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.modalcreateEventContainerPadrao label {
+    margin-bottom: 10px;
+}
+
+.createEvent-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.createEvent-bottom {
+    background-color: var(--color-secundary);
+    text-align: center;
+    border-radius: 25px;
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px 0;
+}
+
+.createEvent-createBtt {
+    color: #fff;
+}
+
+.createEvent-navButtons-Container {
+    width: 100%;
+    padding: 15px 10px 0 10px;
+    text-align: right;
+}
+
+.createEvent-date-container {
+    margin-bottom: 20px;
+    width: 95%;
+
+
+}
+
+.createEvent-date {
+    border: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    background-color: rgba(224, 224, 224, 0);
+    padding: 15px 0;
+    border-radius: 10px;
+
+}

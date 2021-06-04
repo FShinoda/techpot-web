@@ -1,0 +1,48 @@
+.creategroup-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modalCreateGroupContainerPadrao {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    background-color: rgba(224, 224, 224, 0);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modalCreateGroupContainerPadrao label {
+    margin-bottom: 10px;
+}
+
+.creategroup-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.creategroup-bottom {
+    background-color: var(--color-secundary);
+    text-align: center;
+    border-radius: 25px;
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px 0;
+}
+
+.creategroup-createBtt {
+    color: #fff;
+}
+
+.CreateGroup-navButtons-Container{
+    width: 100%;
+    padding: 15px 10px 0 10px;
+    text-align: right;
+}

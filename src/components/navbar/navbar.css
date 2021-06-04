@@ -1,4 +1,9 @@
 /* NAVBAR */
+.navbar-container{
+    height: 65px;
+    width: auto;
+}
+
 .Navbar {
     width: 100vw;
     position: fixed;

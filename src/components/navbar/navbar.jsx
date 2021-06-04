@@ -67,7 +67,7 @@ const Navbar = () => {
           onClose={() => setShowModalUserPreferences(!showModalUserPreferences)}
         />
       )}
-
+      <div className="navbar-container">
       <div className="Navbar">
         {isMobile ? (
           <div className="Navbar-Mob">
@@ -329,6 +329,7 @@ const Navbar = () => {
             </div>
           </div>
         )}
+      </div>
       </div>
     </>
   );
