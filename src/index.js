@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
+import './antd.css';
 import "./index.css";
 
 import Router from "./Router";
 
-// AntD
-import './antd.css';
 
 // Redux
 import store from "./store/index";
@@ -16,7 +15,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <Router></Router>
+        <Router />
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,

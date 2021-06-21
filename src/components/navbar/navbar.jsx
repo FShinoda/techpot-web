@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import "./navbar.css";
-import "../../../node_modules/antd/dist/antd.css"; // TODO -> Review this import
 
 /* ANT DESIGN */
 import { Drawer } from "antd";

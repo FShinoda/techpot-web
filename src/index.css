@@ -26,7 +26,6 @@ html, body {
 body {
   background-color: var(--color-primary);
   font-family: var(--font-body);
-  color: #eee;
 }
 
 /* Btn config padrão*/
@@ -35,7 +34,6 @@ button{
   padding: 5px 0;
   border: none;
   border-radius: 30px;
-  color: #eee;
   cursor: pointer;
   transition: .3s;
 }
@@ -51,11 +49,14 @@ textarea {
   padding: 10px;
   min-height: 100px;
   resize: none;
-  color: #000;
 }
 
 button, input, textarea {
   font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-bottom: 0;
 }
 
 h1 {
@@ -84,6 +85,11 @@ h6 {
 
 code {
   font-family: var(--font-code);
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
 
@@ -221,8 +227,6 @@ dando um margin-top para o conteudo ficar visivel */
       margin-top: 80px;
   }
 }
-
-
 
 
 /* RESPONSIVENESS */

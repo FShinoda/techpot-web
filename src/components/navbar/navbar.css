@@ -210,6 +210,11 @@
     text-decoration: none;
 }
 
+.link-User h4{
+    color: #ddd;
+    
+}
+
 .Navbar-Desk-nav-left-user button {
     background-color: transparent;
 }
