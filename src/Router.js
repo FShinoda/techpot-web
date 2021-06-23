@@ -83,7 +83,7 @@ const Router = () => {
     <>
       <Switch>
 
-        <Route path={["/login"]} component={NoNavbar} />
+        <Route path={["/login", "/editar"]} component={NoNavbar} />
         <Route component={UseNavbar} />
 
         <Route path="*" component={ERR_404} />
@@ -100,6 +100,9 @@ const NoNavbar = () => {
   return (
     <>
       <Route exact path="/login" component={LoginPage} />
+
+      <ProtectedRoute exact path="/editar" component={GeneralEdit} />
+
     </>
   )
 }
@@ -121,9 +124,7 @@ const UseNavbar = () => {
       <ProtectedRoute exact path="/eventos" component={EventSearch} />
 
       <ProtectedRoute exact path="/evento/:id/:eventname" component={Event} />
-
-      <ProtectedRoute exact path="/editar" component={GeneralEdit} />
-
+        
       <ProtectedRoute exact path="/editar/conta" component={AccountEdit} />
 
       {/* Mobile only */}
