@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 30px; /* break */
+    color: #fff;
 }
 
 .Event-photo-div{
@@ -34,23 +35,31 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 15px 25px;
-    padding-bottom: 30px;
+    padding: 15px 25px 25px 30px;
     border: none;
     border-bottom: solid 2px #2c435c;
     border-bottom-style:dashed;
 }
 .Event-ticket-info h2{
-    line-height: 26px;
+    /*line-height: 26px;*/
+    margin-bottom: 10px;
 }
+
+.Event-ticket-info h6{
+    font-size: 21px;
+}
+
 .Event-ticket-info-p{
     color: #bbb;
+    margin-top: 10px;
+
 }
 
 .event-ticket-info-line{
     display: flex;
     align-items: center;
     padding-top: 4px;
+    margin-bottom: 8px;
 }
 
 .event-ticket-info-line img{
@@ -60,6 +69,8 @@
 .event-ticket-info-icon{
     color:#688fb6;
     padding-right: 5px;
+    align-self: flex-end;
+    margin-bottom: 3px;
 }
 
 .event-ticket-info-icon-share{
@@ -150,6 +161,15 @@
 .Event-info-organizator-img{
     display: flex;
     align-items: center;
+}
+
+.Event-info-organizator div p{
+    margin-bottom: 10px;
+}
+
+.Event-info-organizator div h5{
+    margin-bottom: 5px;
+
 }
 
 .Event-info-card p{
@@ -246,7 +266,7 @@
     }
 
     .Event-ticket-info h6{
-        font-size: 1.18em;
+        font-size: 22px;
     }
 
     /* icones share */
@@ -264,6 +284,7 @@
         font-size: 16px;
         margin-top:10px;
         padding: 8px 15px;
+        color: #ddd;
     }
     
     .Event-ticket-code-qr img{
@@ -310,7 +331,7 @@
     }
 
     .Event-ticket-info h6{
-        font-size: 1.2em;
+        font-size: 22px;
     }
 
     /* icones share */
@@ -345,7 +366,7 @@
     }
 
     .Event-ticket-info h6{
-        font-size: 1.2em;
+        font-size: 22px;
     }
 
     /* icones share */
@@ -399,7 +420,7 @@
     }
     .Event-ticket-info h2{
         line-height: 26px;
-        font-size: 22px;
+        font-size: 28px;
         font-weight: bold;
     }
     .Event-ticket-info-p{
@@ -407,7 +428,7 @@
     }
 
     .Event-ticket-info h6{
-        font-size: 1.2em;
+        font-size: 17px;
     }
     
     .event-ticket-info-line{

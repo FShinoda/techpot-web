@@ -32,7 +32,6 @@
     border-radius: 30px;
 }
 
-
 .GroupSearch-container{
     margin-top: 50px; /* breakpoint changeable */
     width: 100%;
@@ -50,7 +49,7 @@
 
 .GroupSearch-title{
     padding: 15px; /* breakpoint changeable */
-
+    color: #fff;
 }
 
 .GroupSearch-btn-newGroup{
