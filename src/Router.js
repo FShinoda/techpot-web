@@ -1,6 +1,6 @@
 /* REACT */
-import React, { useEffect } from "react";
-import { Switch, Route } from "react-router-dom";
+import React, {useEffect} from "react";
+import {Switch, Route} from "react-router-dom";
 
 /* PAGES */
 // Login
@@ -43,97 +43,93 @@ import NotifEdit from "./pages/generalEdit/pages/notifEdit/notifEdit.jsx";
 import ERR_404 from "./pages/404/404.jsx";
 
 // Redux
-import { useSelector, useDispatch } from "react-redux";
-import { userInfo } from "./store/_entities/User";
-import { listEvent } from "./store/_entities/Event";
-import { listGroup } from "./store/_entities/Group";
-import { listPostByUser } from "./store/_entities/Post";
+import {useSelector, useDispatch} from "react-redux";
+import {userInfo} from "./store/_entities/User";
+import {listEvent} from "./store/_entities/Event";
+import {listGroup} from "./store/_entities/Group";
+import {listPostByUser} from "./store/_entities/Post";
 
 // Components
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const Router = () => {
-  // Get User ID
-  const usuarioId = useSelector((state) => state.entitie.user.id);
+    // Get User ID
+    const usuarioId = useSelector((state) => state.entitie.user.id);
 
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    const loadInitialData = async () => {
-      await dispatch(userInfo(usuarioId, true));
-      await dispatch(listEvent());
-      await dispatch(listGroup(usuarioId));
-      await dispatch(listPostByUser(usuarioId));
+    useEffect(() => {
+        const loadInitialData = async () => {
+            await dispatch(userInfo(usuarioId, true));
+            await dispatch(listEvent());
+            await dispatch(listGroup(usuarioId));
+            await dispatch(listPostByUser(usuarioId));
 
-      const loadinSpinner = document.getElementById("ipl-progress-indicator");
-      if (loadinSpinner) {
-        // fade out
-        loadinSpinner.classList.add("available");
-        setTimeout(() => {
-          // remove from DOM
-          loadinSpinner.outerHTML = "";
-        }, 2000);
-      }
-    };
+            const loadinSpinner = document.getElementById("ipl-progress-indicator");
+            if (loadinSpinner) {
+                // fade out
+                loadinSpinner.classList.add("available");
+                setTimeout(() => {
+                    // remove from DOM
+                    loadinSpinner.outerHTML = "";
+                }, 2000);
+            }
+        };
 
-    loadInitialData();
-  }, [dispatch]);
+        loadInitialData();
+    }, [dispatch]);
 
-  return (
-    <>
-      <Switch>
+    return (
+        <>
+            <Switch>
+                <Route path={["/login", "/editar/:id/:username"]} component={NoNavbar}/>
+                <Route component={UseNavbar}/>
 
-        <Route path={["/login", "/editar"]} component={NoNavbar} />
-        <Route component={UseNavbar} />
-
-        <Route path="*" component={ERR_404} />
-
-
-      </Switch>
-    </>
-  );
+                <Route path="*" component={ERR_404}/>
+            </Switch>
+        </>
+    );
 };
 
 
 // Routes that dont use the navbar
 const NoNavbar = () => {
-  return (
-    <>
-      <Route exact path="/login" component={LoginPage} />
+    return (
+        <>
+            <Route exact path="/login" component={LoginPage}/>
 
-      <ProtectedRoute exact path="/editar" component={GeneralEdit} />
-
-    </>
-  )
+            <ProtectedRoute exact path="/editar/:id/:username" component={GeneralEdit}/>
+        </>
+    )
 }
 
 // Routes that use the navbar
 const UseNavbar = () => {
-  return (
-    <>
-      <Navbar />
+    return (
+        <>
+            <Navbar/>
 
-      <ProtectedRoute path={["/", "/feed"]} exact component={MainFeed} />
+            <ProtectedRoute path={["/", "/feed"]} exact component={MainFeed}/>
 
-      <ProtectedRoute path="/perfil/:id/:username" exact component={UserProfile} />
+            <ProtectedRoute path="/perfil/:id/:username" exact component={UserProfile}/>
 
-      <ProtectedRoute path="/grupos" exact component={GroupSearch} />
+            <ProtectedRoute path="/grupos" exact component={GroupSearch}/>
 
-      <ProtectedRoute exact path="/grupo/:id/:groupname" component={Group} />
+            <ProtectedRoute exact path="/grupo/:id/:groupname" component={Group}/>
 
-      <ProtectedRoute exact path="/eventos" component={EventSearch} />
+            <ProtectedRoute exact path="/eventos" component={EventSearch}/>
 
-      <ProtectedRoute exact path="/evento/:id/:eventname" component={Event} />
-        
-      <ProtectedRoute exact path="/editar/conta" component={AccountEdit} />
+            <ProtectedRoute exact path="/evento/:id/:eventname" component={Event}/>
 
-      {/* Mobile only */}
-      <ProtectedRoute exact path="/editar/perfil" component={ProfileEdit} />
-      <ProtectedRoute exact path="/editar/portifolio" component={PortfolioEdit}/>
-      <ProtectedRoute exact path="/editar/notificacao" component={NotifEdit} />
-      
-    </>
-  );
+            <ProtectedRoute exact path="/editar/conta" component={AccountEdit}/>
+
+            {/* Mobile only */}
+            <ProtectedRoute exact path="/editar/perfil" component={ProfileEdit}/>
+            <ProtectedRoute exact path="/editar/portifolio" component={PortfolioEdit}/>
+            <ProtectedRoute exact path="/editar/notificacao" component={NotifEdit}/>
+
+        </>
+    );
 };
 
 export default Router;

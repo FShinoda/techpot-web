@@ -9,11 +9,19 @@
     flex-direction: column;
     align-items: center;
 }
+
 .link-counter{
     width: 100%;
     color: #fff;
     text-decoration: none;
 }
+
+
+.GeneralEdit-sidebar-header h4{
+    color: #ddd;
+    font-size: 20px;
+}
+
 .GeneralEdit-btn-logout{
     margin-top: 30px; /* break */
     border: none;

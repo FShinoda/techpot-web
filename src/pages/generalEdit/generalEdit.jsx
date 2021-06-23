@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {Link, useParams} from 'react-router-dom';
 import './style.css';
 import { Input } from 'antd';
 
@@ -14,14 +14,30 @@ import OptionProfile from './components/optionProfile/optionProfile.jsx';
 // Icons
 import { UserOutlined, BellOutlined, AuditOutlined, LockOutlined, SmileOutlined } from '@ant-design/icons';
 
+// Helpers
+import { formatUserName } from '../../helpers/formatUserName';
+
+// Redux
+import { useSelector, useDispatch } from "react-redux";
+import {USER_INFO_CLEANUP, userInfo} from '../../store/_entities/User';
+
 // Assets
 import bgPlaceholder from '../../assets/profileBackgroundImage.jpg';
 import profilePlaceholder from '../../assets/img/userPlaceholder.jpg';
 
 const GeneralEdit = () =>{
 
+    const dispatch = useDispatch();
+    const { id } = useParams();
+
+    const user_profile = useSelector((state) => state.entitie.user.profile);
+
     const [currentOption, setCurrentOption] = useState("1");
     const [currentTitle, setCurrentTitle] = useState("perfil")
+
+    useEffect(() => {
+        dispatch(userInfo(id, true));
+    }, [])
 
     const getCurrentOption = (current) => {
         switch (current) {
@@ -45,12 +61,12 @@ const GeneralEdit = () =>{
                     <EditHeader title="Configurações"/>
         
                     <div className="GeneralEdit-container top-container">
-                        <Link to="/editar/conta" className="link-counter"><EditItem icon={<LockOutlined />} title={"Minha conta"} /></Link>
+                        <Link to="/editar/conta" className="link-counter" style={{color: "#ddd"}}><EditItem icon={<LockOutlined />} title={"Minha conta"} /></Link>
                         <Link to="/editar/perfil" className="link-counter"><EditItem icon={<UserOutlined/>} title={"Meu perfil"} /></Link>
                         <Link to="/editar/portifolio" className="link-counter"><EditItem icon={<AuditOutlined />} title={"Meu Portifólio"} /></Link>
                         <Link to="/editar/notificacao" className="link-counter"><EditItem icon={<BellOutlined />} title={"Notificações"} /> </Link>
                                     
-                        <button className="GeneralEdit-btn-logout">Log out</button>
+                        <button className="GeneralEdit-btn-logout">Logout</button>
                                 
                     </div>
                 </div>
@@ -60,8 +76,8 @@ const GeneralEdit = () =>{
                     <div className="GeneralEdit-sidebar">
                         <div className="GeneralEdit-sidebar-header">
                             <img src={profilePlaceholder} />
-                            <span>Fernanda Carreira Martins shinoda</span>
-                            <p>@Fshinoda</p>
+                            <h4>{user_profile.u ? formatUserName(user_profile.u.name) : " Name"}</h4>
+                            <p>@{user_profile.u ? user_profile.u.username  : "Usuario"}</p>
                         </div>
                         <div className="GeneralEdit-sidebar-content">
                             <EditItem key="1" icon={<LockOutlined />} title={"Minha conta"} clickEvent={() => {setCurrentOption("1"); setCurrentTitle("conta");}} isActive={currentOption === "1" ? true : false}/>

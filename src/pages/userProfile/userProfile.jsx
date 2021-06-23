@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./userProfile.css";
 
+// Icons
+import { EditOutlined } from '@ant-design/icons';
 
 /* COMPONENTS */
 import UserInfoNavItemList from "./components/userInfoNavItemList/userInfoNavItemList.jsx";
@@ -27,12 +29,13 @@ import { useParams } from 'react-router-dom';
 
 // Helpers
 import { formatUserName } from '../../helpers/formatUserName';
-import { firstLetterUppercase } from '../../helpers/UpperFirstLetter';
+
+// Router
+import { Link } from "react-router-dom";
 
 /* USER PROFILE PAGE */
 const UserProfile = () => {
     const dispatch = useDispatch();
-    
     const { id } = useParams();
     
     const user_id = useSelector(state => state.entitie.user.id);
@@ -102,6 +105,14 @@ const UserProfile = () => {
 
                 <div className="UserProfile_profileImg">
                     <img className="UserProfile_userImg" src={userProfilePlaceholder} alt="Imagem de perfil do usuário." />
+
+                    {isUserProfile &&
+                        <Link to={`/editar/${user_id}/${user_profile.u ? user_profile.u.username : " "}`} style={{ color: '#fff' }}>
+                            <div color="secondary" aria-label="add" className="user-profile-edit-icon-container">
+                                <EditOutlined />
+                            </div>
+                        </Link>
+                    }
                 </div>
             </div>
 
