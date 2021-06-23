@@ -1,6 +1,8 @@
 import React from "react";
 import "./groupRow.css";
 
+import {Avatar} from 'antd';
+import {UserOutlined} from '@ant-design/icons';
 
 /* GROUP ROW */
 const GroupRow = ({redirect, img, alt, groupName, membersCount}) => {
@@ -9,19 +11,16 @@ const GroupRow = ({redirect, img, alt, groupName, membersCount}) => {
             {/* AVATAR */}
             <div className="GroupRow_avatar">
                 <a href={redirect}>
-                    <figure>
-                        <img src={img} alt={alt} />
-                    </figure>
+                    <Avatar size="large" icon={<UserOutlined/>}/>
                 </a>
             </div>
-
 
             {/* GROUP INFO */}
             <div className="GroupRow_group">
                 <a href={redirect}>
                     <h5>{groupName}</h5>
                 </a>
-                <span>{membersCount} membros</span>
+                <span>{membersCount} membro{membersCount > 1 ? "s" : ""}</span>
             </div>
         </div>
     );
