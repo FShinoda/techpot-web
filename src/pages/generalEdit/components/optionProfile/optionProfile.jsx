@@ -6,35 +6,39 @@ import { Input } from 'antd';
 import UpdateImgModal from '../updateImgModal/updateImgModal.jsx'
 
 // Icons
-import { UserOutlined, BellOutlined, AuditOutlined, LockOutlined, SmileOutlined } from '@ant-design/icons';
+import { UserOutlined, MailOutlined , AuditOutlined, LockOutlined, SmileOutlined } from '@ant-design/icons';
 
 // Assets
 import bgPlaceholder from '../../../../assets/profileBackgroundImage.jpg'
 import profilePlaceholder from '../../../../assets/img/userPlaceholder.jpg';
 
-const OptionProfile = () => {
+const OptionProfile = ({ user_profile }) => {
     return (
         <div className="OptionProfile">
             <forms>
                 <div className="OptionProfile-card-edit-content-name-div">
                     <div className="div-flex-column div-padding-x OptionProfile-card-edit-name">
                         <label className="OptionProfile-label">Nome</label>
-                        <Input size="large" placeholder="Nome Completo" prefix={<UserOutlined />} />
-
+                        <Input size="large" placeholder="Nome Completo" disabled prefix={<UserOutlined />} value={user_profile ? user_profile.u.name : " "}/>
                     </div>
                     <div className="div-flex-column div-padding-x OptionProfile-card-edit-username">
                         <label className="OptionProfile-label">Usuário</label>
-                        <Input size="large" placeholder="Nome de Usuário" prefix={<SmileOutlined />} />
+                        <Input size="large" placeholder="Nome de Usuário" disabled prefix={<UserOutlined />} value={user_profile ? user_profile.u.username : " "} />
                     </div>
                 </div>
                 <div className="div-padding-x">
+                    <label className="OptionProfile-label">E-mail</label>
+                    <Input size="large" placeholder="Nome de Usuário" disabled prefix={<MailOutlined  />} value={user_profile ? user_profile.u.email : " "} />
+                </div>
+                <div className="div-padding-x">
                     <label className="OptionProfile-label">Bio</label>
-                    <textarea placeholder="Escreva sobre você...">
+                    <textarea disabled placeholder="Escreva sobre você...">
                     </textarea>
                 </div>
 
+
                 <div className="div-padding-x">
-                    <button className="OptionProfile-submit">Salvar</button>
+                    <button disabled className="OptionProfile-submit">Salvar</button>
                 </div>
 
 

@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import './style.css';
-import { Input } from 'antd';
 
 import Navbar from "../../components/navbar/navbar.jsx";
 
@@ -12,7 +11,7 @@ import UpdateImgModal from './components/updateImgModal/updateImgModal.jsx';
 import OptionProfile from './components/optionProfile/optionProfile.jsx';
 
 // Icons
-import { UserOutlined, BellOutlined, AuditOutlined, LockOutlined, SmileOutlined } from '@ant-design/icons';
+import { UserOutlined, BellOutlined, AuditOutlined, LockOutlined, ArrowLeftOutlined  } from '@ant-design/icons';
 
 // Helpers
 import { formatUserName } from '../../helpers/formatUserName';
@@ -22,7 +21,6 @@ import { useSelector, useDispatch } from "react-redux";
 import {USER_INFO_CLEANUP, userInfo} from '../../store/_entities/User';
 
 // Assets
-import bgPlaceholder from '../../assets/profileBackgroundImage.jpg';
 import profilePlaceholder from '../../assets/img/userPlaceholder.jpg';
 
 const GeneralEdit = () =>{
@@ -44,7 +42,7 @@ const GeneralEdit = () =>{
             case "1":
                 return "Em desenvolvimento1..."
             case "2":
-                return <OptionProfile/>;
+                return <OptionProfile user_profile={user_profile}/>;
             case "3":
                 return "Em desenvolvimento3..."
             default: 
@@ -75,6 +73,9 @@ const GeneralEdit = () =>{
                 <div className="GeneralEdit-desktop">
                     <div className="GeneralEdit-sidebar">
                         <div className="GeneralEdit-sidebar-header">
+                            <Link to={user_profile ? `/perfil/${id}/${user_profile.u.username}` : ""}>
+                                <ArrowLeftOutlined style={{position: "absolute", top: "19px", left: "0px", color: "#ddd", fontSize: '25px'}}/>
+                            </Link>
                             <img src={profilePlaceholder} />
                             <h4>{user_profile.u ? formatUserName(user_profile.u.name) : " Name"}</h4>
                             <p>@{user_profile.u ? user_profile.u.username  : "Usuario"}</p>
@@ -93,7 +94,6 @@ const GeneralEdit = () =>{
                         </div>
                         <div className="GeneralEdit-card-edit-content">
                             {getCurrentOption(currentOption)}
-                            
                         </div>
                         
                     </div>

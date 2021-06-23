@@ -22,6 +22,8 @@
 /* label */
 .OptionProfile-label{
     font-size: 18px; /* break */
+    color: #ddd;
+    margin-bottom: 8px ;
 }
 
 /* input nome */
@@ -39,6 +41,7 @@
     font-size: 16px;
     padding: 10px 15px;
     width: 100%;
+    color: #ddd;
 }
 
 .OptionProfile-card-preview{
