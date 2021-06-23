@@ -32,8 +32,8 @@ const UserGroupTab = () => {
             {/* TAB LIST */}
             <div className="UserGroupTab_groupList">
                 <div className="UserGroupTab_groupListFirst">
-                    <GroupRow redirect={"/editar"} img={avt_01} alt={"Foto de grupo."} groupName={"Rock Lee do Pagode Namora D+"} membersCount={"163"} />
-                    <GroupRow redirect={"/editar"} img={avt_02} alt={"Foto de grupo."} groupName={"Amantes do Ednaldo Pereira"} membersCount={"36952"} />
+                    <GroupRow redirect={"/editar"} img={avt_01} alt={"Foto de grupo."} groupName={"Tech"} membersCount={"163"} />
+                    <GroupRow redirect={"/editar"} img={avt_02} alt={"Foto de grupo."} groupName={""} membersCount={"36952"} />
                     <GroupRow redirect={"/editar"} img={avt_03} alt={"Foto de grupo."} groupName={"Farra, Pinga e Foguete"} membersCount={"1992"} />
                 </div>
 

@@ -29,8 +29,6 @@ import { useParams } from 'react-router-dom';
 import { formatUserName } from '../../helpers/formatUserName';
 import { firstLetterUppercase } from '../../helpers/UpperFirstLetter';
 
-
-
 /* USER PROFILE PAGE */
 const UserProfile = () => {
     const dispatch = useDispatch();
@@ -42,7 +40,7 @@ const UserProfile = () => {
     const other_user_profile = useSelector(state => state.entitie.user.otherUserProfile);
     
     const [ currentNav, setCurrentNav ] = useState("1");
-    const [ isUserProfile, setIsUserProfile ] = useState(user_id === parseInt(id) ? true : false)
+    const [ isUserProfile, setIsUserProfile ] = useState(user_id === parseInt(id))
     const [ friendStatus, setFriendStatus ] = useState("notFriend");
 
     useEffect(() => {

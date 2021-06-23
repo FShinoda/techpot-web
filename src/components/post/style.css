@@ -1,6 +1,6 @@
 .postContainer {
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 8px 5px 15px #111b24;
     background-color: #fff;
     margin-bottom: 30px;
@@ -73,8 +73,8 @@
 .postFooter {
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    align-items: center;
+    margin: 15px 0;
 }
 
 .postLikesContainer,

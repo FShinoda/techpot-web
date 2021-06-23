@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./navbar.css";
+// import "../../../node_modules/antd/dist/antd.css"; // TODO -> Review this import
 
 /* ANT DESIGN */
 import { Drawer } from "antd";
@@ -15,7 +16,6 @@ import iconUser from "../../assets/icon_user.png";
 import iconEvent from "../../assets/icone_evento.png";
 import iconMessage from "../../assets/icon_message.png";
 import iconNotification from "../../assets/icon_notification.png";
-import iconSettings from "../../assets/icon_settings.png";
 
 /* ICONS */
 import { FiMenu } from "react-icons/fi";
@@ -242,32 +242,6 @@ const Navbar = () => {
                     </div>
                   </div>
                 </div>
-                {/* 
-              <div className="Navbar-Desk-nav-left-icons">
-                <div className="Navbar-Desk-nav-left-icons-config">
-                  <button className="Navbar-Desk-nav-left-icons-buttons">
-                    <Link className="link-counter" to={"/editar"}>
-                      <img src={icon} alt={"Ícone de configurações."} />
-                    </Link>
-                  </button>
-                </div>
-
-                <div className="Navbar-Desk-nav-left-icons-groups">
-                  <button className="Navbar-Desk-nav-left-icons-buttons">
-                    <Link className="link-counter" to={"/grupos"}>
-                      <img src={icon} alt={"Ícone de grupos."} />
-                    </Link>
-                  </button>
-                </div>
-
-                <div className="Navbar-Desk-nav-left-icons-events">
-                  <button className="Navbar-Desk-nav-left-icons-buttons">
-                    <Link className="link-counter" to={"/eventos"}>
-                      <img src={iconEvent} alt={"Ícone de eventos."} />
-                    </Link>
-                  </button>
-                </div>
-              </div> */}
               </div>
 
               <div className="Navbar-Desk-nav-right">
@@ -285,96 +259,18 @@ const Navbar = () => {
                         <img src={searchIconRed} alt={"Ícone de pesquisa."} />
                       </button>
                     </div>
-                :
-                    <div className="Navbar-Desk">
-                        <div className="Navbar-Desk-nav">
-                            <div className="Navbar-Desk-nav-left">
-                                <div className="Navbar-Desk-nav-left-user">
-                                    <button className="Navbar-Desk-nav-left-user-button">
-                                        <Link className="link-counter link-User" to={"/perfil"}>
-                                            <img src={iconUser} alt={"Foto do usuário."} />
+                  ) : (
+                    <div className="Navbar-Desk-search-box-false">
+                      <div className="Navbar-Desk-false-input">
+                        <input readOnly />
+                      </div>
 
-                                            <h4>firstName</h4>
-                                        </Link>
-                                    </button>
-                                </div>
-
-                                <div className="Navbar-Desk-nav-left-icons">
-                                    <div className="Navbar-Desk-nav-left-icons-config">
-                                        <button className="Navbar-Desk-nav-left-icons-buttons">
-                                            <Link className="link-counter" to={"/editar"}>
-                                                <img src={iconSettings} alt={"Ícone de configurações."} />
-                                            </Link>
-                                        </button>
-                                    </div>
-
-                                    <div className="Navbar-Desk-nav-left-icons-groups">
-                                        <button className="Navbar-Desk-nav-left-icons-buttons">
-                                            <Link className="link-counter" to={"/grupos"}>
-                                                <img src={icon} alt={"Ícone de grupos."} />
-                                            </Link>
-                                        </button>
-                                    </div>
-
-                                    <div className="Navbar-Desk-nav-left-icons-events">
-                                        <button className="Navbar-Desk-nav-left-icons-buttons">
-                                            <Link className="link-counter" to={"/eventos"}>
-                                                <img src={iconEvent} alt={"Ícone de eventos."} />
-                                            </Link>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="Navbar-Desk-nav-right">
-                                <div className="Navbar-Desk-nav-right-search">
-                                    {
-                                        showSearch ?
-                                            <div className="Navbar-Desk-search-box-true">
-                                                <div className="Navbar-Desk-true-input">
-                                                    <input type="text" placeholder="    Pesquisar . . ." />
-                                                </div>
-
-                                                <button className="Navbar-Desk-search-button" onClick={() => setShowSearch(!showSearch)}>
-                                                    <img src={searchIconRed} alt={"Ícone de pesquisa."} />
-                                                </button>
-                                            </div>
-                                        :
-                                            <div className="Navbar-Desk-search-box-false">
-                                                <div className="Navbar-Desk-false-input">
-                                                    <input readOnly/>
-                                                </div>
-
-                                                <button className="Navbar-Desk-search-button" onClick={() => setShowSearch(!showSearch)}>
-                                                    <img src={searchIcon} alt={"Ícone de pesquisa."} />
-                                                </button>
-                                            </div>  
-                                    }
-                                </div>
-
-                                <div className="Navbar-Desk-nav-right-icons">
-                                    <div className="Navbar-Desk-nav-right-icons-notify">
-                                        <button className="Navbar-Desk-nav-right-icons-buttons">
-                                            <Link className="link-counter" to={"/"}>
-                                                <img src={iconNotification} alt={"Ícone de notificações."} />
-                                            </Link>
-                                        </button>
-                                    </div>
-
-                                    <div className="Navbar-Desk-nav-right-icons-message">
-                                        <button className="Navbar-Desk-nav-right-icons-buttons">
-                                            <Link className="link-counter" to={"/"}>
-                                                <img src={iconMessage} alt={"Ícone de mensagens."} />
-                                            </Link>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="Navbar-Desk-logo">
-                            <img src={logo} alt={"Logo da TECHPOT."} />
-                        </div>
+                      <button
+                        className="Navbar-Desk-search-button"
+                        onClick={() => setShowSearch(!showSearch)}
+                      >
+                        <img src={searchIcon} alt={"Ícone de pesquisa."} />
+                      </button>
                     </div>
                   )}
                 </div>

@@ -18,6 +18,7 @@ const slice = createSlice({
         postListByGroup: [],
         postsUserLiked: [],
         postInfo: {},
+        postComments: []
     },
 
     reducers: {
@@ -80,17 +81,27 @@ const slice = createSlice({
             post.loading = false;
             post.error = false;
         },
-
         
         POST_UNLIKED_SUCCESSFUL: (post, action) => {
             post.loading = false;
             post.error = false;
         },
 
+        POST_LIST_COMMENTS_SUCCESSFUL: (post, action) => {
+            post.postComments = [];
+            post.loading = false;
+            post.error = false;
+            post.postComments = action.payload;
+        },
+
+        POST_COMMENTS_CLEANUP: (post, action) => {
+            post.postComments = [];
+        },
+
     }
 });
 
-export const { POST_REQUESTED, POST_FAILED, POST_INFO_SUCCESSFUL, POST_CREATED_SUCCESSFUL, POST_LIST_SUCCESSFUL, POST_EDITED_SUCCESSFUL, POST_DELETED_SUCCESSFUL, POST_LISTED_USER_SUCCESSFUL, POST_LISTED_GROUP_SUCCESSFUL, POST_LIKED_SUCCESSFUL,POST_UNLIKED_SUCCESSFUL, } = slice.actions;
+export const { POST_REQUESTED, POST_FAILED, POST_INFO_SUCCESSFUL, POST_CREATED_SUCCESSFUL, POST_LIST_SUCCESSFUL, POST_EDITED_SUCCESSFUL, POST_DELETED_SUCCESSFUL, POST_LISTED_USER_SUCCESSFUL, POST_LISTED_GROUP_SUCCESSFUL, POST_LIKED_SUCCESSFUL,POST_UNLIKED_SUCCESSFUL, POST_LIST_COMMENTS_SUCCESSFUL, POST_COMMENTS_CLEANUP } = slice.actions;
 
 export default slice.reducer;
 
@@ -172,5 +183,14 @@ export const unlikePost = (user_id, post_id) => apiCallBegan({
     method: "put",
     onStart: POST_REQUESTED.type,
     onSuccess: POST_UNLIKED_SUCCESSFUL.type,
+    onError: POST_FAILED.type
+});
+
+export const listComments = (post_id) => apiCallBegan({
+    url: url + `/comment/post/${post_id}`,
+    headers: authHeader(),
+    method: "get",
+    onStart: POST_REQUESTED.type,
+    onSuccess: POST_LIST_COMMENTS_SUCCESSFUL.type,
     onError: POST_FAILED.type
 });

@@ -1,0 +1,39 @@
+.comment-box-container{
+
+
+}
+
+.comment-box-row1{
+    display: flex;
+    padding: 7px;
+    margin-top: 8px;
+}
+
+.comment-box-col2{
+    margin-left: 10px;
+    background-color: #f1f2f6 ;
+    padding: 5px 5px 5px 10px;
+    border-radius: 13px;
+    width: auto;
+}
+.comment-box-col2-header{
+    display: flex;
+    align-items: center;
+}
+
+.comment-box-col2-header .comment-box-username{
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+
+.comment-box-col2-content p{
+    margin-top: 10px;
+    font-size: .8rem;
+    font-family: var(--font-body);
+}
+
+.comment-box-col2-footer p{
+    font-size: 11px;
+    margin-left: 45px;
+}

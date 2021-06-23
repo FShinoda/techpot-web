@@ -22,16 +22,12 @@ const api = ({dispatch }) => next => async action => {
             data,
         });
 
-
         // If the api call is succesfull dispatch another 'event' with the data from the server
         // General
         dispatch(actions.apiCallSuccess(response.data))
 
         //Specific
         if(onSuccess) dispatch({type: onSuccess, payload: response.data});
-
-            
-
     }
 
     catch(error){
@@ -41,8 +37,6 @@ const api = ({dispatch }) => next => async action => {
         
         // Specific
         if(onError) dispatch({type: onError, payload: error.response.data.message});
-
-        
 
     }
 

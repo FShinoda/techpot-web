@@ -114,6 +114,7 @@
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
+    color: #ffff;
 }
 
 .UserProfile_profileId h2 {
@@ -122,8 +123,10 @@
 }
 
 .UserProfile_profileId h3 {
-    font-size: 1.1rem;
+    font-size: .9em;
     opacity: .85;
+    font-weight: lighter;
+    margin-top: 6px;
 }
 
 
@@ -258,6 +261,7 @@
 
     .UserProfile_friendCount {
         display: inline-block;
+        color: #fff;
     }
 
     .UserProfile_defaultFriend {

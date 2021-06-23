@@ -1,0 +1,6 @@
+.comment-section-container{
+    -webkit-transition: all 0.4s 0s ease-in;
+    -moz-transition: all 0.4s 0s ease-in;
+    -o-transition: all 0.4s 0s ease-in;
+    transition: all 0.4s 0s ease-in;
+}

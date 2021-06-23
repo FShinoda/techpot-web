@@ -1,0 +1,23 @@
+.create-comment-container{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    padding: 7px;
+}
+
+.create-comment-profile-pic{
+    margin-right: 10px;
+}
+
+.create-comment-container textarea{
+    border: none;
+    background-color: #f1f2f6;
+    padding: 8px;
+    flex: 1;
+    border-radius: 10px;
+    resize: vertical;
+    min-height: 60px;
+}
+
+
+

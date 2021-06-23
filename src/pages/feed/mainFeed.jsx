@@ -68,13 +68,19 @@ const MainFeed = () => {
             key={posts.post_id}
             post_body={posts.post_body}
             post_id={posts.post_id}
-            data_criacao={posts.post_data_criacao}
+            data_criacao={posts.post_create_date}
             post_body_html={posts.post_body_html}
             post_body={posts.post_body}
             grupo={posts.group_name}
             id_criador={posts.user_id}
             nome_criador={posts.user_name}
             like_count={posts.post_like_count}
+            comment_count={posts.post_comment_count}
+            comment_id={posts.comment_id}
+            comment_body={posts.comment_body}
+            comment_user_id={posts.comment_user_id}
+            comment_user_name={posts.comment_user_name}
+            comment_date={posts.comment_date}
           />
         ))}
       </div>
