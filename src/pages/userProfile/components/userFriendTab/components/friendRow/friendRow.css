@@ -29,10 +29,12 @@
 
 .FriendRow_friend h5 {
     font-weight: bold;
+    color: #ddd;
 }
 
 .FriendRow_friend span {
     opacity: .7;
+    color: #ddd;
 }
 
 

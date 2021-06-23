@@ -10,8 +10,11 @@
 .UserFriendTab_heading {
     display: flex;
     justify-content: space-between;
-    margin-left: 1rem;
+    margin-left: .2rem;
+    margin-bottom: 15px;
     padding: 1.75px;
+    color: #fff;
+
 }
 
 
