@@ -8,3 +8,11 @@
     padding: 20px;
     border-radius: 10px;
 }
+
+.modalCreateGroupContainerPadrao select{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #2c435c;
+    margin-top: 8px;
+    width: 100%;
+}

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./style.css";
 
 // Components
-// import TechpotInput from "../../../../shared/TechpotInput";
-// import TechpotTextArea from "../../../../shared/TechpotTextArea";
 
 // Materia UI
 import Button from "@material-ui/core/Button";
@@ -121,17 +119,17 @@ const CreateGroupForm = ({
                   },
                 ]}
               >
-                <Select placeholder="Privacidade" size="large">
+                <select placeholder="Privacidade" size="large">
                   {privacyValues.map((tipo) => (
-                    <Select.Option
+                    <option
                       className="font-techpot"
                       key={tipo.value}
                       value={tipo.value}
                     >
                       {tipo.name}
-                    </Select.Option>
+                    </option>
                   ))}
-                </Select>
+                </select>
               </Form.Item>
             </div>
           </div>

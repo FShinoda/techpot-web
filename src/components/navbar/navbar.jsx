@@ -278,7 +278,7 @@ const Navbar = () => {
                 <div className="Navbar-Desk-nav-right-icons">
                   <div className="Navbar-Desk-nav-right-icons-notify">
                     <button className="Navbar-Desk-nav-right-icons-buttons">
-                      <Link className="link-counter" to={"/"}>
+                      <Link className="link-counter" to={"/grupos"}>
                         <img
                           src={iconNotification}
                           alt={"Ícone de notificações."}
@@ -289,7 +289,7 @@ const Navbar = () => {
 
                   <div className="Navbar-Desk-nav-right-icons-message">
                     <button className="Navbar-Desk-nav-right-icons-buttons">
-                      <Link className="link-counter" to={"/"}>
+                      <Link className="link-counter" to={"/eventos"}>
                         <img src={iconMessage} alt={"Ícone de mensagens."} />
                       </Link>
                     </button>
@@ -299,7 +299,9 @@ const Navbar = () => {
             </div>
 
             <div className="Navbar-Desk-logo">
-              <img src={logo} alt="Logo da TECHPOT." />
+              <Link className="link-counter" to={"/"}>
+                <img src={logo} alt="Logo da TECHPOT." />
+              </Link>
             </div>
           </div>
         )}

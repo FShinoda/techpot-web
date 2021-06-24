@@ -46,3 +46,17 @@
     padding: 15px 10px 0 10px;
     text-align: right;
 }
+
+.creategroup-info-nome input{
+    padding: 8px;
+    width: 100%;
+
+}
+
+.creategroup-info-privacy select{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #2c435c;
+    margin-top: 8px;
+    width: 100%;
+}

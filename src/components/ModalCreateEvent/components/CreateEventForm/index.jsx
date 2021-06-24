@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
 import './style.css'
 
-// Components
-// import TechpotInput from '../../../../shared/TechpotInput/index';
-// import TechpotSelectInput from '../../../../shared/TechpotSelect/index';
-// import TechpotTextArea from '../../../../shared/TechpotTextArea/index';
-
 // Redux
 import { useSelector } from 'react-redux';
 
