@@ -8,7 +8,6 @@ import logo from "../../assets/logo-redborder.png";
 
 /* LOGIN PAGE */
 const LoginPage = () => {
-    console.log()
     return(
         <div className="LoginPage">
             <div className="LoginPage-img">

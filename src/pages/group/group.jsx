@@ -76,12 +76,12 @@ const Group = () => {
                                 id_criador={posts.user_id}
                                 nome_criador={posts.user_name}
                                 like_count={posts.post_like_count}
-                                comment_count={posts.post_comment_count}
-                                comment_id={posts.comment_id}
-                                comment_body={posts.comment_body}
-                                comment_user_id={posts.comment_user_id}
-                                comment_user_name={posts.comment_user_name}
-                                comment_date={posts.comment_date}
+                                // comment_count={posts.post_comment_count}
+                                // comment_id={posts.comment_id}
+                                // comment_body={posts.comment_body}
+                                // comment_user_id={posts.comment_user_id}
+                                // comment_user_name={posts.comment_user_name}
+                                // comment_date={posts.comment_date}
                             />
                             ))}
                     </div>

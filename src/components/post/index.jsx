@@ -43,12 +43,12 @@ const Post = ({
                   data_criacao,
                   grupo,
                   like_count,
-                  comment_count,
-                  comment_id,
-                  comment_body,
-                  comment_user_id,
-                  comment_user_name,
-                  comment_date,
+                  // comment_count,
+                  // comment_id,
+                  // comment_body,
+                  // comment_user_id,
+                  // comment_user_name,
+                  // comment_date,
               }) => {
 
     // Usuario
@@ -56,12 +56,12 @@ const Post = ({
 
     // Post
     const postLikedByUser = useSelector((state) => state.entitie.post.postsUserLiked);
-    const loadPostComments = useSelector((state) => state.entitie.post.postComments);
+    // const loadPostComments = useSelector((state) => state.entitie.post.postComments);
 
     const [isPostLiked, setIsPostLiked] = useState(false);
     const [likeCount, setLikeCount] = useState(like_count);
     const [openCommentSection, setOpenCommentSection] = useState(false);
-    const [postComments, setPostComments] = useState(loadPostComments);
+    // const [postComments, setPostComments] = useState(loadPostComments);
 
     const dataCriacao = new DateFormatter(data_criacao);
     let relativeTime = dataCriacao.getRelativeTime();
@@ -72,10 +72,10 @@ const Post = ({
         if (postLikedByUser.includes(post_id)) setIsPostLiked(!isPostLiked);
     }, []);
 
-    useEffect(() => {
-        if(loadPostComments)
-            setPostComments(loadPostComments);
-    }, [loadPostComments])
+    // useEffect(() => {
+    //     if(loadPostComments)
+    //         setPostComments(loadPostComments);
+    // }, [loadPostComments])
 
     const handleLike = () => {
         setIsPostLiked(true);
@@ -89,12 +89,12 @@ const Post = ({
         dispatch(unlikePost(user_id, post_id));
     };
 
-    const loadComments = () => {
-        dispatch(POST_COMMENTS_CLEANUP())
-        dispatch(listComments(post_id))
-        setPostComments(loadPostComments)
-        setOpenCommentSection(!openCommentSection);
-    }
+    // const loadComments = () => {
+    //     dispatch(POST_COMMENTS_CLEANUP())
+    //     dispatch(listComments(post_id))
+    //     setPostComments(loadPostComments)
+    //     setOpenCommentSection(!openCommentSection);
+    // }
 
     // const handleNewComment = () => {}
 
@@ -136,9 +136,11 @@ const Post = ({
             <BottomLine/>
 
             <div className="postFooter">
-                <div className="postCommentsContainer" onClick={loadComments}>
-                    <ChatBubbleOutline className="postIcon"/>
-                    <p className="postCommentsText">{comment_count}</p>
+                {/*<div className="postCommentsContainer" onClick={loadComments}>*/}
+                <div className="postCommentsContainer" >
+                <ChatBubbleOutline className="postIcon"/>
+                    {/*<p className="postCommentsText">{comment_count}</p>*/}
+                    <p className="postCommentsText">{0}</p>
                 </div>
 
                 <div className="postLikesContainer">
@@ -156,14 +158,14 @@ const Post = ({
 
             <BottomLine/>
 
-            <div className="postLastComment">
-                {openCommentSection ?
-                    <CommentSection comments={postComments}/>
-                    :
-                    <CommentBox id={comment_id} content={comment_body} user_id={comment_user_id}
-                                username={comment_user_name} date={comment_date}/>
-                }
-            </div>
+            {/*<div className="postLastComment">*/}
+            {/*    {openCommentSection ?*/}
+            {/*        <CommentSection comments={postComments}/>*/}
+            {/*        :*/}
+            {/*        <CommentBox id={comment_id} content={comment_body} user_id={comment_user_id}*/}
+            {/*                    username={comment_user_name} date={comment_date}/>*/}
+            {/*    }*/}
+            {/*</div>*/}
 
             <div className="create-component-container">
                 <CreateComment/>

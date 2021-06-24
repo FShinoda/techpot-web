@@ -33,6 +33,7 @@
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     margin-bottom: 15vh;
+    color: #ddd;
 }
 
 .LoginPage-content-red-text {
@@ -56,12 +57,10 @@
     justify-content: center;
     width: 100%;
     background-color: var(--color-secundary);
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding: 4px 16px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    color: #ddd;
 }
 
 .LoginPage-content-blue-box-heading h1 {
@@ -72,10 +71,7 @@
 .LoginPage-content-blue-box-buttons {
     display: flex;
     flex-direction: column;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em 10%;
 }
 
 .LoginPage-content-blue-box-buttons button {
@@ -83,6 +79,7 @@
     margin-bottom: 1em;
     font-size: 1.21rem;
     padding: 12px;
+    color: #ddd;
 }
 
 
@@ -223,39 +220,4 @@
     }
 }
 
-@media only screen and (min-width: 2304px) {
-    .LoginPage-img img {
-        width: 224px;
-        height: 224px;
-    }
 
-    .LoginPage-content-red-text {
-        font-size: 4em;
-    }
-
-    .LoginPage-content-blue-box {
-        height: 40%;
-    }
-
-    .LoginPage-content-blue-box-heading h1 {
-        font-size: 2.25rem;
-    }
-
-    .LoginPage-content-blue-box-buttons {
-        margin-left: 20%;
-        margin-right: 20%;
-        margin-top: 7.5em;
-    }
-
-    .LoginPage-content-blue-box-buttons button {
-        margin-bottom: 3em;
-        font-size: 2em;
-    }
-}
-
-@media only screen and (min-width: 2560px) {
-    .LoginPage-img img {
-        width: 256px;
-        height: 256px;
-    }
-}
