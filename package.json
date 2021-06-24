@@ -50,5 +50,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "/api-t"
+  "proxy": "/apiv1"
 }
