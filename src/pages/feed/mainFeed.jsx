@@ -16,7 +16,7 @@ import ContainerInfo from "./components/containerInfo/containerInfo";
 import ContainerItem from "./components/containerItem/containerItem";
 import CreatePostContainer from '../../components/CreatePostContainer';
 import ModalCreatePost from "../../components/ModalCreatePost"
-import Post from "../../components/Post/index";
+import Post from "../../components/Post";
 // import CreatePost from "../../components/createPost/createPost.jsx"; // TODO -> Review if this can be removed
 
 // Redux
