@@ -72,7 +72,7 @@ const ModalCreatePost = ({ onClose, groupId }) => {
           <h4 className="font-techpot">
             {usuarioPerfil.u.name || " "}
           </h4>
-          {!groupId && <select placeholder="Grupo" onChange={(e) => setGroupSelectInput(e.target.value)}>
+          {!groupId && <select className="modalCreatePost-userInfo-selectGroup" placeholder="Grupo" onChange={(e) => setGroupSelectInput(e.target.value)}>
             {groupList.map((grupos) => (
                 <option
                     className="font-techpot"
