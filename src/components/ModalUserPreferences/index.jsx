@@ -47,13 +47,11 @@ const ModalUserPreferences = ({ anchorLeft, anchorTop, onClose }) => {
               </h3>
 
               {usuarioPerfil.u ? (
-                usuarioPerfil.u.occupation ? (
-                  <p> {firstLetterUppercase(usuarioPerfil.u.occupation)}</p>
+                usuarioPerfil.u.username ? (
+                  <p> @{usuarioPerfil.u.username}</p>
                 ) : null
               ) : null}
             </div>
-
-            <div></div>
           </div>
 
           <div className="BotaoMeuPerfilContainer" onClick={onClose}>

@@ -1,6 +1,5 @@
 /* GROUP ABOUT TAB */
 
-
 /* [DIV] GroupAboutTab-first */
 /* GroupAboutTab-info */
 .GroupAboutTab-info {
@@ -8,10 +7,14 @@
     margin-bottom: 1em;
     padding: 12px;
     border-radius: 12px;
+    color: #fff;
 }
 
 .GroupAboutTab-info h1 {
     margin-bottom: .5em;
+    color: #fff;
+    font-size: 27px;
+
 }
 
 .GroupAboutTab-info-row {
@@ -22,11 +25,11 @@
 
 .GroupAboutTab-info-row h4 {
     margin-left: .5rem;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .GroupAboutTab-info-row h4 span {
-    font-weight: 400;
+    font-weight: lighter;
 }
 
 /* GroupAboutTab-activity */
@@ -35,10 +38,13 @@
     margin-bottom: 1em;
     padding: 12px;
     border-radius: 12px;
+    color: #fff;
+
 }
 
 .GroupAboutTab-activity h1 {
     margin-bottom: .5em;
+    font-size: 27px;
 }
 .GroupAboutTab-activity-row {
     display: flex;
@@ -48,7 +54,6 @@
 .GroupAboutTab-activity h4 {
     margin-left: .5rem;
 }
-
 
 /* [DIV] GroupAboutTab-second */
 .GroupAboutTab-second {

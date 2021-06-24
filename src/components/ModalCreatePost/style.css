@@ -1,5 +1,5 @@
 .modalCreatePost-userInfo-col2 h4, .ModalCreatePost-top h2 {
-    font-weight: 300;
+    font-weight: 200;
 }
 
 /* User info  */
@@ -10,16 +10,20 @@
 }
 
 .modalCreatePost-userInfo-col2 {
-    height: 80px;
+    height: auto;
     flex: 1;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: center;
 }
 
 .modalCreatePost-userInfo-col2 h4 {
     font-weight: 600;
     font-size: 17px;
+}
+
+.modalCreatePost-userInfo-col2 select{
+    margin-top: 8px;
 }
 
 /* Image  */

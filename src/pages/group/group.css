@@ -1,44 +1,50 @@
 /* GROUP PAGE */
 
 .Group-container{
-    height: 100vh;
+    height: auto;
     width: 100vw;
-    position: relative;
+    /*position: relative;*/
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 /* [DIV] Group-top */
-.Group-banner {
-    max-width: 100%;
-    height: 150px;
-    margin-bottom: 2em;
-}
 
-.Group-banner img {
-    object-fit: contain;
-    width: 100%;
+.Group-banner-2 img {
+    max-width: 970px;
+
     height: auto;
+    width: auto;
+    margin:auto;
+    display:block;
+
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 }
-
 .Group-id {
     margin-left: 2.5%;
     margin-right: 2.5%;
+    margin-top: 2em;
 }
 
 .Group-name {
     line-height: 1.5rem;
     font-weight: bolder;
+    color: #fff;
 }
 
 .Group-type {
     margin-top: .25em;
     margin-bottom: .25em;
-    margin-left: .25rem;
+    /*margin-left: .25rem;*/
 }
 
 .Group-type-left {
     display: flex;
+    color: #fff;
 }
 
 .public {
@@ -53,8 +59,9 @@
 
 .Group-type h6 {
     margin-left: .5rem;
-    margin-right: 1rem;
+    margin-right: 8px;
     opacity: .8;
+    font-size: 16px ;
 }
 
 .Group-type h6::before {
@@ -69,6 +76,7 @@
     opacity: .8;
     display: flex;
     align-items: center;
+    font-size: 15px;
 }
 
 .Group-membersCount::after {
@@ -87,8 +95,9 @@
     letter-spacing: .1rem;
     padding-left: 1rem;
     padding-right: 1rem;
-}
+    color: #fff;
 
+}
 
 /* [DIV] Group-infoNav */
 .Group-infoNav {
@@ -100,7 +109,7 @@
 
 .Group-navbar {
     display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .Group-content {

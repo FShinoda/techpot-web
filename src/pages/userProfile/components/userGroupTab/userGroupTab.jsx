@@ -35,7 +35,7 @@ const UserGroupTab = () => {
             {/* TAB LIST */}
             <div className="UserGroupTab_groupList">
                 {groupList.map((group) => (
-                    <GroupRow redirect={"/editar"} img={avt_01} alt={"Foto de grupo."} groupName={group.group_name} membersCount={group.group_members_count} />
+                    <GroupRow redirect={`/grupo/${group.group_id}/${group.group_name}`} img={avt_01} alt={"Foto de grupo."} groupName={group.group_name} membersCount={group.group_members_count} />
                 ))}
             </div>
         </div>

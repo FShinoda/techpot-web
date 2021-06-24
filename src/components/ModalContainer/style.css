@@ -1,7 +1,11 @@
 .modalContainer-container {
     position: absolute;
-    top: 5%;
-    z-index: 5;
+    top: 15%;
+    left: 0;
+    right: 0;
+    margin-left:auto;
+    margin-right:auto;
+    z-index: 21;
     width: 600px;
     height: auto;
     background-color: #fff;
@@ -20,6 +24,10 @@
     border-bottom: 1px solid #c0c0c0;
 }
 
+.modalContainer-top h2{
+    font-size: 25px;
+}
+
 /* Overlay  */
 
 .modalContainer-overlay {
@@ -30,6 +38,6 @@
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 20;
     background-color: #1e2e3e88;
 }

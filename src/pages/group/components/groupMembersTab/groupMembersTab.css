@@ -10,25 +10,13 @@
 .GroupMembersTab-heading {
     display: flex;
     justify-content: space-between;
-    margin-left: 1rem;
     padding: 1.75px;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-
-/* RESPONSIVENESS */
-@media only screen and (min-width: 1200px) {
-    .GroupMembersTab-memberList {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .GroupMembersTab-first {
-        min-width: 49.5%;
-        max-width: 49.5%;
-    }
-
-    .GroupMembersTab-second {
-        min-width: 49.5%;
-        max-width: 49.5%;
-    }
+.GroupMembersTab-memberList{
+    display: flex;
+    flex-direction: column;
 }
+

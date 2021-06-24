@@ -27,7 +27,7 @@ const icon = {
   cursor: "pointer",
 };
 
-const ModalCreatePost = ({ onClose }) => {
+const ModalCreatePost = ({ onClose, groupId }) => {
   useLockBodyScroll();
 
   const [postBody, setPostBody] = useState({ value: null });
@@ -48,12 +48,13 @@ const ModalCreatePost = ({ onClose }) => {
     const text = editor.getText();
     setPostBody(text);
   };
+
   const dispatch = useDispatch();
 
   const criarPost = async (e) => {
     e.preventDefault();
      await dispatch(
-       createPost(postBody, postBodyHTML.value, usuarioId, parseInt(groupSelectInput))
+       createPost(postBody, postBodyHTML.value, usuarioId, (groupId ? parseInt(groupId) : parseInt(groupSelectInput)))
      );
 
     onClose();
@@ -71,17 +72,17 @@ const ModalCreatePost = ({ onClose }) => {
           <h4 className="font-techpot">
             {usuarioPerfil.u.name || " "}
           </h4>
-          <select placeholder="Grupo" onChange={(e) => setGroupSelectInput(e.target.value) }>
+          {!groupId && <select placeholder="Grupo" onChange={(e) => setGroupSelectInput(e.target.value)}>
             {groupList.map((grupos) => (
-              <option
-                className="font-techpot"
-                key={grupos.group_id}
-                value={grupos.group_id}
-              >
-                {grupos.group_name}
-              </option>
+                <option
+                    className="font-techpot"
+                    key={grupos.group_id}
+                    value={grupos.group_id}
+                >
+                  {grupos.group_name}
+                </option>
             ))}
-          </select>
+          </select>}
         </div>
       </div>
 

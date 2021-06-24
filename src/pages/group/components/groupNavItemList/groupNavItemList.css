@@ -1,9 +1,8 @@
 /* GROUP NAV ITEM LIST */
-.Group-navBtn {
-    margin-left: .5rem;
-    margin-right: .5rem;
-}
-
+/*.Group-navBtn {*/
+/*    margin-left: .5rem;*/
+/*    margin-right: .5rem;*/
+/*}*/
 
 /* GroupNavItemList button */
 .Group-navBtn button {
@@ -12,6 +11,8 @@
     padding-bottom: .5em;
     background-color: #eee;
     border: transparent;
+    min-width: 150px;
+    min-height: 50px;
 }
 
 .Group-navBtn button img {
@@ -42,29 +43,29 @@
 /* RESPONSIVENESS */
 @media only screen and (min-width: 480px) {
     .Group-navBtn {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        /*margin-left: 1rem;*/
+        /*margin-right: 1rem;*/
     }
 }
 
 @media only screen and (min-width: 576px) {
     .Group-navBtn {
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
+        /*margin-left: 1.25rem;*/
+        /*margin-right: 1.25rem;*/
     }
 }
 
 @media only screen and (min-width: 768px) {
     .Group-navBtn {
-        margin-left: 1.75rem;
-        margin-right: 1.75rem;
+        /*margin-left: 1.75rem;*/
+        /*margin-right: 1.75rem;*/
     }
 }
 
 @media only screen and (min-width: 992px) {
     .Group-navBtn {
-        margin-left: 2.25rem;
-        margin-right: 2.25rem;
+        /*margin-left: 2.25rem;*/
+        /*margin-right: 2.25rem;*/
     }
 }
 

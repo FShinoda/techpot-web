@@ -18,6 +18,7 @@ import Post from "../../components/Post/index";
 
 /* IMAGES */
 import racional from "../../assets/tim-maia_racional.jpg";
+import overbiteBanner from '../../assets/overbite-banner.jpg';
 
 
 /* ICONS */
@@ -75,6 +76,12 @@ const Group = () => {
                                 id_criador={posts.user_id}
                                 nome_criador={posts.user_name}
                                 like_count={posts.post_like_count}
+                                comment_count={posts.post_comment_count}
+                                comment_id={posts.comment_id}
+                                comment_body={posts.comment_body}
+                                comment_user_id={posts.comment_user_id}
+                                comment_user_name={posts.comment_user_name}
+                                comment_date={posts.comment_date}
                             />
                             ))}
                     </div>
@@ -90,22 +97,12 @@ const Group = () => {
         }
     };
 
-    /* 
-        TODO -> Fix create post modal. 
-            - Place on the middle 
-            - Remove the choose group section
-    */
-
     return(
         <div className="Group-container">
-            {showModalCreatePost && (
-                <ModalCreatePost onClose={() => setShowModalCreatePost(!showModalCreatePost)} />
-            )}
-
             {/* BANNER AND GROUP INFO */}
             <div className="Group-top">
-                <div className="Group-banner">
-                    <img src={racional} alt={"Foto do Grupo."} />
+                <div className="Group-banner-2">
+                    <img src={overbiteBanner} alt={"Foto do Grupo."} />
                 </div>
 
                 <div className="Group-id">
@@ -149,8 +146,12 @@ const Group = () => {
                 </div>
             </div>
 
+            {showModalCreatePost && (
+                <ModalCreatePost onClose={() => setShowModalCreatePost(!showModalCreatePost)} groupId={id} />
+            )}
 
         </div>
+
     );
 };
 

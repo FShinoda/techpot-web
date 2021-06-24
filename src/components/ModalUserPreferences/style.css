@@ -14,9 +14,9 @@
 .ModalUserPreferencesContainer{
     position: absolute;
     width: 300px;
-    height: 160px;
+    height: 170px;
     
-    z-index: 10;
+    z-index: 11;
     transform: translateX(-50%);
 
     border-radius: 20px;
@@ -24,6 +24,7 @@
 
     position: fixed;
     position: -webkit-sticky;
+
 }
 
 .ModalUserPreferences-topbar{
@@ -39,17 +40,22 @@
 
 .ModalUserPreferences-topbar-row1{
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    margin-bottom: 15px;
+}
 
+.ModalUserPreferences-topbar-col2{
+    margin-left: 10px;
 }
 
 .ModalUserPreferences-topbar-col2 h3{
     color: var(--color-primary);
+    font-size: 25px;
 }
 
 .ModalUserPreferences-topbar-col2 p{
     color: rgba(153, 153, 153, 0.933);
+    font-size: 13px;
 }
 
 .ModalUserPreferencesProfilePicContainer{
@@ -101,9 +107,8 @@
 }
 
 .ModalUserPreferences-bottom p:hover{
-    color: #05a84f;
+    color: var(--color-secundary);
     cursor: pointer;
-    transition: 0.3;
 }
 
 .ModalUserPreferences-overlay{
@@ -114,6 +119,6 @@
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 10;
 }
 

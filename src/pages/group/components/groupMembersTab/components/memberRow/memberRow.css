@@ -2,25 +2,18 @@
 .MemberRow {
     display: flex;
     align-items: center;
-    padding-left: 12px;
-    padding-right: 12px;
-    border: 1px solid #375472;
     border-radius: 12px;
     margin-bottom: 1em;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 8px;
 }
 
-
-/* [DIV] MemberRow-avatar */
-.MemberRow-avatar {
-    margin-top: 1em ;
+.MemberRow-member p{
+    font-size: 15px;
+    color: #bbbbbb;
+    margin-top: 5px;
 }
-
-.MemberRow-avatar figure img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-}
-
 
 /* [DIV] MemberRow-member */
 .MemberRow-member {
@@ -33,30 +26,4 @@
 
 .MemberRow-member span {
     opacity: .7;
-}
-
-
-/* RESPONSIVENESS */
-@media only screen and (min-width: 1200px) {
-    .MemberRow {
-        padding-left: 6px;
-        padding-right: 6px;
-    }
-    
-    .MemberRow-avatar figure img {
-        width: 32px;
-        height: 32px;
-    }
-}
-
-@media only screen and (min-width: 1920px) {
-    .MemberRow {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    .MemberRow-avatar figure img {
-        width: 48px;
-        height: 48px;
-    }
 }
